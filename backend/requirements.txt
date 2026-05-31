@@ -1,0 +1,12 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+pydantic==2.7.1
+sqlalchemy==2.0.30
+aiosqlite==0.20.0
+redis==5.0.4
+langdetect==1.0.9
+deep-translator==1.11.4
+python-dotenv==1.0.1
+httpx==0.27.0
+groq==0.9.0

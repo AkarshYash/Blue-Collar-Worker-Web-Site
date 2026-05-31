@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Admin Panel — BlueCollar</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="brand"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="workers.html">Find Workers</a></li>
+    <li><a href="booking.html">Book Now</a></li><li><a href="dashboard-customer.html">My Bookings</a></li>
+    <li><a href="dashboard-worker.html">Worker Portal</a></li>
+    <li><a href="admin.html" class="active">Admin</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span style="font-size:13px;color:#6b7280">⚙️ Admin</span>
+    <span class="badge badge-purple" style="padding:6px 12px">Super Admin</span>
+  </div>
+</div></nav>
+
+<div class="dashboard-layout">
+  <div class="dash-sidebar">
+    <div class="dash-menu-item active">📊 Dashboard</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show pending disputes')">⚖️ Disputes (45)</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Pending verifications')">🆔 Verifications (156)</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show suspicious activities')">🚨 Fraud Alerts (7)</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show me platform metrics')">📈 Analytics</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('admin')">💬 AI Assistant</div>
+    <hr style="margin:12px 0;border-color:#f3f4f6"/>
+    <div style="padding:12px;background:#fee2e2;border-radius:10px;font-size:12px">
+      <strong style="color:#dc2626">🔴 Urgent Alerts</strong><br>
+      <div style="margin-top:6px;line-height:1.8;color:#374151">
+        45 disputes pending<br>7 fraud flags<br>3.2% payment failures
+      </div>
+    </div>
+  </div>
+
+  <div class="dash-main">
+    <!-- KPI CARDS -->
+    <div class="dash-cards">
+      <div class="dash-card"><div class="dash-card-val">15,670</div><div class="dash-card-label">Jobs This Week</div><div class="dash-card-delta">+23% MoM</div></div>
+      <div class="dash-card"><div class="dash-card-val">₹2.34Cr</div><div class="dash-card-label">GMV This Week</div><div class="dash-card-delta">+31% MoM</div></div>
+      <div class="dash-card"><div class="dash-card-val">2,340</div><div class="dash-card-label">New Customers</div><div class="dash-card-delta">This week</div></div>
+      <div class="dash-card"><div class="dash-card-val">890</div><div class="dash-card-label">New Workers</div><div class="dash-card-delta">This week</div></div>
+      <div class="dash-card"><div class="dash-card-val">4.6★</div><div class="dash-card-label">Platform CSAT</div><div class="dash-card-delta">+0.1 vs last week</div></div>
+      <div class="dash-card"><div class="dash-card-val">87%</div><div class="dash-card-label">Resolution Rate</div><div class="dash-card-delta">+2% MoM</div></div>
+    </div>
+
+    <!-- DISPUTES -->
+    <div class="table-wrap" style="margin-bottom:20px">
+      <div class="table-header">
+        <h3>⚖️ Pending Disputes</h3>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show pending disputes')">Manage via AI</button>
+      </div>
+      <table>
+        <thead><tr><th>ID</th><th>Customer</th><th>Worker</th><th>Amount</th><th>Issue</th><th>Priority</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>DSP-001</strong></td><td>Anjali S.</td><td>Rajesh K.</td><td>₹500</td>
+            <td>Poor quality work</td><td><span class="badge badge-green">High</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Review DSP-001')">Review</button></td>
+          </tr>
+          <tr>
+            <td><strong>DSP-002</strong></td><td>Raj M.</td><td>Priya S.</td><td>₹650</td>
+            <td>Payment not released</td><td><span class="badge badge-yellow">Medium</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Review DSP-002')">Review</button></td>
+          </tr>
+          <tr>
+            <td><strong>DSP-003</strong></td><td>Meena R.</td><td>Amit S.</td><td>₹800</td>
+            <td>Safety complaint</td><td><span class="badge badge-green">Urgent</span></td>
+            <td><button class="btn btn-danger btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Review DSP-003')">Urgent</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FRAUD ALERTS -->
+    <div class="table-wrap" style="margin-bottom:20px">
+      <div class="table-header">
+        <h3>🚨 Fraud Alerts</h3>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show suspicious activities')">View All via AI</button>
+      </div>
+      <table>
+        <thead><tr><th>User</th><th>Type</th><th>Pattern</th><th>Risk</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Worker #W-44512</td><td>Worker</td><td>5 fake reviews in 10 mins</td>
+            <td><span class="badge badge-green" style="background:#fee2e2;color:#dc2626">High</span></td>
+            <td><button class="btn btn-danger btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Resolve W-44512')">Suspend</button></td>
+          </tr>
+          <tr>
+            <td>Customer #C-23451</td><td>Customer</td><td>87% cancellation rate</td>
+            <td><span class="badge badge-yellow">Medium</span></td>
+            <td><button class="btn btn-outline btn-sm">Flag</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TOP CITIES -->
+    <div class="table-wrap">
+      <div class="table-header"><h3>🏙️ Top Performing Cities</h3></div>
+      <table>
+        <thead><tr><th>City</th><th>GMV</th><th>Jobs</th><th>Workers</th><th>Growth</th></tr></thead>
+        <tbody>
+          <tr><td>🏙️ Mumbai</td><td>₹45L</td><td>4,230</td><td>8,900</td><td><span style="color:#059669">+28%</span></td></tr>
+          <tr><td>🏙️ Delhi</td><td>₹38L</td><td>3,890</td><td>7,200</td><td><span style="color:#059669">+22%</span></td></tr>
+          <tr><td>🏙️ Bangalore</td><td>₹32L</td><td>3,100</td><td>6,100</td><td><span style="color:#059669">+35%</span></td></tr>
+          <tr><td>🏙️ Hyderabad</td><td>₹24L</td><td>2,340</td><td>4,800</td><td><span style="color:#059669">+19%</span></td></tr>
+          <tr><td>🏙️ Chennai</td><td>₹18L</td><td>1,890</td><td>3,900</td><td><span style="color:#059669">+15%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px;background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:14px">⚙️ Admin Quick Actions via Sahayak AI</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show me platform metrics')">📊 Full Analytics</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show pending disputes')">⚖️ All Disputes</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Pending verifications')">🆔 Verify Workers</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('admin');window.sahayakQuick('Show suspicious activities')">🚨 Fraud Report</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">
+  <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+</div></footer>
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

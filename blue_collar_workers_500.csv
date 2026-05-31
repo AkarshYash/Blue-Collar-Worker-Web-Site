@@ -1,0 +1,501 @@
+worker_id,full_name,designation,rating,reviews_count,hourly_rate_inr,experience_years,mobile_number,state,city,languages_known,payment_method,availability,profile_summary
+W0001,Zaina Roy,Welder,3.9,76,409,22,+919181143731,Gujarat,Ahmedabad,"English, Kannada, Hindi",UPI,Available,Experienced welder available for residential and commercial work.
+W0002,Chirag Chahal,CCTV Installer,4.4,292,607,23,+918791232393,Karnataka,Bengaluru,"Punjabi, Kannada, English","UPI, Cash",Available Today,Experienced cctv installer available for residential and commercial work.
+W0003,Tarini Sura,TV Repair Technician,4.5,179,769,5,+916924765563,Tamil Nadu,Chennai,"English, Punjabi","UPI, Cash",Available,Experienced tv repair technician available for residential and commercial work.
+W0004,Rati Handa,Appliance Repair Technician,3.9,27,1140,18,+916536124280,Delhi,New Delhi,"English, Tamil",Cash,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0005,Navya Talwar,Carpenter,3.6,121,792,3,+919673561638,Karnataka,Hubballi,English,"UPI, Cash",Busy,Experienced carpenter available for residential and commercial work.
+W0006,Ishaan Sibal,TV Repair Technician,4.1,112,746,23,+918935814872,West Bengal,Siliguri,"English, Gujarati, Tamil",Bank Transfer,Available,Experienced tv repair technician available for residential and commercial work.
+W0007,Vardaniya Ramaswamy,Welder,5.0,332,1340,8,+918940395823,West Bengal,Siliguri,"Hindi, Marathi",UPI,Busy,Experienced welder available for residential and commercial work.
+W0008,Armaan D’Alia,Carpenter,3.8,487,1361,23,+917351531223,Uttar Pradesh,Kanpur,Bengali,"UPI, Cash",Available Today,Experienced carpenter available for residential and commercial work.
+W0009,Azad Dasgupta,Welder,3.7,386,1349,18,+917128466620,West Bengal,Kolkata,"Kannada, Punjabi, Gujarati",Bank Transfer,Available,Experienced welder available for residential and commercial work.
+W0010,Dhanush Grover,Carpenter,4.6,445,424,5,+918694860228,Telangana,Warangal,Kannada,UPI,Busy,Experienced carpenter available for residential and commercial work.
+W0011,Chirag Halder,Water Purifier Technician,4.3,288,223,22,+919095476665,Uttar Pradesh,Noida,Punjabi,Cash,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0012,Lavanya Rajan,Mason,4.2,237,206,24,+919761759725,Delhi,New Delhi,"Tamil, Gujarati, Punjabi",UPI,Available Today,Experienced mason available for residential and commercial work.
+W0013,Kavya Devan,CCTV Installer,4.4,83,965,25,+916693847829,Tamil Nadu,Madurai,"Punjabi, Hindi, Tamil",Cash,Busy,Experienced cctv installer available for residential and commercial work.
+W0014,Mehul Varma,Housekeeper,4.8,430,829,8,+916248786714,Maharashtra,Mumbai,English,UPI,Available Today,Experienced housekeeper available for residential and commercial work.
+W0015,Saanvi Bhavsar,Mobile Repair Technician,4.6,70,1173,18,+916709214891,West Bengal,Kolkata,"Punjabi, Kannada",Bank Transfer,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0016,Kavya Kapoor,Mason,4.1,348,964,15,+919863813067,Karnataka,Hubballi,"Bengali, English, Punjabi",Bank Transfer,Available,Experienced mason available for residential and commercial work.
+W0017,Khushi Dewan,Computer Repair Technician,4.3,306,651,1,+916304912982,Delhi,New Delhi,"Hindi, Marathi, Punjabi",UPI,Busy,Experienced computer repair technician available for residential and commercial work.
+W0018,Oorja Bahri,Painter,3.9,253,638,18,+916568275055,Gujarat,Vadodara,"Bengali, Marathi, Kannada","UPI, Cash",Busy,Experienced painter available for residential and commercial work.
+W0019,Ivan Sama,Mechanic,4.5,186,1067,14,+918005855667,Karnataka,Bengaluru,"Hindi, English, Punjabi","UPI, Cash",Available Today,Experienced mechanic available for residential and commercial work.
+W0020,Samar Chandra,Painter,3.8,279,1118,5,+917811967841,Delhi,New Delhi,Tamil,"UPI, Cash",Available,Experienced painter available for residential and commercial work.
+W0021,Heer Gola,Mobile Repair Technician,3.6,338,1307,1,+916400560567,Gujarat,Surat,Gujarati,"UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0022,Divyansh Dora,Gardener,4.9,89,976,1,+917676848676,West Bengal,Kolkata,"Bengali, Tamil","UPI, Cash",Available Today,Experienced gardener available for residential and commercial work.
+W0023,Tarini Chakraborty,AC Technician,3.8,116,319,19,+919159967109,Telangana,Warangal,"Hindi, Telugu, Punjabi",UPI,Available Today,Experienced ac technician available for residential and commercial work.
+W0024,Yashvi Luthra,Electrician,4.9,46,580,3,+918555656321,West Bengal,Kolkata,Marathi,"UPI, Cash",Available,Experienced electrician available for residential and commercial work.
+W0025,Adira Sarna,Computer Repair Technician,4.4,322,367,14,+918823396242,Madhya Pradesh,Indore,"Punjabi, Telugu, Gujarati",Bank Transfer,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0026,Anaya Dalal,Welder,4.1,348,814,15,+917357970698,Delhi,New Delhi,Hindi,"UPI, Cash",Available Today,Experienced welder available for residential and commercial work.
+W0027,Veer Sachdeva,Carpenter,4.3,264,743,5,+917498981529,Madhya Pradesh,Indore,Marathi,Cash,Busy,Experienced carpenter available for residential and commercial work.
+W0028,Eva Raval,Mobile Repair Technician,4.6,318,1283,1,+918868450609,Rajasthan,Jodhpur,"Tamil, English, Bengali",Cash,Available,Experienced mobile repair technician available for residential and commercial work.
+W0029,Indrans Deo,Mobile Repair Technician,3.7,149,1438,7,+919082120871,Gujarat,Vadodara,"Marathi, Tamil","UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0030,Nishith Kumar,Pest Control Technician,4.7,27,207,11,+919311931853,Maharashtra,Mumbai,Tamil,Bank Transfer,Available Today,Experienced pest control technician available for residential and commercial work.
+W0031,Aaina Walla,Mobile Repair Technician,3.5,43,505,18,+916154739678,West Bengal,Siliguri,"Punjabi, Gujarati","UPI, Cash",Available,Experienced mobile repair technician available for residential and commercial work.
+W0032,Tushar Hegde,Housekeeper,4.8,412,281,12,+916902271852,Maharashtra,Pune,"Marathi, English, Gujarati","UPI, Cash",Available Today,Experienced housekeeper available for residential and commercial work.
+W0033,Shanaya Ganesh,TV Repair Technician,5.0,420,562,14,+916106456634,Rajasthan,Jaipur,Telugu,"UPI, Cash",Available Today,Experienced tv repair technician available for residential and commercial work.
+W0034,Amira Jayaraman,TV Repair Technician,4.7,60,983,2,+919687629943,Karnataka,Mysuru,"Marathi, Punjabi","UPI, Cash",Busy,Experienced tv repair technician available for residential and commercial work.
+W0035,Charvi Mandal,Painter,3.5,103,1016,11,+917196591018,Tamil Nadu,Chennai,Tamil,Cash,Available Today,Experienced painter available for residential and commercial work.
+W0036,Pranay D’Alia,Mobile Repair Technician,4.0,19,436,9,+916766942939,Telangana,Warangal,"Tamil, Hindi, Bengali","UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0037,Nakul Halder,Appliance Repair Technician,5.0,64,988,19,+916816382125,Delhi,New Delhi,"Hindi, Kannada",UPI,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0038,Riya Basu,Housekeeper,4.1,490,876,20,+917348257414,Telangana,Hyderabad,"English, Tamil, Bengali",Cash,Available Today,Experienced housekeeper available for residential and commercial work.
+W0039,Samarth Sharaf,Gardener,4.5,288,460,7,+917805803262,Uttar Pradesh,Kanpur,"Kannada, Gujarati, Tamil",Cash,Busy,Experienced gardener available for residential and commercial work.
+W0040,Riaan Banerjee,Mason,3.9,225,1387,20,+918811939242,Telangana,Hyderabad,"Bengali, Punjabi","UPI, Cash",Available Today,Experienced mason available for residential and commercial work.
+W0041,Khushi Barad,Solar Panel Technician,4.7,496,547,22,+916364194056,Karnataka,Hubballi,"Punjabi, Telugu",UPI,Available,Experienced solar panel technician available for residential and commercial work.
+W0042,Ryan Mangal,Refrigerator Technician,3.7,28,701,16,+918625401719,Tamil Nadu,Chennai,Bengali,"UPI, Cash",Available Today,Experienced refrigerator technician available for residential and commercial work.
+W0043,Sumer Mannan,Gardener,4.2,129,502,21,+918953315788,Madhya Pradesh,Indore,English,"UPI, Cash",Available,Experienced gardener available for residential and commercial work.
+W0044,Charvi Upadhyay,CCTV Installer,4.2,290,710,4,+917960488639,Rajasthan,Udaipur,Bengali,Cash,Busy,Experienced cctv installer available for residential and commercial work.
+W0045,Riaan Bala,Mobile Repair Technician,4.2,86,1172,15,+917113219231,Madhya Pradesh,Bhopal,Tamil,"UPI, Cash",Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0046,Rasha Saran,Water Purifier Technician,3.6,151,680,9,+917442454200,Karnataka,Mysuru,"Punjabi, English",Bank Transfer,Available,Experienced water purifier technician available for residential and commercial work.
+W0047,Divyansh Kakar,AC Technician,4.6,37,1049,14,+917421124738,Karnataka,Mysuru,"Bengali, Kannada, Hindi",Bank Transfer,Busy,Experienced ac technician available for residential and commercial work.
+W0048,Veer Karpe,Plumber,4.8,396,1379,13,+918048612358,Uttar Pradesh,Noida,Telugu,Cash,Busy,Experienced plumber available for residential and commercial work.
+W0049,Kimaya Dhillon,Mobile Repair Technician,4.7,464,651,16,+916942408767,Uttar Pradesh,Noida,"Kannada, Bengali",UPI,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0050,Anika Bhargava,TV Repair Technician,4.8,475,461,20,+918294043548,Delhi,New Delhi,Kannada,UPI,Available,Experienced tv repair technician available for residential and commercial work.
+W0051,Jayan Sharaf,Water Purifier Technician,3.8,138,976,11,+916909074012,Uttar Pradesh,Lucknow,"Telugu, Punjabi","UPI, Cash",Busy,Experienced water purifier technician available for residential and commercial work.
+W0052,Veer Badami,Carpenter,4.2,388,1304,2,+917503068227,Uttar Pradesh,Kanpur,English,UPI,Available,Experienced carpenter available for residential and commercial work.
+W0053,Kanav Majumdar,Plumber,4.4,127,458,16,+918875303857,Karnataka,Bengaluru,Marathi,"UPI, Cash",Available Today,Experienced plumber available for residential and commercial work.
+W0054,Abram Wagle,TV Repair Technician,4.4,498,434,25,+919518871744,Tamil Nadu,Coimbatore,Tamil,UPI,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0055,Prisha Reddy,Computer Repair Technician,4.5,495,968,13,+919070964768,Maharashtra,Pune,English,Bank Transfer,Available,Experienced computer repair technician available for residential and commercial work.
+W0056,Nehmat Buch,Appliance Repair Technician,4.7,412,1359,2,+917491228808,Tamil Nadu,Madurai,"Kannada, Telugu, Hindi",Cash,Available,Experienced appliance repair technician available for residential and commercial work.
+W0057,Jayant Sane,Mechanic,4.2,190,1141,23,+916657091982,Uttar Pradesh,Kanpur,"Gujarati, Tamil","UPI, Cash",Busy,Experienced mechanic available for residential and commercial work.
+W0058,Saira Lad,Computer Repair Technician,3.9,441,702,3,+917197987692,Uttar Pradesh,Noida,"Marathi, Bengali","UPI, Cash",Busy,Experienced computer repair technician available for residential and commercial work.
+W0059,Aniruddh Lata,Driver,3.8,113,926,9,+917461744198,Maharashtra,Pune,"Tamil, Hindi",Bank Transfer,Available,Experienced driver available for residential and commercial work.
+W0060,Kavya Korpal,Pest Control Technician,4.2,393,692,23,+918044804330,Karnataka,Hubballi,"Bengali, Punjabi, Kannada",UPI,Available,Experienced pest control technician available for residential and commercial work.
+W0061,Sumer Chadha,Gardener,4.5,161,1391,12,+918032638323,Tamil Nadu,Chennai,"Punjabi, Telugu, Marathi",Cash,Busy,Experienced gardener available for residential and commercial work.
+W0062,Ivan Sinha,Mason,3.9,66,594,11,+916513483708,West Bengal,Siliguri,"Punjabi, Gujarati, English",Bank Transfer,Available Today,Experienced mason available for residential and commercial work.
+W0063,Pranay Deol,Computer Repair Technician,5.0,273,1422,10,+916431756350,West Bengal,Siliguri,Tamil,Bank Transfer,Busy,Experienced computer repair technician available for residential and commercial work.
+W0064,Saksham Agrawal,Plumber,4.6,69,761,2,+916234187462,Rajasthan,Jodhpur,"Tamil, Gujarati, Telugu","UPI, Cash",Available,Experienced plumber available for residential and commercial work.
+W0065,Shaan Mallick,Mason,4.2,230,897,6,+916220661337,Maharashtra,Nagpur,"Bengali, English",UPI,Busy,Experienced mason available for residential and commercial work.
+W0066,Divyansh Shanker,Computer Repair Technician,4.4,32,510,5,+919483828685,West Bengal,Kolkata,"Tamil, English, Bengali",UPI,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0067,Hiran Ghose,Appliance Repair Technician,4.7,120,1270,13,+917934944879,Uttar Pradesh,Noida,"Tamil, Kannada",Cash,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0068,Emir Sarna,Appliance Repair Technician,4.9,55,625,21,+916906346324,Madhya Pradesh,Indore,"English, Gujarati",Bank Transfer,Available,Experienced appliance repair technician available for residential and commercial work.
+W0069,Vedika Din,TV Repair Technician,3.5,235,1416,16,+917250949136,Telangana,Hyderabad,Marathi,Cash,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0070,Aayush Shetty,Water Purifier Technician,3.6,124,741,21,+918533126989,Tamil Nadu,Madurai,"Marathi, Kannada, Hindi",Bank Transfer,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0071,Riaan Kar,AC Technician,3.6,89,829,20,+919216748927,Rajasthan,Jodhpur,"Tamil, Bengali, Hindi","UPI, Cash",Available Today,Experienced ac technician available for residential and commercial work.
+W0072,Ritvik Thakur,Gardener,4.9,261,1305,16,+917880160025,Tamil Nadu,Madurai,Hindi,"UPI, Cash",Available Today,Experienced gardener available for residential and commercial work.
+W0073,Saira Madan,Plumber,3.6,497,1378,19,+916089101055,Delhi,New Delhi,"Tamil, Hindi, Kannada",Bank Transfer,Busy,Experienced plumber available for residential and commercial work.
+W0074,Ritvik Vora,Welder,3.8,304,1092,21,+919497155420,Telangana,Warangal,"English, Bengali",Cash,Busy,Experienced welder available for residential and commercial work.
+W0075,Vivaan Lal,Mechanic,4.8,173,1043,23,+918128023255,Delhi,New Delhi,"Kannada, Hindi","UPI, Cash",Available,Experienced mechanic available for residential and commercial work.
+W0076,Vidur Rana,Driver,3.7,400,1027,17,+919543035341,Delhi,New Delhi,Punjabi,"UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0077,Tara Dyal,CCTV Installer,4.0,392,1220,21,+917898551433,Maharashtra,Mumbai,Marathi,Cash,Available Today,Experienced cctv installer available for residential and commercial work.
+W0078,Vardaniya Saran,Water Purifier Technician,4.8,253,448,1,+918705925058,Rajasthan,Jodhpur,"Marathi, Gujarati, Bengali",UPI,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0079,Lakshit Lanka,Painter,5.0,472,432,15,+916504513251,Uttar Pradesh,Lucknow,"Gujarati, Bengali, Telugu",Cash,Available Today,Experienced painter available for residential and commercial work.
+W0080,Himmat Tata,Solar Panel Technician,5.0,129,1135,18,+916621232513,Tamil Nadu,Coimbatore,"Marathi, Gujarati",UPI,Busy,Experienced solar panel technician available for residential and commercial work.
+W0081,Dhanuk Batra,CCTV Installer,3.9,6,779,24,+917282287615,Uttar Pradesh,Kanpur,"Bengali, Gujarati, Marathi","UPI, Cash",Busy,Experienced cctv installer available for residential and commercial work.
+W0082,Biju Badami,Water Purifier Technician,4.9,450,586,23,+917025662000,Delhi,New Delhi,"Kannada, Marathi, Punjabi","UPI, Cash",Available,Experienced water purifier technician available for residential and commercial work.
+W0083,Misha Dara,Gardener,4.1,344,511,16,+916158998032,Delhi,New Delhi,Punjabi,Cash,Available,Experienced gardener available for residential and commercial work.
+W0084,Zoya Baria,CCTV Installer,4.9,12,495,14,+919740628617,West Bengal,Kolkata,"Gujarati, English, Marathi",Cash,Busy,Experienced cctv installer available for residential and commercial work.
+W0085,Ryan Subramanian,Carpenter,4.8,441,1292,13,+917360049298,Madhya Pradesh,Bhopal,"Bengali, Hindi, Tamil",UPI,Available,Experienced carpenter available for residential and commercial work.
+W0086,Yuvaan Wable,Carpenter,4.2,55,1497,23,+919747699292,Tamil Nadu,Chennai,Bengali,Bank Transfer,Available Today,Experienced carpenter available for residential and commercial work.
+W0087,Farhan Tank,Electrician,4.0,33,800,12,+917609930218,Tamil Nadu,Chennai,"Gujarati, Marathi","UPI, Cash",Available Today,Experienced electrician available for residential and commercial work.
+W0088,Tarini Ramaswamy,TV Repair Technician,3.6,450,983,20,+918934040683,Rajasthan,Jaipur,Bengali,Bank Transfer,Available,Experienced tv repair technician available for residential and commercial work.
+W0089,Advika Vala,Water Purifier Technician,3.9,9,1152,10,+918910316591,West Bengal,Siliguri,"Gujarati, English, Marathi",Cash,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0090,Vritika Desai,Pest Control Technician,4.5,238,818,7,+917652244897,Tamil Nadu,Madurai,"English, Marathi","UPI, Cash",Available Today,Experienced pest control technician available for residential and commercial work.
+W0091,Veer Mand,Mason,3.5,429,1010,9,+916034780500,Delhi,New Delhi,"Hindi, Bengali, Kannada",Cash,Available,Experienced mason available for residential and commercial work.
+W0092,Piya Sant,Painter,4.5,322,713,22,+919245179885,Madhya Pradesh,Bhopal,"Gujarati, English, Telugu",UPI,Busy,Experienced painter available for residential and commercial work.
+W0093,Anay Bedi,Computer Repair Technician,4.0,72,384,10,+917403247962,West Bengal,Kolkata,"Kannada, Gujarati, English",Bank Transfer,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0094,Anahita Sani,TV Repair Technician,3.9,427,1186,10,+919206447974,Delhi,New Delhi,"English, Bengali",UPI,Available,Experienced tv repair technician available for residential and commercial work.
+W0095,Gatik Lanka,Gardener,5.0,416,1341,12,+916387847884,Karnataka,Hubballi,"Hindi, Tamil",UPI,Busy,Experienced gardener available for residential and commercial work.
+W0096,Trisha Chaudhry,Computer Repair Technician,4.1,331,960,4,+918898400928,Delhi,New Delhi,Bengali,UPI,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0097,Lagan Karan,Appliance Repair Technician,3.8,37,1150,23,+917297896903,Telangana,Warangal,"Kannada, English, Bengali",UPI,Available,Experienced appliance repair technician available for residential and commercial work.
+W0098,Anika Maharaj,Mechanic,3.6,459,1300,5,+917669221121,Tamil Nadu,Coimbatore,"Telugu, Kannada",Bank Transfer,Busy,Experienced mechanic available for residential and commercial work.
+W0099,Badal Dada,Appliance Repair Technician,4.1,492,772,2,+918964732879,Gujarat,Surat,"Marathi, Bengali","UPI, Cash",Available,Experienced appliance repair technician available for residential and commercial work.
+W0100,Advika Virk,Housekeeper,4.3,335,934,2,+917709996749,Delhi,New Delhi,"Marathi, English","UPI, Cash",Available,Experienced housekeeper available for residential and commercial work.
+W0101,Anika Date,Appliance Repair Technician,5.0,30,883,8,+916540838949,Karnataka,Hubballi,"Marathi, English, Kannada",Bank Transfer,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0102,Shamik Chanda,Driver,4.7,408,1420,1,+917190886387,Karnataka,Bengaluru,Gujarati,Cash,Available,Experienced driver available for residential and commercial work.
+W0103,Ojas Savant,Plumber,3.7,188,687,19,+917390587865,Gujarat,Vadodara,Gujarati,Cash,Available,Experienced plumber available for residential and commercial work.
+W0104,Saksham Guha,Pest Control Technician,4.3,386,330,16,+917925327382,Rajasthan,Udaipur,"Punjabi, English","UPI, Cash",Available Today,Experienced pest control technician available for residential and commercial work.
+W0105,Rasha Chakrabarti,Electrician,4.6,470,1267,10,+917967277638,Karnataka,Hubballi,"Hindi, Punjabi, Marathi","UPI, Cash",Busy,Experienced electrician available for residential and commercial work.
+W0106,Taimur Gour,Water Purifier Technician,3.6,46,859,20,+916637088959,Gujarat,Surat,Gujarati,Cash,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0107,Shlok Singhal,Gardener,5.0,276,803,15,+918171325343,Madhya Pradesh,Bhopal,"Kannada, English, Punjabi",UPI,Available Today,Experienced gardener available for residential and commercial work.
+W0108,Khushi Tak,Pest Control Technician,4.2,121,1047,11,+919553738511,Telangana,Hyderabad,"Kannada, Punjabi",UPI,Busy,Experienced pest control technician available for residential and commercial work.
+W0109,Ranbir Brar,Welder,4.1,83,1171,3,+916391807468,Uttar Pradesh,Kanpur,English,"UPI, Cash",Available,Experienced welder available for residential and commercial work.
+W0110,Nirvi Dey,Mobile Repair Technician,3.6,494,1350,18,+917415818695,Delhi,New Delhi,"English, Kannada, Gujarati","UPI, Cash",Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0111,Mohanlal Shetty,Appliance Repair Technician,4.0,58,1383,17,+916913706213,Maharashtra,Pune,Bengali,Bank Transfer,Available,Experienced appliance repair technician available for residential and commercial work.
+W0112,Saksham Ramesh,Mechanic,4.6,298,663,14,+919629913789,Delhi,New Delhi,"Punjabi, Hindi, Tamil",Cash,Available,Experienced mechanic available for residential and commercial work.
+W0113,Advik Roy,Mason,4.9,184,212,6,+919736031885,Rajasthan,Jodhpur,Kannada,UPI,Available,Experienced mason available for residential and commercial work.
+W0114,Trisha Dewan,CCTV Installer,3.8,219,1129,11,+916676067682,Maharashtra,Mumbai,"Tamil, Telugu",UPI,Available,Experienced cctv installer available for residential and commercial work.
+W0115,Baiju Wali,Appliance Repair Technician,3.6,46,757,15,+918843005049,Rajasthan,Jaipur,"Bengali, Punjabi","UPI, Cash",Busy,Experienced appliance repair technician available for residential and commercial work.
+W0116,Anahi Kulkarni,Mechanic,4.0,61,780,22,+918914076272,Karnataka,Hubballi,"Bengali, Tamil, Hindi",Bank Transfer,Busy,Experienced mechanic available for residential and commercial work.
+W0117,Aarna Gulati,Plumber,3.8,489,632,25,+916589418977,Madhya Pradesh,Indore,"Tamil, Telugu",UPI,Available,Experienced plumber available for residential and commercial work.
+W0118,Pihu Cheema,TV Repair Technician,3.7,277,671,17,+918399699438,West Bengal,Siliguri,"Telugu, English, Marathi",UPI,Busy,Experienced tv repair technician available for residential and commercial work.
+W0119,Kiaan Issac,Carpenter,4.8,299,1079,19,+917736983049,Maharashtra,Pune,"Kannada, Tamil, Hindi","UPI, Cash",Available,Experienced carpenter available for residential and commercial work.
+W0120,Ahana  Mann,Appliance Repair Technician,4.2,358,941,3,+917875662813,Delhi,New Delhi,Marathi,"UPI, Cash",Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0121,Kimaya Bandi,Carpenter,4.1,163,895,8,+917430518844,Uttar Pradesh,Noida,English,UPI,Available Today,Experienced carpenter available for residential and commercial work.
+W0122,Nirvi Tandon,Housekeeper,4.0,495,502,8,+916441542090,Telangana,Hyderabad,Tamil,Bank Transfer,Available,Experienced housekeeper available for residential and commercial work.
+W0123,Eva Rama,Carpenter,3.8,400,1486,16,+917992663260,Madhya Pradesh,Indore,"Bengali, Telugu, Kannada",Cash,Available,Experienced carpenter available for residential and commercial work.
+W0124,Aniruddh Ravel,Solar Panel Technician,4.2,160,762,19,+916241257421,West Bengal,Kolkata,"Punjabi, English",Cash,Busy,Experienced solar panel technician available for residential and commercial work.
+W0125,Purab Mahajan,Electrician,4.1,151,357,21,+919711925630,West Bengal,Kolkata,Punjabi,"UPI, Cash",Busy,Experienced electrician available for residential and commercial work.
+W0126,Shalv Sunder,Water Purifier Technician,4.9,297,585,11,+918598480273,Madhya Pradesh,Indore,"Punjabi, Gujarati",UPI,Busy,Experienced water purifier technician available for residential and commercial work.
+W0127,Sana Gill,Carpenter,4.3,93,280,8,+919039212077,Gujarat,Surat,"Bengali, Gujarati",Cash,Busy,Experienced carpenter available for residential and commercial work.
+W0128,Riaan Jhaveri,Pest Control Technician,4.7,352,1424,2,+919389703852,Tamil Nadu,Coimbatore,"Telugu, English, Gujarati",UPI,Available Today,Experienced pest control technician available for residential and commercial work.
+W0129,Vedika Gandhi,Welder,4.6,341,1434,5,+917431779064,Uttar Pradesh,Kanpur,Gujarati,Cash,Busy,Experienced welder available for residential and commercial work.
+W0130,Shayak Ramaswamy,Appliance Repair Technician,4.6,48,834,18,+917617825308,Uttar Pradesh,Lucknow,"Telugu, Gujarati, Punjabi",UPI,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0131,Saksham Kamdar,Housekeeper,3.5,163,569,7,+917467729242,Uttar Pradesh,Noida,"Marathi, Punjabi",Bank Transfer,Available,Experienced housekeeper available for residential and commercial work.
+W0132,Ira Seth,Mechanic,4.3,281,1278,2,+918842964443,Gujarat,Surat,"Gujarati, Kannada",Bank Transfer,Available,Experienced mechanic available for residential and commercial work.
+W0133,Yakshit Mammen,Appliance Repair Technician,4.7,89,1096,2,+917764624310,Rajasthan,Udaipur,"Marathi, Bengali",Cash,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0134,Darshit Bawa,Mobile Repair Technician,3.9,499,1160,7,+917579864877,West Bengal,Kolkata,"Bengali, Punjabi, Kannada",Cash,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0135,Rohan Korpal,TV Repair Technician,4.7,415,1438,5,+919749514711,Telangana,Warangal,"Hindi, Bengali",Cash,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0136,Vihaan Kara,CCTV Installer,4.8,150,371,25,+916688536251,Gujarat,Vadodara,"Bengali, Gujarati","UPI, Cash",Available,Experienced cctv installer available for residential and commercial work.
+W0137,Jivika Loke,Housekeeper,4.9,217,309,13,+918156104136,Karnataka,Mysuru,"Marathi, Kannada",UPI,Busy,Experienced housekeeper available for residential and commercial work.
+W0138,Taran Chand,Driver,4.9,434,886,5,+916590985753,Karnataka,Bengaluru,Tamil,"UPI, Cash",Available Today,Experienced driver available for residential and commercial work.
+W0139,Dhanuk Sangha,Solar Panel Technician,4.2,7,362,1,+917099184899,Rajasthan,Udaipur,Gujarati,"UPI, Cash",Available,Experienced solar panel technician available for residential and commercial work.
+W0140,Manikya Bera,Mason,3.7,127,1059,21,+919409770698,Tamil Nadu,Chennai,"Bengali, English, Hindi","UPI, Cash",Available Today,Experienced mason available for residential and commercial work.
+W0141,Elakshi Suresh,CCTV Installer,4.4,372,494,10,+917843567009,Telangana,Hyderabad,Telugu,Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0142,Raunak Zacharia,Carpenter,4.3,189,338,17,+918336814230,Uttar Pradesh,Lucknow,"Punjabi, Hindi, Marathi","UPI, Cash",Available,Experienced carpenter available for residential and commercial work.
+W0143,Zara Sabharwal,Welder,4.6,187,338,12,+917035627944,Uttar Pradesh,Kanpur,"English, Telugu, Punjabi",UPI,Busy,Experienced welder available for residential and commercial work.
+W0144,Manikya Luthra,TV Repair Technician,4.7,355,1151,23,+918055275742,Telangana,Warangal,"Gujarati, Punjabi, Hindi","UPI, Cash",Available,Experienced tv repair technician available for residential and commercial work.
+W0145,Madhav Ramakrishnan,Electrician,4.7,458,285,11,+917331765783,Tamil Nadu,Chennai,"Kannada, Bengali, Gujarati",UPI,Available Today,Experienced electrician available for residential and commercial work.
+W0146,Jivika Bhagat,Housekeeper,4.8,29,879,9,+916534616074,Karnataka,Mysuru,"Kannada, Punjabi","UPI, Cash",Busy,Experienced housekeeper available for residential and commercial work.
+W0147,Hansh Ben,Solar Panel Technician,4.5,193,1263,9,+919440904834,Delhi,New Delhi,Kannada,UPI,Busy,Experienced solar panel technician available for residential and commercial work.
+W0148,Umang Bath,Mobile Repair Technician,3.9,57,363,11,+918838626452,Madhya Pradesh,Indore,"Tamil, Bengali","UPI, Cash",Available,Experienced mobile repair technician available for residential and commercial work.
+W0149,Shamik Mani,Water Purifier Technician,3.6,450,922,20,+917868055235,West Bengal,Siliguri,"Hindi, English","UPI, Cash",Busy,Experienced water purifier technician available for residential and commercial work.
+W0150,Yuvraj  Deol,Plumber,3.7,316,1097,2,+916542153826,Telangana,Hyderabad,Marathi,Cash,Busy,Experienced plumber available for residential and commercial work.
+W0151,Tanya Devi,Electrician,4.4,352,1121,12,+917597785308,Uttar Pradesh,Noida,"English, Gujarati",Cash,Busy,Experienced electrician available for residential and commercial work.
+W0152,Diya Chander,Painter,4.9,18,581,16,+918223699008,Delhi,New Delhi,"Punjabi, English",Cash,Busy,Experienced painter available for residential and commercial work.
+W0153,Aarush Mall,Appliance Repair Technician,3.9,474,1205,7,+916526723719,West Bengal,Kolkata,English,"UPI, Cash",Available,Experienced appliance repair technician available for residential and commercial work.
+W0154,Ojas Yogi,Driver,4.5,368,332,18,+918328608265,West Bengal,Kolkata,"Tamil, Gujarati",Bank Transfer,Busy,Experienced driver available for residential and commercial work.
+W0155,Madhav Sankaran,Mechanic,5.0,410,484,8,+919394626443,Telangana,Hyderabad,"Hindi, Telugu",Cash,Busy,Experienced mechanic available for residential and commercial work.
+W0156,Samarth Khanna,Appliance Repair Technician,4.8,38,833,13,+919079206353,Telangana,Hyderabad,"Bengali, Kannada, Punjabi","UPI, Cash",Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0157,Jivin Divan,Driver,4.5,235,1154,22,+918222044336,Gujarat,Ahmedabad,"Gujarati, Punjabi",Bank Transfer,Busy,Experienced driver available for residential and commercial work.
+W0158,Elakshi Dara,Mechanic,4.3,160,537,6,+917385817349,Telangana,Hyderabad,"Marathi, Telugu, Tamil",Cash,Available,Experienced mechanic available for residential and commercial work.
+W0159,Vidur Randhawa,Mobile Repair Technician,3.9,325,820,20,+918291270703,Tamil Nadu,Chennai,Punjabi,Bank Transfer,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0160,Hunar Kala,TV Repair Technician,4.5,373,1439,11,+919618638812,Madhya Pradesh,Indore,"Hindi, Punjabi, Bengali",UPI,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0161,Onkar Andra,Refrigerator Technician,4.7,218,1465,21,+916130076950,Madhya Pradesh,Bhopal,"Punjabi, Tamil",Cash,Busy,Experienced refrigerator technician available for residential and commercial work.
+W0162,Aniruddh Handa,Gardener,3.9,42,322,6,+917888091245,Karnataka,Hubballi,"Bengali, Punjabi",Bank Transfer,Busy,Experienced gardener available for residential and commercial work.
+W0163,Mishti Singh,Driver,4.8,168,907,13,+916561636336,Madhya Pradesh,Indore,"Punjabi, English",Cash,Available,Experienced driver available for residential and commercial work.
+W0164,Kartik Dutt,Welder,4.2,77,398,2,+917246451043,West Bengal,Kolkata,"Kannada, Marathi",Bank Transfer,Busy,Experienced welder available for residential and commercial work.
+W0165,Ryan Srivastava,Refrigerator Technician,4.6,260,1254,15,+918142156616,Madhya Pradesh,Bhopal,"Bengali, Hindi",UPI,Busy,Experienced refrigerator technician available for residential and commercial work.
+W0166,Shalv Din,Painter,3.8,185,299,2,+917208416260,Telangana,Warangal,"Bengali, Tamil",UPI,Available,Experienced painter available for residential and commercial work.
+W0167,Tarini Ramakrishnan,Welder,4.6,396,1025,12,+916194314620,Uttar Pradesh,Lucknow,"Hindi, Marathi",Cash,Available Today,Experienced welder available for residential and commercial work.
+W0168,Shlok Srinivasan,Gardener,4.3,396,1326,9,+919544685115,Tamil Nadu,Chennai,"English, Gujarati, Hindi","UPI, Cash",Busy,Experienced gardener available for residential and commercial work.
+W0169,Jivika Kota,AC Technician,3.8,265,1022,17,+916172893522,Delhi,New Delhi,Hindi,Bank Transfer,Available Today,Experienced ac technician available for residential and commercial work.
+W0170,Adah Raman,CCTV Installer,4.2,315,1255,5,+917408602588,Delhi,New Delhi,"Telugu, Gujarati, Marathi",Cash,Available Today,Experienced cctv installer available for residential and commercial work.
+W0171,Zain Dube,Computer Repair Technician,3.9,422,234,12,+917422663210,Delhi,New Delhi,"English, Kannada, Tamil",Cash,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0172,Eshani Srinivas,Solar Panel Technician,3.9,340,1384,19,+916977290717,Maharashtra,Nagpur,"Hindi, Bengali, English","UPI, Cash",Available,Experienced solar panel technician available for residential and commercial work.
+W0173,Adira Sodhi,Computer Repair Technician,4.9,61,590,1,+917894246230,Karnataka,Bengaluru,"Kannada, Gujarati","UPI, Cash",Available Today,Experienced computer repair technician available for residential and commercial work.
+W0174,Madhup Ray,CCTV Installer,4.7,476,1165,24,+919124168227,Karnataka,Mysuru,Gujarati,Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0175,Ishaan Butala,CCTV Installer,4.1,494,554,15,+919917543432,Delhi,New Delhi,"Telugu, Punjabi, Bengali",Cash,Available Today,Experienced cctv installer available for residential and commercial work.
+W0176,Bhavin Badal,Painter,3.9,157,660,10,+919312168268,West Bengal,Kolkata,"Marathi, Bengali",Cash,Busy,Experienced painter available for residential and commercial work.
+W0177,Saksham Bahl,Mason,3.7,351,1312,13,+919847261858,Delhi,New Delhi,"Telugu, Gujarati",Cash,Available,Experienced mason available for residential and commercial work.
+W0178,Zoya Bhargava,Carpenter,4.0,231,725,24,+918057629778,Tamil Nadu,Madurai,Marathi,Cash,Available Today,Experienced carpenter available for residential and commercial work.
+W0179,Aarav Seshadri,Mechanic,4.4,305,690,8,+916218035843,Tamil Nadu,Chennai,"Punjabi, Marathi, Telugu",Bank Transfer,Available,Experienced mechanic available for residential and commercial work.
+W0180,Ranbir Chadha,Driver,4.6,56,481,1,+918363746243,Gujarat,Surat,Kannada,"UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0181,Urvi Bose,Driver,3.9,35,383,21,+918465883999,Karnataka,Mysuru,Punjabi,UPI,Available,Experienced driver available for residential and commercial work.
+W0182,Hridaan Ramaswamy,Electrician,5.0,208,1214,6,+919216944250,Uttar Pradesh,Lucknow,"Hindi, Punjabi",Cash,Available Today,Experienced electrician available for residential and commercial work.
+W0183,Vihaan Edwin,Driver,3.9,333,1312,17,+918121337685,Madhya Pradesh,Indore,Punjabi,"UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0184,Adira Bajwa,Driver,3.7,239,726,23,+916799718923,Karnataka,Bengaluru,Telugu,Cash,Available Today,Experienced driver available for residential and commercial work.
+W0185,Urvi Sastry,Appliance Repair Technician,4.8,464,1030,14,+918213113588,Karnataka,Bengaluru,"English, Kannada",UPI,Available,Experienced appliance repair technician available for residential and commercial work.
+W0186,Aniruddh Contractor,Driver,4.9,8,734,13,+917011556076,Rajasthan,Jodhpur,"Tamil, Telugu",Cash,Available Today,Experienced driver available for residential and commercial work.
+W0187,Kabir Brar,Welder,4.5,359,683,2,+918868119543,Madhya Pradesh,Indore,Bengali,Cash,Available,Experienced welder available for residential and commercial work.
+W0188,Sumer Tak,CCTV Installer,4.9,459,836,23,+916504296774,Uttar Pradesh,Noida,"Tamil, Telugu, Punjabi",Bank Transfer,Available,Experienced cctv installer available for residential and commercial work.
+W0189,Indranil Chandra,AC Technician,4.2,315,965,14,+919014812471,Rajasthan,Jodhpur,"Bengali, Marathi, Kannada",Bank Transfer,Available Today,Experienced ac technician available for residential and commercial work.
+W0190,Advika Sundaram,CCTV Installer,4.2,365,940,3,+919939536009,Madhya Pradesh,Indore,"English, Hindi, Kannada",Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0191,Ishaan Bajwa,TV Repair Technician,4.0,271,1104,4,+918921845810,Telangana,Hyderabad,Bengali,UPI,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0192,Rati Bhatnagar,Water Purifier Technician,3.7,217,1135,19,+916247977570,West Bengal,Kolkata,"Bengali, Tamil, Telugu",UPI,Busy,Experienced water purifier technician available for residential and commercial work.
+W0193,Indrajit Sule,Refrigerator Technician,4.4,28,1067,12,+919008130163,Tamil Nadu,Chennai,Punjabi,UPI,Available,Experienced refrigerator technician available for residential and commercial work.
+W0194,Saira Dutt,Mason,4.1,398,477,25,+918755328890,West Bengal,Kolkata,"Kannada, Telugu, Marathi","UPI, Cash",Busy,Experienced mason available for residential and commercial work.
+W0195,Shray Iyengar,Mobile Repair Technician,3.7,445,912,4,+916766538381,Uttar Pradesh,Lucknow,"Kannada, Gujarati, Telugu",Bank Transfer,Available,Experienced mobile repair technician available for residential and commercial work.
+W0196,Gokul Dyal,Water Purifier Technician,4.5,283,1068,18,+917628980027,Maharashtra,Pune,Marathi,"UPI, Cash",Busy,Experienced water purifier technician available for residential and commercial work.
+W0197,Hansh Sathe,Refrigerator Technician,4.9,376,431,2,+919476682312,Rajasthan,Jodhpur,"Kannada, Hindi, English",Bank Transfer,Available,Experienced refrigerator technician available for residential and commercial work.
+W0198,Bhavin Barad,Electrician,4.2,349,299,8,+919180599722,Gujarat,Vadodara,Kannada,"UPI, Cash",Available,Experienced electrician available for residential and commercial work.
+W0199,Samiha Dua,Electrician,3.7,153,679,24,+918474375067,Telangana,Hyderabad,"Telugu, Marathi",Cash,Available,Experienced electrician available for residential and commercial work.
+W0200,Charvi Sachdev,Pest Control Technician,4.0,36,1340,19,+919778342396,Telangana,Hyderabad,"Gujarati, Kannada, Tamil","UPI, Cash",Available,Experienced pest control technician available for residential and commercial work.
+W0201,Vritika Edwin,CCTV Installer,4.0,218,1036,5,+917288011277,Delhi,New Delhi,"Gujarati, Bengali",Bank Transfer,Available,Experienced cctv installer available for residential and commercial work.
+W0202,Aniruddh Rajan,AC Technician,4.7,473,318,18,+917772436303,Tamil Nadu,Madurai,"Punjabi, Gujarati","UPI, Cash",Available,Experienced ac technician available for residential and commercial work.
+W0203,Taimur Ratti,Driver,4.5,477,1121,12,+916397129827,Tamil Nadu,Chennai,"Marathi, Hindi, Gujarati","UPI, Cash",Available Today,Experienced driver available for residential and commercial work.
+W0204,Pari Balay,Carpenter,3.8,394,1403,24,+918883858045,Madhya Pradesh,Indore,"Marathi, Bengali, English",Cash,Busy,Experienced carpenter available for residential and commercial work.
+W0205,Vidur Sem,Refrigerator Technician,4.9,65,1180,8,+918987692130,Maharashtra,Mumbai,"Marathi, Kannada, English",Cash,Busy,Experienced refrigerator technician available for residential and commercial work.
+W0206,Ojas Dugal,Mobile Repair Technician,4.5,162,735,12,+918202530266,Uttar Pradesh,Kanpur,"Bengali, English","UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0207,Devansh Chakrabarti,Driver,4.1,293,653,24,+916626733282,Karnataka,Mysuru,Tamil,"UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0208,Hazel Kota,Driver,3.8,296,703,16,+918364991672,Rajasthan,Jaipur,"Telugu, Tamil, Kannada","UPI, Cash",Available Today,Experienced driver available for residential and commercial work.
+W0209,Reyansh Deo,TV Repair Technician,4.6,185,546,5,+919093723050,West Bengal,Siliguri,"Bengali, Gujarati, Tamil",UPI,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0210,Siya Krishnan,Electrician,4.6,216,481,21,+916993998848,Maharashtra,Mumbai,Gujarati,UPI,Available,Experienced electrician available for residential and commercial work.
+W0211,Vritika Chanda,Housekeeper,3.6,331,1462,16,+918831604672,Telangana,Warangal,"Hindi, Punjabi","UPI, Cash",Available,Experienced housekeeper available for residential and commercial work.
+W0212,Hiran Ram,Welder,4.3,151,235,17,+919492483651,Maharashtra,Nagpur,"Kannada, Gujarati, Hindi",UPI,Available Today,Experienced welder available for residential and commercial work.
+W0213,Vedika Karpe,Refrigerator Technician,4.4,134,925,9,+919414225544,Rajasthan,Jaipur,"English, Telugu","UPI, Cash",Busy,Experienced refrigerator technician available for residential and commercial work.
+W0214,Sahil Choudhary,Painter,3.9,428,365,21,+919686023201,Madhya Pradesh,Indore,"Hindi, English, Marathi","UPI, Cash",Busy,Experienced painter available for residential and commercial work.
+W0215,Nirvi Dugal,Electrician,4.5,364,550,3,+918146875428,Telangana,Warangal,"Telugu, English",UPI,Available,Experienced electrician available for residential and commercial work.
+W0216,Kismat Khatri,Computer Repair Technician,4.2,28,352,22,+919975356499,Karnataka,Hubballi,"Punjabi, Hindi",Bank Transfer,Busy,Experienced computer repair technician available for residential and commercial work.
+W0217,Inaaya  Ganesh,Computer Repair Technician,3.7,425,1015,3,+917285384455,Maharashtra,Mumbai,Marathi,"UPI, Cash",Available Today,Experienced computer repair technician available for residential and commercial work.
+W0218,Chirag Jha,Gardener,4.6,76,360,17,+919201711520,Telangana,Warangal,"Hindi, English","UPI, Cash",Available,Experienced gardener available for residential and commercial work.
+W0219,Madhav Ghosh,Appliance Repair Technician,4.7,493,1419,13,+919322393065,Gujarat,Surat,"Hindi, Tamil","UPI, Cash",Busy,Experienced appliance repair technician available for residential and commercial work.
+W0220,Veer Sunder,Mobile Repair Technician,4.9,226,580,22,+918516314486,Karnataka,Mysuru,"Kannada, English, Punjabi",Cash,Available,Experienced mobile repair technician available for residential and commercial work.
+W0221,Vivaan Gala,Welder,3.7,369,1498,5,+919176795294,Gujarat,Ahmedabad,"Telugu, Punjabi",UPI,Available,Experienced welder available for residential and commercial work.
+W0222,Mamooty Jani,Water Purifier Technician,4.0,143,409,5,+916374938761,Maharashtra,Pune,Kannada,"UPI, Cash",Available Today,Experienced water purifier technician available for residential and commercial work.
+W0223,Khushi Sawhney,Mechanic,3.5,186,1335,3,+918563771436,Telangana,Warangal,"Telugu, Kannada, Hindi",Cash,Busy,Experienced mechanic available for residential and commercial work.
+W0224,Neysa Sur,Mobile Repair Technician,4.9,129,1371,17,+916728353118,Uttar Pradesh,Lucknow,"Kannada, Gujarati, English",Cash,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0225,Miraya Wason,AC Technician,3.6,227,765,14,+917287426116,Tamil Nadu,Coimbatore,"English, Telugu",Cash,Available,Experienced ac technician available for residential and commercial work.
+W0226,Keya Vaidya,Water Purifier Technician,3.7,160,213,13,+917426862057,West Bengal,Kolkata,"Kannada, Telugu, Marathi",Cash,Busy,Experienced water purifier technician available for residential and commercial work.
+W0227,Mahika Chaudhry,Mason,4.0,490,611,16,+917349406919,Madhya Pradesh,Indore,Kannada,Cash,Busy,Experienced mason available for residential and commercial work.
+W0228,Urvi Dutt,Driver,4.1,423,1004,12,+916489144474,West Bengal,Kolkata,"Marathi, Gujarati, Telugu",UPI,Available Today,Experienced driver available for residential and commercial work.
+W0229,Rati Sane,Water Purifier Technician,4.7,430,341,14,+918890416998,West Bengal,Kolkata,"Gujarati, Tamil",Bank Transfer,Busy,Experienced water purifier technician available for residential and commercial work.
+W0230,Kabir Shenoy,Pest Control Technician,4.7,42,1119,20,+918058297345,Rajasthan,Udaipur,"Kannada, Punjabi, Tamil",UPI,Busy,Experienced pest control technician available for residential and commercial work.
+W0231,Piya Loyal,Mechanic,4.7,341,927,6,+918778843173,Telangana,Hyderabad,"Hindi, Kannada, Bengali",Cash,Busy,Experienced mechanic available for residential and commercial work.
+W0232,Trisha Bhargava,Mechanic,3.9,266,1262,18,+918493307092,Gujarat,Ahmedabad,"Marathi, Bengali, Gujarati","UPI, Cash",Busy,Experienced mechanic available for residential and commercial work.
+W0233,Adah Uppal,Housekeeper,5.0,252,414,10,+917786600854,Madhya Pradesh,Indore,English,Bank Transfer,Busy,Experienced housekeeper available for residential and commercial work.
+W0234,Eva Jani,Water Purifier Technician,4.7,271,1189,12,+918045102506,Tamil Nadu,Coimbatore,Bengali,"UPI, Cash",Busy,Experienced water purifier technician available for residential and commercial work.
+W0235,Jiya Mander,Electrician,4.7,63,246,11,+918783009621,Gujarat,Surat,Gujarati,Bank Transfer,Available Today,Experienced electrician available for residential and commercial work.
+W0236,Kashvi Singh,TV Repair Technician,4.0,223,1146,8,+919426335013,Rajasthan,Udaipur,"Gujarati, Punjabi","UPI, Cash",Busy,Experienced tv repair technician available for residential and commercial work.
+W0237,Amira Dass,Appliance Repair Technician,4.8,235,1412,14,+917670036982,Maharashtra,Nagpur,Marathi,Bank Transfer,Busy,Experienced appliance repair technician available for residential and commercial work.
+W0238,Devansh Sangha,Mechanic,4.7,279,582,12,+917400094541,Gujarat,Vadodara,Bengali,UPI,Busy,Experienced mechanic available for residential and commercial work.
+W0239,Tiya Kar,Appliance Repair Technician,4.1,205,1402,4,+917494324956,West Bengal,Siliguri,"Bengali, Gujarati",Cash,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0240,Neysa Ranganathan,AC Technician,4.0,127,825,4,+916786170238,Madhya Pradesh,Indore,"Gujarati, Kannada","UPI, Cash",Available Today,Experienced ac technician available for residential and commercial work.
+W0241,Dhruv Madan,Gardener,4.1,254,1300,23,+919947766401,Rajasthan,Udaipur,"Gujarati, Punjabi, Marathi",Cash,Available,Experienced gardener available for residential and commercial work.
+W0242,Kaira Comar,Water Purifier Technician,4.4,448,935,1,+918081379485,Rajasthan,Jodhpur,Marathi,"UPI, Cash",Available Today,Experienced water purifier technician available for residential and commercial work.
+W0243,Piya Dhawan,Pest Control Technician,4.5,217,1109,16,+916718348264,Telangana,Warangal,Hindi,Bank Transfer,Busy,Experienced pest control technician available for residential and commercial work.
+W0244,Yakshit Sampath,Painter,4.3,91,1136,19,+919189091602,Maharashtra,Pune,"Punjabi, English",UPI,Busy,Experienced painter available for residential and commercial work.
+W0245,Miraya Kant,Mobile Repair Technician,4.7,26,1103,18,+916938630454,Telangana,Warangal,"English, Marathi",Cash,Available,Experienced mobile repair technician available for residential and commercial work.
+W0246,Vaibhav Basak,Housekeeper,4.8,49,1099,4,+919331312549,West Bengal,Siliguri,Marathi,Cash,Available Today,Experienced housekeeper available for residential and commercial work.
+W0247,Abram Tella,TV Repair Technician,4.4,406,623,7,+919459340599,Madhya Pradesh,Bhopal,Telugu,Cash,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0248,Kimaya Krishna,Driver,5.0,154,792,19,+917148229704,Telangana,Hyderabad,"English, Gujarati, Kannada","UPI, Cash",Available,Experienced driver available for residential and commercial work.
+W0249,Devansh Sem,AC Technician,4.6,72,711,5,+919055417606,Tamil Nadu,Madurai,"Marathi, Kannada","UPI, Cash",Available,Experienced ac technician available for residential and commercial work.
+W0250,Shanaya Sane,Pest Control Technician,4.1,43,1497,25,+916399839065,Madhya Pradesh,Bhopal,"Punjabi, Tamil",Cash,Busy,Experienced pest control technician available for residential and commercial work.
+W0251,Rania Ratti,Computer Repair Technician,3.5,401,390,24,+917969024554,West Bengal,Siliguri,"Telugu, English, Kannada","UPI, Cash",Available,Experienced computer repair technician available for residential and commercial work.
+W0252,Romil Kulkarni,Solar Panel Technician,3.9,429,780,11,+918350680837,Uttar Pradesh,Lucknow,"Gujarati, Bengali, Kannada",Cash,Available Today,Experienced solar panel technician available for residential and commercial work.
+W0253,Eva Char,Mechanic,4.4,433,1141,1,+916533594595,Maharashtra,Mumbai,Bengali,"UPI, Cash",Available,Experienced mechanic available for residential and commercial work.
+W0254,Hiran Ganguly,AC Technician,4.8,159,525,9,+916400892179,Uttar Pradesh,Lucknow,"Telugu, Tamil, Hindi",Cash,Available Today,Experienced ac technician available for residential and commercial work.
+W0255,Mehul Loke,Gardener,4.4,376,679,14,+918815287619,Rajasthan,Jaipur,English,UPI,Available,Experienced gardener available for residential and commercial work.
+W0256,Hazel Sengupta,AC Technician,4.4,270,1111,1,+916034628465,West Bengal,Kolkata,"Telugu, English, Kannada","UPI, Cash",Available Today,Experienced ac technician available for residential and commercial work.
+W0257,Ishaan Buch,Carpenter,3.8,50,409,4,+917345834347,Rajasthan,Jodhpur,"Tamil, Gujarati","UPI, Cash",Available,Experienced carpenter available for residential and commercial work.
+W0258,Urvi Bhardwaj,CCTV Installer,4.3,317,536,15,+917508339770,Rajasthan,Jaipur,"Marathi, Gujarati, Punjabi","UPI, Cash",Available,Experienced cctv installer available for residential and commercial work.
+W0259,Fateh Ahuja,AC Technician,4.6,306,986,12,+917844210621,Gujarat,Ahmedabad,"Gujarati, Marathi",Cash,Available Today,Experienced ac technician available for residential and commercial work.
+W0260,Elakshi Chand,Mobile Repair Technician,4.4,374,1444,10,+919345649167,Gujarat,Ahmedabad,"Hindi, Tamil, English",Bank Transfer,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0261,Prerak Bala,Electrician,4.7,411,690,16,+917657365938,Uttar Pradesh,Kanpur,Marathi,"UPI, Cash",Available Today,Experienced electrician available for residential and commercial work.
+W0262,Madhup Samra,CCTV Installer,4.8,11,939,11,+916566862173,Madhya Pradesh,Indore,"Kannada, Telugu",Bank Transfer,Busy,Experienced cctv installer available for residential and commercial work.
+W0263,Navya Choudhry,Computer Repair Technician,3.6,139,641,2,+919962447893,Gujarat,Ahmedabad,Kannada,Cash,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0264,Ira Mand,Pest Control Technician,4.6,47,1298,18,+918645901955,Telangana,Warangal,Tamil,UPI,Busy,Experienced pest control technician available for residential and commercial work.
+W0265,Myra Babu,Refrigerator Technician,5.0,84,1298,11,+917678179022,Gujarat,Vadodara,"English, Tamil, Telugu","UPI, Cash",Available Today,Experienced refrigerator technician available for residential and commercial work.
+W0266,Badal Bhalla,Painter,3.6,227,437,15,+918629794700,Karnataka,Bengaluru,"Hindi, Tamil, Telugu",Bank Transfer,Available,Experienced painter available for residential and commercial work.
+W0267,Gokul Bath,AC Technician,4.6,88,1216,12,+918246290917,Maharashtra,Nagpur,"Tamil, Gujarati, Bengali",Bank Transfer,Available Today,Experienced ac technician available for residential and commercial work.
+W0268,Ojas Dutta,Mechanic,4.7,20,886,14,+917168147769,Tamil Nadu,Madurai,"English, Tamil, Telugu",UPI,Busy,Experienced mechanic available for residential and commercial work.
+W0269,Ela Bhakta,Electrician,4.2,295,541,12,+916675641216,West Bengal,Siliguri,"English, Punjabi",Bank Transfer,Available Today,Experienced electrician available for residential and commercial work.
+W0270,Shaan Sama,Electrician,4.8,11,700,2,+918026213491,Telangana,Hyderabad,"Kannada, Gujarati",Bank Transfer,Available,Experienced electrician available for residential and commercial work.
+W0271,Shaan Bhavsar,Painter,4.0,218,855,9,+919547630097,Telangana,Warangal,Telugu,UPI,Available Today,Experienced painter available for residential and commercial work.
+W0272,Amani Kari,Painter,4.7,28,1021,3,+919766648694,Maharashtra,Mumbai,"Tamil, Punjabi",Cash,Available,Experienced painter available for residential and commercial work.
+W0273,Myra Chahal,Plumber,4.1,154,1354,10,+919176454660,Telangana,Warangal,"Marathi, Bengali, Gujarati","UPI, Cash",Available,Experienced plumber available for residential and commercial work.
+W0274,Jayan Rastogi,AC Technician,3.5,214,248,8,+918325918921,Telangana,Hyderabad,"Hindi, Telugu",UPI,Available Today,Experienced ac technician available for residential and commercial work.
+W0275,Ranbir Bhardwaj,Mason,3.7,276,687,14,+918113247935,Uttar Pradesh,Noida,Gujarati,Cash,Available,Experienced mason available for residential and commercial work.
+W0276,Piya Khalsa,CCTV Installer,4.1,463,962,15,+919212203479,Maharashtra,Mumbai,English,Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0277,Mishti Barad,Computer Repair Technician,4.4,227,467,8,+917252738994,Uttar Pradesh,Lucknow,"Telugu, Kannada",Cash,Busy,Experienced computer repair technician available for residential and commercial work.
+W0278,Umang Issac,Painter,3.6,108,478,25,+919307754533,West Bengal,Siliguri,"English, Gujarati, Hindi",Bank Transfer,Busy,Experienced painter available for residential and commercial work.
+W0279,Rati Kale,Pest Control Technician,3.7,188,625,15,+917324171556,West Bengal,Siliguri,"Tamil, English",UPI,Available,Experienced pest control technician available for residential and commercial work.
+W0280,Akarsh Lanka,Appliance Repair Technician,3.6,432,871,5,+916391756438,Tamil Nadu,Madurai,"Marathi, Telugu, Punjabi",UPI,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0281,Aarush Baral,TV Repair Technician,3.5,212,1126,18,+919212972476,Tamil Nadu,Coimbatore,"Marathi, English, Punjabi",UPI,Available,Experienced tv repair technician available for residential and commercial work.
+W0282,Ishaan Vyas,Electrician,4.7,118,467,7,+919537650376,Gujarat,Ahmedabad,"Telugu, English",Cash,Available,Experienced electrician available for residential and commercial work.
+W0283,Miraya Kamdar,Refrigerator Technician,4.9,232,463,3,+919887280261,Maharashtra,Mumbai,"English, Hindi","UPI, Cash",Available,Experienced refrigerator technician available for residential and commercial work.
+W0284,Stuvan Kala,Pest Control Technician,4.7,207,1216,1,+917643810426,Rajasthan,Udaipur,"Kannada, Gujarati, Bengali",Bank Transfer,Available,Experienced pest control technician available for residential and commercial work.
+W0285,Vaibhav Tank,Water Purifier Technician,4.8,22,1457,20,+918649896750,Tamil Nadu,Coimbatore,Tamil,"UPI, Cash",Busy,Experienced water purifier technician available for residential and commercial work.
+W0286,Advika Vala,Electrician,3.6,201,481,14,+916856664739,Telangana,Warangal,"Punjabi, Marathi, Telugu",UPI,Busy,Experienced electrician available for residential and commercial work.
+W0287,Rati Kala,Mobile Repair Technician,4.7,181,1358,17,+917381280467,Delhi,New Delhi,"Tamil, Gujarati",UPI,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0288,Emir Rastogi,Plumber,4.8,403,775,2,+919473141960,Madhya Pradesh,Indore,"Punjabi, Telugu",Bank Transfer,Available,Experienced plumber available for residential and commercial work.
+W0289,Rhea Bajwa,Painter,3.9,422,314,25,+916942365574,Gujarat,Ahmedabad,"Kannada, Telugu, Punjabi",Bank Transfer,Available,Experienced painter available for residential and commercial work.
+W0290,Samaira Krishna,Driver,4.7,362,934,19,+916121146276,Karnataka,Hubballi,"Telugu, Gujarati, Tamil",Bank Transfer,Busy,Experienced driver available for residential and commercial work.
+W0291,Hiran Shenoy,TV Repair Technician,4.2,51,315,8,+918584122005,Telangana,Warangal,Hindi,"UPI, Cash",Available,Experienced tv repair technician available for residential and commercial work.
+W0292,Navya Sandal,AC Technician,4.0,95,862,2,+916094115188,Delhi,New Delhi,Gujarati,UPI,Available Today,Experienced ac technician available for residential and commercial work.
+W0293,Ivana Golla,Housekeeper,4.6,344,1010,19,+916433929868,Delhi,New Delhi,"Tamil, Telugu",Bank Transfer,Available,Experienced housekeeper available for residential and commercial work.
+W0294,Ivana Tata,Solar Panel Technician,4.5,94,1350,23,+919820803827,Uttar Pradesh,Noida,"Telugu, Marathi, Punjabi",Bank Transfer,Busy,Experienced solar panel technician available for residential and commercial work.
+W0295,Samar Bera,Mason,3.7,378,203,23,+918460306692,Tamil Nadu,Madurai,"Hindi, Gujarati",Cash,Available Today,Experienced mason available for residential and commercial work.
+W0296,Miraan Dyal,Computer Repair Technician,3.7,259,488,11,+919201225242,Karnataka,Hubballi,Marathi,Cash,Busy,Experienced computer repair technician available for residential and commercial work.
+W0297,Yasmin Halder,Carpenter,4.7,348,887,15,+916048943839,Rajasthan,Udaipur,"Marathi, Punjabi",UPI,Busy,Experienced carpenter available for residential and commercial work.
+W0298,Neelofar Seshadri,Plumber,3.6,229,1059,6,+919799121913,Tamil Nadu,Chennai,"Bengali, Kannada",Cash,Available Today,Experienced plumber available for residential and commercial work.
+W0299,Mehul Zacharia,Solar Panel Technician,4.7,300,661,6,+917938264714,Uttar Pradesh,Lucknow,Hindi,Cash,Available,Experienced solar panel technician available for residential and commercial work.
+W0300,Ranbir Shan,Mechanic,3.6,92,968,6,+919143852021,Delhi,New Delhi,Punjabi,UPI,Busy,Experienced mechanic available for residential and commercial work.
+W0301,Piya Behl,Plumber,4.1,339,537,20,+919821461211,Madhya Pradesh,Bhopal,"Gujarati, Hindi",UPI,Busy,Experienced plumber available for residential and commercial work.
+W0302,Shanaya Shukla,Pest Control Technician,4.5,374,1306,9,+918837246354,Karnataka,Bengaluru,"Tamil, Marathi",UPI,Available,Experienced pest control technician available for residential and commercial work.
+W0303,Himmat Tandon,Mobile Repair Technician,4.8,83,311,12,+916016387764,Uttar Pradesh,Noida,"English, Tamil","UPI, Cash",Available,Experienced mobile repair technician available for residential and commercial work.
+W0304,Lagan Choudhry,Refrigerator Technician,3.8,154,367,16,+919623960580,Gujarat,Ahmedabad,Tamil,"UPI, Cash",Busy,Experienced refrigerator technician available for residential and commercial work.
+W0305,Ranbir Dash,Carpenter,4.5,203,578,12,+919803162153,West Bengal,Siliguri,"Telugu, Gujarati","UPI, Cash",Available,Experienced carpenter available for residential and commercial work.
+W0306,Aarav Choudhury,Water Purifier Technician,3.9,433,750,19,+916264739091,Tamil Nadu,Coimbatore,English,UPI,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0307,Tiya Mall,Computer Repair Technician,3.8,36,992,17,+917798011065,Delhi,New Delhi,"Bengali, Marathi, Punjabi",Cash,Available,Experienced computer repair technician available for residential and commercial work.
+W0308,Aradhya Mahajan,Electrician,4.3,466,1258,19,+918909990149,Uttar Pradesh,Noida,"Gujarati, English, Kannada","UPI, Cash",Available,Experienced electrician available for residential and commercial work.
+W0309,Zaina Lall,Refrigerator Technician,3.7,221,360,22,+917869999754,Rajasthan,Jaipur,Gujarati,Cash,Busy,Experienced refrigerator technician available for residential and commercial work.
+W0310,Hridaan Setty,Gardener,4.3,287,867,9,+918232043732,Gujarat,Ahmedabad,"Hindi, Kannada",UPI,Busy,Experienced gardener available for residential and commercial work.
+W0311,Vritika Savant,Computer Repair Technician,4.4,393,405,4,+918416708343,Rajasthan,Jaipur,Tamil,Cash,Busy,Experienced computer repair technician available for residential and commercial work.
+W0312,Anya Malhotra,Solar Panel Technician,4.4,247,276,6,+917182894728,Tamil Nadu,Coimbatore,"Gujarati, Kannada",UPI,Busy,Experienced solar panel technician available for residential and commercial work.
+W0313,Gokul Sankaran,Electrician,4.6,476,750,12,+916086899610,Delhi,New Delhi,"Tamil, Punjabi",Cash,Busy,Experienced electrician available for residential and commercial work.
+W0314,Kanav Toor,AC Technician,4.0,385,1107,25,+919546884199,Gujarat,Ahmedabad,"Tamil, Kannada",UPI,Available,Experienced ac technician available for residential and commercial work.
+W0315,Nirvaan Som,Pest Control Technician,4.6,393,1257,12,+919526242854,West Bengal,Kolkata,Punjabi,Bank Transfer,Available,Experienced pest control technician available for residential and commercial work.
+W0316,Tiya Chaudhuri,CCTV Installer,4.1,404,1273,19,+916124331395,Tamil Nadu,Madurai,Marathi,Bank Transfer,Available,Experienced cctv installer available for residential and commercial work.
+W0317,Saksham Balan,Water Purifier Technician,3.6,189,607,9,+917582059473,Karnataka,Bengaluru,"Punjabi, Kannada",UPI,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0318,Onkar Bassi,Housekeeper,4.2,233,563,16,+918520631487,Maharashtra,Mumbai,"Telugu, Punjabi, English",Cash,Available Today,Experienced housekeeper available for residential and commercial work.
+W0319,Sumer Som,Plumber,4.1,88,1371,25,+916920491305,Gujarat,Surat,Marathi,Bank Transfer,Busy,Experienced plumber available for residential and commercial work.
+W0320,Priyansh Dewan,Plumber,4.8,500,218,16,+919914929023,Uttar Pradesh,Noida,Gujarati,UPI,Available,Experienced plumber available for residential and commercial work.
+W0321,Yakshit Keer,Mason,4.6,368,763,14,+919846070092,Tamil Nadu,Madurai,"Telugu, Bengali",Cash,Available,Experienced mason available for residential and commercial work.
+W0322,Siya Kohli,CCTV Installer,4.7,208,1397,4,+916031557592,West Bengal,Siliguri,"Telugu, Tamil, Gujarati",UPI,Busy,Experienced cctv installer available for residential and commercial work.
+W0323,Rati Dey,Welder,4.5,446,767,9,+918818012241,Gujarat,Surat,"Tamil, Marathi, English",Bank Transfer,Available,Experienced welder available for residential and commercial work.
+W0324,Nayantara Jain,Driver,4.5,374,252,21,+918136200004,Madhya Pradesh,Bhopal,"Tamil, Kannada","UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0325,Tarini Sarraf,Computer Repair Technician,4.7,180,655,22,+918296240256,Maharashtra,Nagpur,"Bengali, Telugu, Tamil",Cash,Available,Experienced computer repair technician available for residential and commercial work.
+W0326,Advik Mane,Mason,3.6,70,729,24,+919471810472,Telangana,Hyderabad,"Gujarati, Telugu, Bengali",UPI,Available,Experienced mason available for residential and commercial work.
+W0327,Ivana Kant,Mason,4.1,459,878,12,+917119093377,Delhi,New Delhi,"Tamil, Bengali, Kannada",UPI,Busy,Experienced mason available for residential and commercial work.
+W0328,Diya Thaman,Computer Repair Technician,4.4,322,345,16,+919820055862,Maharashtra,Nagpur,Punjabi,UPI,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0329,Kartik Garde,Mason,4.1,450,508,5,+916860267314,Uttar Pradesh,Noida,"Kannada, Bengali",Bank Transfer,Busy,Experienced mason available for residential and commercial work.
+W0330,Zeeshan Sur,Solar Panel Technician,4.0,95,841,21,+916249166485,Rajasthan,Jaipur,Bengali,Cash,Available,Experienced solar panel technician available for residential and commercial work.
+W0331,Indranil Kar,TV Repair Technician,4.2,395,380,5,+918639170397,Rajasthan,Udaipur,"Kannada, Punjabi","UPI, Cash",Busy,Experienced tv repair technician available for residential and commercial work.
+W0332,Jayan Dave,Electrician,4.3,379,964,1,+919831138280,Uttar Pradesh,Lucknow,"Punjabi, Marathi",UPI,Available Today,Experienced electrician available for residential and commercial work.
+W0333,Hunar Issac,Painter,3.8,454,905,10,+916553753599,Maharashtra,Nagpur,Kannada,Cash,Available,Experienced painter available for residential and commercial work.
+W0334,Heer Ahuja,Mason,4.9,238,1265,20,+918251068157,Gujarat,Ahmedabad,"Kannada, Gujarati",Cash,Busy,Experienced mason available for residential and commercial work.
+W0335,Shaan Jaggi,TV Repair Technician,4.9,475,1026,1,+916981049082,Delhi,New Delhi,Gujarati,Bank Transfer,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0336,Eshani Walia,CCTV Installer,3.8,192,276,13,+919764728389,Maharashtra,Nagpur,"Tamil, Hindi, Punjabi",UPI,Available Today,Experienced cctv installer available for residential and commercial work.
+W0337,Anika Shan,Plumber,3.6,64,1053,15,+917633177480,Gujarat,Vadodara,Punjabi,Cash,Busy,Experienced plumber available for residential and commercial work.
+W0338,Renee Deo,Plumber,4.0,343,406,22,+918234711156,Rajasthan,Jaipur,"Gujarati, Kannada",UPI,Available Today,Experienced plumber available for residential and commercial work.
+W0339,Aarna Jhaveri,Mason,3.7,59,1219,7,+918615642860,Madhya Pradesh,Indore,Tamil,Bank Transfer,Busy,Experienced mason available for residential and commercial work.
+W0340,Damini Deol,TV Repair Technician,3.6,259,625,23,+918064435929,Uttar Pradesh,Kanpur,"Marathi, Hindi",UPI,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0341,Anaya Contractor,Computer Repair Technician,4.5,81,384,25,+918197757742,Gujarat,Ahmedabad,English,Cash,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0342,Pari Sani,Mason,3.9,30,404,6,+919754404646,Karnataka,Mysuru,Tamil,Cash,Available Today,Experienced mason available for residential and commercial work.
+W0343,Dhruv Hegde,Mechanic,3.6,393,293,1,+919659306670,Delhi,New Delhi,Gujarati,Cash,Busy,Experienced mechanic available for residential and commercial work.
+W0344,Nehmat Sunder,Carpenter,4.1,180,574,4,+917721326325,West Bengal,Siliguri,"Bengali, Tamil","UPI, Cash",Available Today,Experienced carpenter available for residential and commercial work.
+W0345,Purab Cherian,TV Repair Technician,3.7,361,320,6,+916445444412,West Bengal,Siliguri,"Bengali, Punjabi",Bank Transfer,Available Today,Experienced tv repair technician available for residential and commercial work.
+W0346,Mishti Mallick,Appliance Repair Technician,3.5,355,467,16,+919953079243,Uttar Pradesh,Kanpur,"English, Kannada","UPI, Cash",Available,Experienced appliance repair technician available for residential and commercial work.
+W0347,Romil Dora,Driver,3.5,449,1274,25,+919193839966,Gujarat,Surat,"Marathi, Telugu, Tamil",UPI,Busy,Experienced driver available for residential and commercial work.
+W0348,Uthkarsh Sarma,Housekeeper,4.5,333,988,5,+919603619372,Karnataka,Mysuru,"Hindi, Punjabi, Telugu",Bank Transfer,Available Today,Experienced housekeeper available for residential and commercial work.
+W0349,Biju Gulati,TV Repair Technician,3.6,256,856,8,+917421182517,West Bengal,Siliguri,"Hindi, Marathi","UPI, Cash",Busy,Experienced tv repair technician available for residential and commercial work.
+W0350,Reyansh Deo,Water Purifier Technician,4.2,298,1117,3,+919679022701,Karnataka,Bengaluru,"Bengali, Telugu",UPI,Busy,Experienced water purifier technician available for residential and commercial work.
+W0351,Mehul Ratta,Gardener,4.1,290,1324,1,+919547251133,Maharashtra,Mumbai,Tamil,Bank Transfer,Available Today,Experienced gardener available for residential and commercial work.
+W0352,Sahil Chander,Housekeeper,4.7,423,656,15,+917425811567,West Bengal,Siliguri,"Bengali, Telugu, Punjabi","UPI, Cash",Available,Experienced housekeeper available for residential and commercial work.
+W0353,Biju Raval,Painter,3.5,186,1497,10,+918352313121,Gujarat,Vadodara,"Telugu, English, Hindi",Bank Transfer,Busy,Experienced painter available for residential and commercial work.
+W0354,Yakshit Gola,Pest Control Technician,3.7,317,601,7,+916518599264,Rajasthan,Udaipur,"Marathi, Bengali",Bank Transfer,Available Today,Experienced pest control technician available for residential and commercial work.
+W0355,Jhanvi Dyal,Pest Control Technician,3.6,329,1405,4,+919316338263,Delhi,New Delhi,"Bengali, Gujarati","UPI, Cash",Available,Experienced pest control technician available for residential and commercial work.
+W0356,Jiya Ahuja,Mobile Repair Technician,4.9,434,1398,16,+919970142676,Telangana,Hyderabad,"Gujarati, Punjabi, Telugu",Bank Transfer,Available,Experienced mobile repair technician available for residential and commercial work.
+W0357,Charvi Sani,Appliance Repair Technician,4.4,169,1232,13,+917798151372,Uttar Pradesh,Noida,"Marathi, Tamil, Punjabi",Cash,Busy,Experienced appliance repair technician available for residential and commercial work.
+W0358,Mohanlal Toor,AC Technician,4.1,363,1249,10,+919620977113,West Bengal,Kolkata,"Punjabi, Telugu, Bengali",Bank Transfer,Available,Experienced ac technician available for residential and commercial work.
+W0359,Vardaniya Atwal,Mason,4.5,476,471,23,+918792099745,Karnataka,Hubballi,Punjabi,Cash,Available Today,Experienced mason available for residential and commercial work.
+W0360,Rohan Madan,Mobile Repair Technician,4.2,297,1054,22,+919212071708,Gujarat,Surat,"Tamil, Kannada, Bengali",UPI,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0361,Shayak Bedi,Gardener,3.7,348,315,7,+917146662918,Gujarat,Ahmedabad,Tamil,Cash,Available,Experienced gardener available for residential and commercial work.
+W0362,Shalv Deshmukh,Mason,3.8,282,266,12,+919496215976,Maharashtra,Nagpur,"English, Marathi","UPI, Cash",Available,Experienced mason available for residential and commercial work.
+W0363,Yakshit Badal,Electrician,4.9,203,1053,22,+917342838606,Telangana,Warangal,"Hindi, Punjabi, Telugu",Cash,Available,Experienced electrician available for residential and commercial work.
+W0364,Romil Dara,Painter,4.9,365,953,25,+918527095794,Madhya Pradesh,Bhopal,"Marathi, Punjabi, Gujarati","UPI, Cash",Available,Experienced painter available for residential and commercial work.
+W0365,Yuvaan Zacharia,TV Repair Technician,4.6,66,972,2,+917840427040,Gujarat,Ahmedabad,"Punjabi, Tamil",Bank Transfer,Available,Experienced tv repair technician available for residential and commercial work.
+W0366,Kiara Dhingra,Plumber,4.0,368,517,2,+916660150996,Madhya Pradesh,Bhopal,"Hindi, Tamil","UPI, Cash",Available Today,Experienced plumber available for residential and commercial work.
+W0367,Misha Desai,Carpenter,4.7,167,1276,8,+916789711774,Telangana,Warangal,"English, Gujarati, Marathi","UPI, Cash",Available,Experienced carpenter available for residential and commercial work.
+W0368,Madhup Chandran,Refrigerator Technician,4.5,174,938,10,+916938215334,Delhi,New Delhi,"Punjabi, Bengali, Tamil",UPI,Available,Experienced refrigerator technician available for residential and commercial work.
+W0369,Rhea Ratti,Painter,4.9,319,1472,8,+916171271484,Delhi,New Delhi,"Telugu, Kannada, Bengali",UPI,Busy,Experienced painter available for residential and commercial work.
+W0370,Vardaniya Srinivasan,Mason,3.5,269,967,17,+919448071630,Tamil Nadu,Madurai,"Bengali, Punjabi, Hindi",Cash,Available Today,Experienced mason available for residential and commercial work.
+W0371,Shanaya Chander,CCTV Installer,3.6,54,542,25,+918310584302,Karnataka,Mysuru,"Hindi, English, Bengali",Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0372,Ryan Sami,Refrigerator Technician,4.3,364,1091,21,+919507933204,Uttar Pradesh,Lucknow,Gujarati,UPI,Busy,Experienced refrigerator technician available for residential and commercial work.
+W0373,Hazel Sheth,Carpenter,3.6,96,715,18,+916302546464,Delhi,New Delhi,"Marathi, Tamil, Punjabi","UPI, Cash",Busy,Experienced carpenter available for residential and commercial work.
+W0374,Mamooty D’Alia,Driver,3.5,349,442,18,+916025335682,Uttar Pradesh,Kanpur,"English, Hindi, Telugu",UPI,Busy,Experienced driver available for residential and commercial work.
+W0375,Taran Kade,Mason,4.7,159,1442,3,+917209108201,Telangana,Hyderabad,"Kannada, Punjabi",UPI,Busy,Experienced mason available for residential and commercial work.
+W0376,Jivin Rama,Painter,3.7,205,1317,10,+918723205427,Rajasthan,Udaipur,Tamil,Cash,Available,Experienced painter available for residential and commercial work.
+W0377,Aarush Sharaf,Mechanic,3.6,298,1421,13,+918307050488,Telangana,Hyderabad,"English, Tamil, Punjabi",Cash,Available,Experienced mechanic available for residential and commercial work.
+W0378,Neelofar Soman,CCTV Installer,3.7,99,652,20,+919585216937,Uttar Pradesh,Noida,"Marathi, English",Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0379,Bhavin Seth,Mobile Repair Technician,4.2,286,349,10,+918884866198,Madhya Pradesh,Indore,Tamil,UPI,Available,Experienced mobile repair technician available for residential and commercial work.
+W0380,Prerak Chaudhuri,Driver,4.0,348,680,4,+917224654701,Madhya Pradesh,Bhopal,"English, Marathi, Gujarati","UPI, Cash",Busy,Experienced driver available for residential and commercial work.
+W0381,Alia Ravi,Computer Repair Technician,3.7,295,946,11,+917839566253,Delhi,New Delhi,Hindi,Cash,Available,Experienced computer repair technician available for residential and commercial work.
+W0382,Saira Wagle,Pest Control Technician,3.9,189,475,22,+919148094176,Karnataka,Hubballi,"Bengali, Punjabi","UPI, Cash",Busy,Experienced pest control technician available for residential and commercial work.
+W0383,Ranbir Roy,Mobile Repair Technician,3.7,335,1442,3,+919615473387,Tamil Nadu,Coimbatore,"Gujarati, Marathi",Cash,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0384,Riaan Chopra,Carpenter,4.8,439,1238,21,+916133978190,Gujarat,Vadodara,"Kannada, Marathi, Hindi",Cash,Available Today,Experienced carpenter available for residential and commercial work.
+W0385,Heer Dewan,AC Technician,4.0,119,1407,24,+919681492019,Telangana,Warangal,"Gujarati, Bengali",UPI,Busy,Experienced ac technician available for residential and commercial work.
+W0386,Vaibhav Lanka,Painter,4.8,417,1457,22,+916712292620,Delhi,New Delhi,"Gujarati, Bengali, English",Bank Transfer,Available Today,Experienced painter available for residential and commercial work.
+W0387,Kiaan Shukla,Solar Panel Technician,4.9,25,648,25,+918094407076,Madhya Pradesh,Indore,English,Cash,Busy,Experienced solar panel technician available for residential and commercial work.
+W0388,Anika Gara,Refrigerator Technician,4.3,410,939,13,+918017235435,Karnataka,Bengaluru,"Hindi, Punjabi",Cash,Available,Experienced refrigerator technician available for residential and commercial work.
+W0389,Shamik Sharma,Welder,4.4,296,556,13,+918807514105,Telangana,Warangal,"Telugu, English",Cash,Busy,Experienced welder available for residential and commercial work.
+W0390,Ivana Agrawal,Gardener,4.0,449,906,16,+919404437849,Karnataka,Hubballi,"Hindi, Gujarati","UPI, Cash",Available,Experienced gardener available for residential and commercial work.
+W0391,Advik Saraf,CCTV Installer,4.5,113,507,6,+916675844672,Karnataka,Bengaluru,"English, Marathi","UPI, Cash",Busy,Experienced cctv installer available for residential and commercial work.
+W0392,Advik Grewal,Solar Panel Technician,4.2,307,530,21,+919579275417,Gujarat,Surat,"Hindi, Marathi",UPI,Available,Experienced solar panel technician available for residential and commercial work.
+W0393,Nirvi Ranganathan,AC Technician,4.4,25,1372,5,+916240140248,Madhya Pradesh,Indore,Tamil,Bank Transfer,Available Today,Experienced ac technician available for residential and commercial work.
+W0394,Siya Trivedi,Computer Repair Technician,4.5,454,780,3,+916930261655,Uttar Pradesh,Noida,"Bengali, Punjabi",Bank Transfer,Available,Experienced computer repair technician available for residential and commercial work.
+W0395,Khushi Dube,AC Technician,4.7,425,572,20,+918833169800,Uttar Pradesh,Noida,"Tamil, Gujarati, Telugu",Cash,Busy,Experienced ac technician available for residential and commercial work.
+W0396,Jiya Gandhi,Painter,4.1,72,422,1,+916869080406,Madhya Pradesh,Indore,"Punjabi, Kannada, Bengali",Bank Transfer,Available Today,Experienced painter available for residential and commercial work.
+W0397,Seher Gaba,Solar Panel Technician,4.9,312,279,18,+918161782487,Gujarat,Ahmedabad,English,"UPI, Cash",Available Today,Experienced solar panel technician available for residential and commercial work.
+W0398,Anahita Arya,Mobile Repair Technician,4.7,464,1083,17,+917806824124,Rajasthan,Udaipur,"Hindi, Kannada",Bank Transfer,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0399,Reyansh Bhatt,Computer Repair Technician,4.7,469,1379,4,+917827463042,Uttar Pradesh,Kanpur,Tamil,"UPI, Cash",Available,Experienced computer repair technician available for residential and commercial work.
+W0400,Lakshay Bhatti,Appliance Repair Technician,4.8,214,727,7,+916023491105,Gujarat,Surat,"Hindi, English, Tamil",UPI,Busy,Experienced appliance repair technician available for residential and commercial work.
+W0401,Kabir Kothari,Driver,4.1,59,516,14,+918798497340,Karnataka,Hubballi,"Tamil, Punjabi, Kannada","UPI, Cash",Available Today,Experienced driver available for residential and commercial work.
+W0402,Pihu Sem,Gardener,4.6,216,1330,18,+918072183247,Delhi,New Delhi,Telugu,"UPI, Cash",Busy,Experienced gardener available for residential and commercial work.
+W0403,Azad Handa,Housekeeper,4.7,208,482,22,+916511469461,Tamil Nadu,Madurai,"Marathi, Bengali, Kannada",Bank Transfer,Available,Experienced housekeeper available for residential and commercial work.
+W0404,Tejas Das,Gardener,4.7,415,1327,20,+918993838759,Karnataka,Hubballi,"Hindi, Gujarati, Marathi",UPI,Available,Experienced gardener available for residential and commercial work.
+W0405,Riaan Reddy,Appliance Repair Technician,4.2,37,738,8,+917592724766,Rajasthan,Jodhpur,Hindi,"UPI, Cash",Busy,Experienced appliance repair technician available for residential and commercial work.
+W0406,Kiara Tara,Appliance Repair Technician,3.6,401,558,21,+918123296018,Madhya Pradesh,Bhopal,"Hindi, Marathi",Cash,Available,Experienced appliance repair technician available for residential and commercial work.
+W0407,Raunak Ben,CCTV Installer,4.3,123,1459,6,+918894912687,Maharashtra,Nagpur,Telugu,Bank Transfer,Available Today,Experienced cctv installer available for residential and commercial work.
+W0408,Ryan Malhotra,Carpenter,5.0,404,1018,12,+918876176605,Maharashtra,Mumbai,"Kannada, Marathi",UPI,Available Today,Experienced carpenter available for residential and commercial work.
+W0409,Indrans Balan,Mobile Repair Technician,3.9,429,1345,19,+917495057700,Gujarat,Ahmedabad,"Tamil, Marathi",Bank Transfer,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0410,Shayak Sood,Plumber,3.9,213,1236,4,+918399300652,Uttar Pradesh,Noida,Punjabi,Cash,Busy,Experienced plumber available for residential and commercial work.
+W0411,Samar Banerjee,Welder,4.8,421,1377,9,+918981531341,Gujarat,Vadodara,"Kannada, Bengali",Bank Transfer,Busy,Experienced welder available for residential and commercial work.
+W0412,Nitya Kale,Computer Repair Technician,4.8,251,438,9,+916290143353,West Bengal,Siliguri,"Marathi, Punjabi",Cash,Busy,Experienced computer repair technician available for residential and commercial work.
+W0413,Akarsh Sehgal,Welder,3.9,52,1017,22,+919216020524,Delhi,New Delhi,"English, Gujarati","UPI, Cash",Busy,Experienced welder available for residential and commercial work.
+W0414,Samarth Sarin,Computer Repair Technician,3.9,489,589,16,+919165873005,Delhi,New Delhi,Marathi,Bank Transfer,Busy,Experienced computer repair technician available for residential and commercial work.
+W0415,Kashvi Chanda,Refrigerator Technician,4.8,433,1466,12,+916669995863,Karnataka,Bengaluru,English,UPI,Available Today,Experienced refrigerator technician available for residential and commercial work.
+W0416,Lakshay Ramesh,Mobile Repair Technician,4.9,439,1187,12,+918665746525,West Bengal,Kolkata,"Bengali, Tamil","UPI, Cash",Available,Experienced mobile repair technician available for residential and commercial work.
+W0417,Damini Din,Gardener,3.8,300,462,2,+918258016513,Telangana,Warangal,"Bengali, Hindi",Cash,Busy,Experienced gardener available for residential and commercial work.
+W0418,Ahana  Divan,Mechanic,4.5,240,846,23,+916036157653,Rajasthan,Jodhpur,Marathi,"UPI, Cash",Available Today,Experienced mechanic available for residential and commercial work.
+W0419,Prerak Khare,Housekeeper,4.4,137,583,18,+917128928014,Gujarat,Surat,Tamil,"UPI, Cash",Available Today,Experienced housekeeper available for residential and commercial work.
+W0420,Hiran Hans,TV Repair Technician,4.2,112,1058,23,+919230656215,Delhi,New Delhi,"Telugu, Kannada",Cash,Busy,Experienced tv repair technician available for residential and commercial work.
+W0421,Keya Chana,AC Technician,5.0,356,668,4,+919095878831,Rajasthan,Udaipur,"Marathi, Kannada","UPI, Cash",Available,Experienced ac technician available for residential and commercial work.
+W0422,Vaibhav Chokshi,AC Technician,4.2,9,561,14,+918145756342,Rajasthan,Udaipur,Punjabi,Cash,Busy,Experienced ac technician available for residential and commercial work.
+W0423,Ryan Seshadri,Mobile Repair Technician,4.8,29,1015,4,+918965860354,Tamil Nadu,Coimbatore,Hindi,Bank Transfer,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0424,Khushi Kant,Water Purifier Technician,4.6,138,939,12,+918406685070,West Bengal,Kolkata,"Tamil, Telugu, Hindi","UPI, Cash",Available,Experienced water purifier technician available for residential and commercial work.
+W0425,Nehmat Varty,Computer Repair Technician,4.4,337,1302,6,+919351402058,Delhi,New Delhi,"Telugu, Punjabi","UPI, Cash",Available Today,Experienced computer repair technician available for residential and commercial work.
+W0426,Kavya Buch,Gardener,4.4,242,1493,5,+919729138222,West Bengal,Kolkata,Telugu,"UPI, Cash",Available Today,Experienced gardener available for residential and commercial work.
+W0427,Ivan Vyas,Carpenter,3.6,180,667,11,+917360981688,Madhya Pradesh,Bhopal,"Tamil, Punjabi, Bengali","UPI, Cash",Busy,Experienced carpenter available for residential and commercial work.
+W0428,Dharmajan Rout,Computer Repair Technician,4.3,235,1047,6,+916789785197,West Bengal,Siliguri,Gujarati,Bank Transfer,Available Today,Experienced computer repair technician available for residential and commercial work.
+W0429,Fateh Chakrabarti,Carpenter,3.8,208,410,4,+916273986261,Tamil Nadu,Madurai,"Punjabi, Hindi",UPI,Busy,Experienced carpenter available for residential and commercial work.
+W0430,Nishith Trivedi,Mechanic,3.9,84,372,21,+919803070343,Telangana,Hyderabad,"Tamil, Marathi",Bank Transfer,Available Today,Experienced mechanic available for residential and commercial work.
+W0431,Seher Datta,AC Technician,3.7,434,549,1,+916150989488,Tamil Nadu,Coimbatore,"Telugu, Punjabi, Kannada","UPI, Cash",Busy,Experienced ac technician available for residential and commercial work.
+W0432,Mishti Chana,Mobile Repair Technician,4.2,490,1304,6,+918537599506,Telangana,Warangal,"Bengali, Kannada, Tamil",Cash,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0433,Kavya Chakrabarti,Carpenter,4.2,192,1044,9,+916668801732,West Bengal,Kolkata,"Hindi, Punjabi",Bank Transfer,Busy,Experienced carpenter available for residential and commercial work.
+W0434,Jayant Kapur,Mobile Repair Technician,3.5,477,1207,25,+918048987473,Tamil Nadu,Coimbatore,"Hindi, Kannada",Cash,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0435,Aniruddh Thakkar,Mobile Repair Technician,4.1,215,1348,14,+917695447268,Karnataka,Bengaluru,Gujarati,"UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0436,Purab Jain,Carpenter,4.1,127,1258,25,+919435798036,Karnataka,Mysuru,"Tamil, Punjabi, Telugu",Cash,Busy,Experienced carpenter available for residential and commercial work.
+W0437,Lakshay Ben,TV Repair Technician,3.7,61,1132,20,+917944620470,Karnataka,Bengaluru,"Bengali, Marathi",Cash,Available,Experienced tv repair technician available for residential and commercial work.
+W0438,Anika Kalita,Mobile Repair Technician,3.5,57,777,9,+916537039291,Rajasthan,Jaipur,"Bengali, Hindi, English",UPI,Available,Experienced mobile repair technician available for residential and commercial work.
+W0439,Inaaya  Dhingra,Refrigerator Technician,4.0,164,1220,12,+917991509618,Maharashtra,Pune,"Hindi, Telugu, Punjabi",Bank Transfer,Available,Experienced refrigerator technician available for residential and commercial work.
+W0440,Ritvik Sha,Carpenter,4.3,97,593,9,+919510065121,Tamil Nadu,Coimbatore,"Hindi, English",Bank Transfer,Busy,Experienced carpenter available for residential and commercial work.
+W0441,Vaibhav Sami,Electrician,3.8,381,392,17,+918860482054,West Bengal,Kolkata,Bengali,"UPI, Cash",Available Today,Experienced electrician available for residential and commercial work.
+W0442,Riya Virk,TV Repair Technician,4.4,26,1325,17,+916524593800,Tamil Nadu,Coimbatore,"Bengali, Tamil",Bank Transfer,Busy,Experienced tv repair technician available for residential and commercial work.
+W0443,Navya Chandra,Refrigerator Technician,5.0,125,1496,14,+917393774816,Maharashtra,Nagpur,Gujarati,Cash,Available Today,Experienced refrigerator technician available for residential and commercial work.
+W0444,Alia Goyal,Painter,3.5,26,1390,23,+918041272017,Gujarat,Surat,"Gujarati, Telugu, Kannada",UPI,Available,Experienced painter available for residential and commercial work.
+W0445,Badal Goda,Carpenter,4.5,178,1480,2,+916256732224,Rajasthan,Jodhpur,"Gujarati, English",Bank Transfer,Busy,Experienced carpenter available for residential and commercial work.
+W0446,Zeeshan Guha,Mobile Repair Technician,4.7,392,911,15,+919149022054,Karnataka,Mysuru,Hindi,"UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0447,Nitara Date,Electrician,4.2,229,1344,10,+918331025091,Rajasthan,Jodhpur,"Bengali, Marathi, Tamil",Bank Transfer,Available Today,Experienced electrician available for residential and commercial work.
+W0448,Vardaniya Wagle,Water Purifier Technician,3.9,430,1426,18,+916688669716,Delhi,New Delhi,Punjabi,Bank Transfer,Busy,Experienced water purifier technician available for residential and commercial work.
+W0449,Bhamini Varty,Mobile Repair Technician,4.1,5,1236,13,+919151036012,Tamil Nadu,Coimbatore,Hindi,Cash,Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0450,Kabir Bhatnagar,Carpenter,4.5,280,993,7,+918250862526,Karnataka,Mysuru,"Bengali, Gujarati, Tamil",Cash,Busy,Experienced carpenter available for residential and commercial work.
+W0451,Shaan Bhattacharyya,Driver,3.7,272,336,2,+919587128140,Uttar Pradesh,Noida,Gujarati,UPI,Available,Experienced driver available for residential and commercial work.
+W0452,Kismat Bhavsar,Refrigerator Technician,3.6,297,995,22,+918104145858,Gujarat,Surat,"Tamil, Hindi, Gujarati",Bank Transfer,Available Today,Experienced refrigerator technician available for residential and commercial work.
+W0453,Nirvaan Bobal,Refrigerator Technician,4.5,480,363,15,+919440354470,Gujarat,Ahmedabad,"Hindi, Telugu, Tamil","UPI, Cash",Busy,Experienced refrigerator technician available for residential and commercial work.
+W0454,Azad Kumer,Welder,4.3,380,344,10,+916334729865,Maharashtra,Nagpur,Punjabi,UPI,Available,Experienced welder available for residential and commercial work.
+W0455,Ira Sur,Gardener,3.8,274,709,19,+918685750629,Karnataka,Hubballi,Punjabi,"UPI, Cash",Available Today,Experienced gardener available for residential and commercial work.
+W0456,Aniruddh Sankar,Computer Repair Technician,4.0,239,1074,4,+916716440566,Gujarat,Vadodara,Punjabi,"UPI, Cash",Available Today,Experienced computer repair technician available for residential and commercial work.
+W0457,Adira Vohra,Mobile Repair Technician,5.0,231,921,11,+918362581359,Delhi,New Delhi,"Telugu, Kannada","UPI, Cash",Available Today,Experienced mobile repair technician available for residential and commercial work.
+W0458,Anahita Iyengar,Computer Repair Technician,4.3,197,1326,24,+917091304489,Delhi,New Delhi,"Bengali, Punjabi","UPI, Cash",Available,Experienced computer repair technician available for residential and commercial work.
+W0459,Baiju Goel,Appliance Repair Technician,3.5,74,818,1,+917289924514,Maharashtra,Pune,Marathi,Cash,Available,Experienced appliance repair technician available for residential and commercial work.
+W0460,Alisha Varkey,CCTV Installer,4.3,479,1370,5,+916404960131,Tamil Nadu,Madurai,Bengali,Cash,Available,Experienced cctv installer available for residential and commercial work.
+W0461,Anya Raval,Housekeeper,4.8,132,677,9,+919483537336,Rajasthan,Jodhpur,"English, Kannada",Bank Transfer,Available Today,Experienced housekeeper available for residential and commercial work.
+W0462,Damini Kala,Driver,4.7,93,1199,23,+919018708717,Gujarat,Vadodara,"English, Tamil, Hindi","UPI, Cash",Available,Experienced driver available for residential and commercial work.
+W0463,Lavanya Bobal,Housekeeper,4.8,227,1053,4,+919735704638,Maharashtra,Pune,Hindi,"UPI, Cash",Available,Experienced housekeeper available for residential and commercial work.
+W0464,Priyansh Barad,Electrician,4.0,294,506,11,+918157798468,Tamil Nadu,Madurai,"Marathi, Gujarati, Hindi","UPI, Cash",Busy,Experienced electrician available for residential and commercial work.
+W0465,Ela Chana,Painter,4.1,407,1007,5,+916567747634,Madhya Pradesh,Indore,"English, Bengali",UPI,Available Today,Experienced painter available for residential and commercial work.
+W0466,Aaryahi Ben,Carpenter,4.1,227,467,25,+916579265528,Uttar Pradesh,Kanpur,"Punjabi, Marathi","UPI, Cash",Busy,Experienced carpenter available for residential and commercial work.
+W0467,Kavya Dass,Mobile Repair Technician,4.4,381,1273,8,+917040735415,Madhya Pradesh,Indore,Tamil,"UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0468,Dishani Mammen,Mechanic,4.5,221,948,12,+916818147210,Madhya Pradesh,Indore,"Telugu, Hindi",Cash,Available,Experienced mechanic available for residential and commercial work.
+W0469,Samiha Master,Appliance Repair Technician,3.7,27,678,7,+918943595471,Delhi,New Delhi,"Gujarati, English",UPI,Available Today,Experienced appliance repair technician available for residential and commercial work.
+W0470,Aayush Kapadia,Appliance Repair Technician,4.9,449,789,1,+917474339313,Maharashtra,Mumbai,"English, Tamil, Marathi","UPI, Cash",Available,Experienced appliance repair technician available for residential and commercial work.
+W0471,Miraya Gara,Mobile Repair Technician,3.8,284,1271,25,+917110927658,Delhi,New Delhi,"Bengali, Gujarati, Telugu",UPI,Busy,Experienced mobile repair technician available for residential and commercial work.
+W0472,Jivika Uppal,Welder,3.8,150,611,23,+918654138501,Madhya Pradesh,Indore,"Hindi, Bengali",UPI,Available,Experienced welder available for residential and commercial work.
+W0473,Rohan Shroff,Welder,4.5,472,937,4,+916081940786,Uttar Pradesh,Noida,"Kannada, Marathi","UPI, Cash",Available Today,Experienced welder available for residential and commercial work.
+W0474,Rhea Johal,Solar Panel Technician,4.8,277,380,6,+916854162477,Gujarat,Surat,"Bengali, Hindi, Punjabi",Bank Transfer,Available Today,Experienced solar panel technician available for residential and commercial work.
+W0475,Kabir Dayal,Solar Panel Technician,4.1,85,237,12,+918939094899,Tamil Nadu,Coimbatore,"Telugu, Tamil",Bank Transfer,Available Today,Experienced solar panel technician available for residential and commercial work.
+W0476,Anay Dyal,Welder,4.8,460,260,18,+917203423402,Tamil Nadu,Chennai,Gujarati,Cash,Busy,Experienced welder available for residential and commercial work.
+W0477,Indrajit Khare,Gardener,4.3,352,1454,21,+918948595172,Rajasthan,Jaipur,Kannada,Bank Transfer,Available Today,Experienced gardener available for residential and commercial work.
+W0478,Vedika Bawa,Mason,4.9,173,1119,18,+916565956995,Rajasthan,Jodhpur,Gujarati,Bank Transfer,Available,Experienced mason available for residential and commercial work.
+W0479,Trisha Tandon,CCTV Installer,4.9,225,497,21,+918425987715,Tamil Nadu,Madurai,Telugu,UPI,Available Today,Experienced cctv installer available for residential and commercial work.
+W0480,Aayush Salvi,TV Repair Technician,4.0,455,498,24,+916126630005,Telangana,Hyderabad,"Kannada, Punjabi",Cash,Busy,Experienced tv repair technician available for residential and commercial work.
+W0481,Tara Kata,Refrigerator Technician,3.7,99,253,25,+918628440956,Tamil Nadu,Chennai,"Tamil, Marathi, Punjabi",Bank Transfer,Available,Experienced refrigerator technician available for residential and commercial work.
+W0482,Lakshit Srinivasan,Carpenter,4.5,249,474,17,+919634136054,Maharashtra,Pune,"Bengali, Telugu, English","UPI, Cash",Busy,Experienced carpenter available for residential and commercial work.
+W0483,Elakshi Khanna,TV Repair Technician,3.8,21,1036,25,+916064485730,West Bengal,Kolkata,"Kannada, Marathi",Bank Transfer,Available,Experienced tv repair technician available for residential and commercial work.
+W0484,Yuvraj  Thakur,Water Purifier Technician,4.8,255,865,15,+919812156793,Gujarat,Ahmedabad,Kannada,"UPI, Cash",Available,Experienced water purifier technician available for residential and commercial work.
+W0485,Biju Sibal,Driver,4.1,485,1371,20,+918302787027,Madhya Pradesh,Bhopal,"Hindi, English, Marathi","UPI, Cash",Available,Experienced driver available for residential and commercial work.
+W0486,Ishaan Hari,Mobile Repair Technician,4.1,381,280,18,+917663861118,Karnataka,Hubballi,"Hindi, Marathi, Gujarati","UPI, Cash",Busy,Experienced mobile repair technician available for residential and commercial work.
+W0487,Jayesh Din,Water Purifier Technician,3.7,155,1455,2,+918963325389,Tamil Nadu,Coimbatore,"Gujarati, Bengali, Kannada","UPI, Cash",Available,Experienced water purifier technician available for residential and commercial work.
+W0488,Piya Goda,TV Repair Technician,4.7,485,1319,5,+917688208703,Telangana,Hyderabad,"Telugu, Bengali",UPI,Available,Experienced tv repair technician available for residential and commercial work.
+W0489,Yasmin Butala,Water Purifier Technician,3.6,170,535,23,+919149337748,West Bengal,Kolkata,English,UPI,Available Today,Experienced water purifier technician available for residential and commercial work.
+W0490,Reyansh Grewal,Carpenter,4.3,201,1247,20,+916686763846,West Bengal,Siliguri,"Punjabi, Kannada",UPI,Available,Experienced carpenter available for residential and commercial work.
+W0491,Manikya Bali,TV Repair Technician,4.8,96,305,14,+917323117098,Delhi,New Delhi,"Bengali, Tamil",Bank Transfer,Available,Experienced tv repair technician available for residential and commercial work.
+W0492,Nitara Deol,Plumber,4.4,134,225,15,+918137294302,Rajasthan,Jaipur,"Punjabi, Hindi","UPI, Cash",Available,Experienced plumber available for residential and commercial work.
+W0493,Jayant Dhar,Solar Panel Technician,4.2,231,362,20,+918577418939,Karnataka,Hubballi,Marathi,Cash,Available Today,Experienced solar panel technician available for residential and commercial work.
+W0494,Anahita Bajwa,Electrician,3.8,33,914,2,+916624378340,Telangana,Hyderabad,Tamil,Cash,Available,Experienced electrician available for residential and commercial work.
+W0495,Neelofar Guha,Pest Control Technician,5.0,87,782,20,+918838649569,Maharashtra,Mumbai,"Punjabi, Gujarati, Marathi",Cash,Available,Experienced pest control technician available for residential and commercial work.
+W0496,Mannat Seshadri,Driver,4.1,199,338,25,+917835341895,Gujarat,Surat,"English, Tamil, Marathi",Bank Transfer,Available,Experienced driver available for residential and commercial work.
+W0497,Nehmat Dugar,CCTV Installer,4.1,112,628,20,+916249900899,Tamil Nadu,Coimbatore,Punjabi,UPI,Busy,Experienced cctv installer available for residential and commercial work.
+W0498,Anya Grewal,Pest Control Technician,4.4,167,731,17,+918470219008,Madhya Pradesh,Bhopal,"Telugu, Gujarati, Tamil","UPI, Cash",Available Today,Experienced pest control technician available for residential and commercial work.
+W0499,Misha Bath,TV Repair Technician,4.8,124,794,7,+916006789986,West Bengal,Siliguri,Hindi,"UPI, Cash",Available Today,Experienced tv repair technician available for residential and commercial work.
+W0500,Eshani Choudhary,Refrigerator Technician,4.7,217,1047,2,+917433626831,Gujarat,Vadodara,"Punjabi, Marathi",UPI,Available Today,Experienced refrigerator technician available for residential and commercial work.

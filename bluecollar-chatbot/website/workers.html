@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Find Workers — BlueCollar</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="brand"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="workers.html" class="active">Find Workers</a></li>
+    <li><a href="booking.html">Book Now</a></li>
+    <li><a href="dashboard-customer.html">My Bookings</a></li>
+    <li><a href="dashboard-worker.html">Worker Portal</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="#" class="btn btn-outline">Login</a>
+    <a href="#" class="btn btn-primary">Sign Up</a>
+  </div>
+</div></nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Find Skilled Workers</h1>
+    <p>Browse 50,000+ verified workers near you</p>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-bar">
+  <div class="filters-inner">
+    <input class="search-input" type="text" placeholder="🔍 Search workers..." id="search-inp" oninput="filterWorkers()"/>
+    <select class="filter-select" id="skill-filter" onchange="filterWorkers()">
+      <option value="">All Services</option>
+      <option>Plumber</option><option>Electrician</option><option>Carpenter</option>
+      <option>Cleaner</option><option>Painter</option><option>Mechanic</option>
+      <option>Cook</option><option>Driver</option><option>Gardener</option>
+    </select>
+    <select class="filter-select" id="rating-filter" onchange="filterWorkers()">
+      <option value="">Any Rating</option>
+      <option value="4.5">4.5+ Stars</option>
+      <option value="4.0">4.0+ Stars</option>
+    </select>
+    <select class="filter-select" id="price-filter" onchange="filterWorkers()">
+      <option value="">Any Price</option>
+      <option value="500">Under ₹500/hr</option>
+      <option value="400">Under ₹400/hr</option>
+    </select>
+    <select class="filter-select" id="sort-filter" onchange="filterWorkers()">
+      <option value="rating">Sort: Top Rated</option>
+      <option value="price">Sort: Lowest Price</option>
+      <option value="distance">Sort: Nearest</option>
+    </select>
+  </div>
+</div>
+
+<div class="container" style="padding-top:28px;padding-bottom:48px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <p id="result-count" style="font-size:14px;color:#6b7280"></p>
+  </div>
+  <div class="workers-grid" id="workers-grid"></div>
+</div>
+
+<footer class="footer"><div class="container">
+  <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+</div></footer>
+
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+<script>
+const WORKERS = [
+  {id:'W001',name:'Rajesh Kumar',skill:'Plumber',rating:4.9,price:500,distance:'800m',jobs:234,avatar:'👷',verified:true,badges:['Top Rated','Background Checked'],bio:'Expert in pipe fitting, leakage repair, bathroom plumbing. 8 years experience.'},
+  {id:'W002',name:'Priya Sharma',skill:'Electrician',rating:4.8,price:550,distance:'1.2km',jobs:189,avatar:'👷‍♀️',verified:true,badges:['Skill Tested','ID Verified'],bio:'Certified electrician. Wiring, fan installation, MCB repair.'},
+  {id:'W003',name:'Amit Singh',skill:'Carpenter',rating:4.7,price:600,distance:'2.1km',jobs:156,avatar:'🧑‍🔧',verified:true,badges:['ID Verified'],bio:'Furniture repair, door fitting, custom woodwork.'},
+  {id:'W004',name:'Sunita Devi',skill:'Cleaner',rating:4.8,price:300,distance:'500m',jobs:312,avatar:'👩',verified:true,badges:['Top Rated','Background Checked'],bio:'Deep cleaning, kitchen cleaning, bathroom sanitization.'},
+  {id:'W005',name:'Vikram Patel',skill:'Painter',rating:4.6,price:450,distance:'3.2km',jobs:98,avatar:'👨',verified:true,badges:['Skill Tested'],bio:'Interior & exterior painting. Wall putty, texture work.'},
+  {id:'W006',name:'Ravi Mehta',skill:'Mechanic',rating:4.9,price:700,distance:'1.8km',jobs:267,avatar:'🧑',verified:true,badges:['Top Rated','Background Checked'],bio:'Two-wheeler & four-wheeler repair. Engine, brakes, AC.'},
+  {id:'W007',name:'Kavita Rao',skill:'Cook',rating:4.7,price:400,distance:'900m',jobs:143,avatar:'👩‍🍳',verified:true,badges:['ID Verified'],bio:'North & South Indian cuisine. Tiffin service available.'},
+  {id:'W008',name:'Suresh Nair',skill:'Driver',rating:4.8,price:350,distance:'2.5km',jobs:201,avatar:'🧑‍💼',verified:true,badges:['Background Checked'],bio:'Licensed driver. Local & outstation trips. 10 years experience.'},
+  {id:'W009',name:'Mohan Das',skill:'Gardener',rating:4.5,price:350,distance:'4.1km',jobs:87,avatar:'👨‍🌾',verified:false,badges:['ID Verified'],bio:'Garden maintenance, plant care, lawn mowing.'},
+  {id:'W010',name:'Anita Gupta',skill:'Plumber',rating:4.6,price:450,distance:'1.5km',jobs:112,avatar:'👩‍🔧',verified:true,badges:['Skill Tested'],bio:'Specializes in bathroom renovation and pipe installation.'},
+  {id:'W011',name:'Deepak Joshi',skill:'Electrician',rating:4.7,price:500,distance:'2.8km',jobs:178,avatar:'👨‍🔧',verified:true,badges:['Top Rated'],bio:'Solar panel installation, inverter setup, home wiring.'},
+  {id:'W012',name:'Meena Kumari',skill:'Cleaner',rating:4.9,price:280,distance:'600m',jobs:389,avatar:'👩',verified:true,badges:['Top Rated','Background Checked'],bio:'Office & home cleaning. Sofa & carpet cleaning specialist.'},
+];
+
+let filtered = [...WORKERS];
+
+function filterWorkers() {
+  const search = document.getElementById('search-inp').value.toLowerCase();
+  const skill  = document.getElementById('skill-filter').value;
+  const rating = parseFloat(document.getElementById('rating-filter').value) || 0;
+  const price  = parseFloat(document.getElementById('price-filter').value) || 9999;
+  const sort   = document.getElementById('sort-filter').value;
+
+  filtered = WORKERS.filter(w =>
+    (!search || w.name.toLowerCase().includes(search) || w.skill.toLowerCase().includes(search)) &&
+    (!skill  || w.skill === skill) &&
+    w.rating >= rating &&
+    w.price  <= price
+  );
+
+  if (sort === 'rating')   filtered.sort((a,b) => b.rating - a.rating);
+  if (sort === 'price')    filtered.sort((a,b) => a.price - b.price);
+  if (sort === 'distance') filtered.sort((a,b) => parseFloat(a.distance) - parseFloat(b.distance));
+
+  render();
+}
+
+function render() {
+  document.getElementById('result-count').textContent = `Showing ${filtered.length} workers`;
+  document.getElementById('workers-grid').innerHTML = filtered.map(w => `
+    <div class="worker-card">
+      <div class="wc-header">
+        <div class="wc-avatar">${w.avatar}</div>
+        <div>
+          <div class="wc-name">${w.name} ${w.verified ? '✅' : ''}</div>
+          <div class="wc-skill">${w.skill} · 📍 ${w.distance}</div>
+          <div class="wc-rating">⭐ ${w.rating} · ${w.jobs} jobs</div>
+        </div>
+      </div>
+      <div class="wc-badges">
+        ${w.badges.map(b => `<span class="badge badge-purple">${b}</span>`).join('')}
+      </div>
+      <div class="wc-info">${w.bio}</div>
+      <div class="wc-price">₹${w.price}/hr</div>
+      <div class="wc-actions">
+        <a href="booking.html?worker=${w.id}" class="btn btn-primary btn-sm" style="flex:1;justify-content:center">📅 Book Now</a>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Tell me about ${w.name}')">💬 Ask AI</button>
+      </div>
+    </div>`).join('');
+}
+
+// Pre-select skill from URL
+const urlSkill = new URLSearchParams(location.search).get('skill');
+if (urlSkill) document.getElementById('skill-filter').value = urlSkill;
+filterWorkers();
+</script>
+</body>
+</html>

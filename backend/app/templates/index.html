@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueCollar — Enterprise AI-Powered Workforce Marketplace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #020617;
+      --color-primary: #6366f1;
+      --color-secondary: #a855f7;
+      --color-accent: #10b981;
+    }
+
+    /* ============ LIGHT THEME OVERRIDES ============ */
+    body.light-mode {
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    body.light-mode .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    }
+    body.light-mode .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(99, 102, 241, 0.12);
+      box-shadow: 0 8px 30px -10px rgba(99, 102, 241, 0.18);
+    }
+    body.light-mode .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.45);
+      box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.25);
+    }
+    body.light-mode .glass-input {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
+    body.light-mode .glow-overlay {
+      opacity: 0.35;
+    }
+    body.light-mode section {
+      background: none !important;
+    }
+    body.light-mode .text-slate-400,
+    body.light-mode .text-slate-500 {
+      color: #475569 !important;
+    }
+    body.light-mode .text-slate-300 {
+      color: #334155 !important;
+    }
+    body.light-mode .text-white {
+      color: #0f172a !important;
+    }
+    body.light-mode .bg-slate-900\/60,
+    body.light-mode .bg-slate-950\/40 {
+      background: rgba(241, 245, 249, 0.85) !important;
+    }
+    body.light-mode ::-webkit-scrollbar-track {
+      background: #e2e8f0;
+    }
+    body.light-mode ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+    }
+    /* Theme toggle button */
+    #theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(99,102,241,0.3);
+      background: rgba(99,102,241,0.08);
+      color: #818cf8;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.03em;
+    }
+    #theme-toggle:hover {
+      background: rgba(99,102,241,0.18);
+      border-color: rgba(99,102,241,0.55);
+      transform: scale(1.04);
+    }
+    #theme-toggle .toggle-track {
+      width: 34px;
+      height: 18px;
+      background: #334155;
+      border-radius: 99px;
+      position: relative;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+    body.light-mode #theme-toggle .toggle-track {
+      background: #6366f1;
+    }
+    #theme-toggle .toggle-knob {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+      transition: transform 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    body.light-mode #theme-toggle .toggle-knob {
+      transform: translateX(16px);
+    }
+    /* ============ END LIGHT THEME ============ */
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--color-bg);
+      color: #f8fafc;
+      overflow-x: hidden;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+    .font-sans-alt {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-nav {
+      background: rgba(2, 6, 23, 0.75);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.35s ease, border-color 0.35s ease;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 30px 60px -20px rgba(99, 102, 241, 0.2);
+    }
+    .glass-input {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+    .glass-input:focus-within {
+      border-color: rgba(99, 102, 241, 0.6);
+      box-shadow: 0 0 20px -5px rgba(99, 102, 241, 0.3);
+    }
+    .glow-overlay {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-12px) scale(1.02); }
+    }
+    .float-anim {
+      animation: float 5s ease-in-out infinite;
+    }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    .mic-pulse {
+      animation: pulse-ring 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+    .glow-text-indigo {
+      text-shadow: 0 0 25px rgba(99, 102, 241, 0.55);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 99px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white font-sans-alt">
+
+  <!-- Nav Background Glows -->
+  <div class="glow-overlay top-0 left-1/4"></div>
+  <div class="glow-overlay top-1/3 right-1/4"></div>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 font-extrabold text-2xl tracking-wide group font-sans-alt">
+        <span class="text-3xl bg-indigo-500/10 p-2.5 rounded-2xl border border-indigo-500/20 group-hover:scale-110 transition duration-300">🔧</span>
+        <span class="text-white font-extrabold tracking-tight">Blue<span class="text-indigo-400 group-hover:text-indigo-300 transition duration-200">Collar</span></span>
+        <span class="bg-indigo-500/15 text-indigo-300 text-[10px] uppercase px-3 py-1 rounded-full border border-indigo-500/20 font-mono font-bold tracking-widest">AI MARKETPLACE</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-400">
+        <a href="#services" class="hover:text-indigo-400 transition duration-200">Services</a>
+        <a href="#workers" class="hover:text-indigo-400 transition duration-200">Featured Workers</a>
+        <a href="/admin" class="hover:text-indigo-400 transition duration-200">Admin Node</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Multilingual Selector -->
+        <div class="relative group flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 px-4 py-2.5 rounded-xl border border-slate-800 transition text-sm font-semibold cursor-pointer">
+          <span class="text-indigo-400 text-base">🌐</span>
+          <span id="selected-lang" class="text-slate-200">English</span>
+          <svg class="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          <div class="absolute right-0 top-full mt-2 hidden group-hover:block bg-slate-900 border border-slate-800 rounded-xl p-2.5 shadow-2xl w-44 z-50 animate-slideup">
+            <button onclick="changeLanguage('English')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-indigo-400 hover:bg-slate-800 transition">English</button>
+            <button onclick="changeLanguage('Hindi')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Hindi (हिंदी)</button>
+            <button onclick="changeLanguage('Gujarati')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Gujarati (ગુજરાતી)</button>
+            <button onclick="changeLanguage('Punjabi')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Punjabi (ਪੰਜਾਬੀ)</button>
+            <button onclick="changeLanguage('Bengali')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Bengali (বাংলা)</button>
+            <button onclick="changeLanguage('Tamil')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Tamil (தமிழ்)</button>
+            <button onclick="changeLanguage('Telugu')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Telugu (తెలుగు)</button>
+            <button onclick="changeLanguage('Kannada')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Kannada (ಕನ್ನಡ)</button>
+            <button onclick="changeLanguage('Marathi')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-350 hover:bg-slate-800 transition">Marathi (मराठी)</button>
+          </div>
+        </div>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-label">Dark</span>
+          <div class="toggle-track">
+            <div class="toggle-knob"></div>
+          </div>
+        </button>
+
+        <a href="/customer" class="px-5 py-2.5 text-sm font-bold text-indigo-400 border border-indigo-500/30 rounded-xl hover:bg-indigo-950/40 hover:border-indigo-400 transition duration-300" id="nav-book-btn">
+          Book Service
+        </a>
+        <a href="/worker" class="hidden sm:inline-flex px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl hover:shadow-xl hover:shadow-indigo-500/20 hover:scale-[1.02] transition duration-300" id="nav-join-btn">
+          Join as Worker
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-48 pb-32 relative overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-950/30 via-slate-950 to-slate-950">
+    <div class="glow-overlay top-20 right-0 w-96 h-96"></div>
+    
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2 bg-indigo-500/10 text-indigo-300 px-4.5 py-2 rounded-full text-xs font-black border border-indigo-500/25 tracking-widest uppercase font-mono shadow-sm">
+            ✨ Regional Multilingual Voice Assistant Integration Enabled
+          </div>
+          
+          <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight font-sans-alt" id="hero-title">
+            Hire Skilled Workers<br>
+            <span class="gradient-text glow-text-indigo">Near You, Instantly</span>
+          </h1>
+          
+          <p class="text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl" id="hero-sub">
+            Connect with vetted plumbers, electricians, mechanics & professional experts. Evaluated dynamically by machine learning models and logged safely on-chain.
+          </p>
+
+          <!-- Voice Search Input Panel -->
+          <div class="glass-input p-3.5 rounded-3xl shadow-2xl max-w-2xl relative z-10">
+            <div class="flex items-center gap-3">
+              <span class="text-indigo-400 text-xl pl-2">🔍</span>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="What service do you need today?"
+                class="flex-1 bg-transparent outline-none text-slate-100 placeholder:text-slate-550 text-sm font-sans-alt"
+                onkeydown="if(event.key === 'Enter') executeSearch()"
+              />
+              <button
+                id="mic-btn"
+                onclick="startVoiceSearch()"
+                class="p-3 bg-slate-800/90 border border-slate-700 hover:bg-slate-700 hover:border-indigo-500/40 text-indigo-400 rounded-2xl transition duration-300 flex items-center justify-center"
+                title="Search by voice (Hindi / English)"
+              >
+                🎙️
+              </button>
+              <button
+                onclick="executeSearch()"
+                class="px-7 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-extrabold rounded-2xl shadow-lg transition duration-200 text-sm"
+                id="search-btn"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+
+          <!-- popular options -->
+          <div class="flex flex-wrap gap-2.5 items-center">
+            <span class="text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mr-2" id="popular-label">Popular Queries:</span>
+            <button onclick="quickSearch('Plumber')" class="px-4 py-2 bg-slate-900 hover:bg-indigo-950/40 hover:text-indigo-300 border border-slate-850 hover:border-indigo-500/20 rounded-2xl text-xs font-bold text-slate-400 transition">🔧 Plumber</button>
+            <button onclick="quickSearch('Electrician')" class="px-4 py-2 bg-slate-900 hover:bg-indigo-950/40 hover:text-indigo-300 border border-slate-850 hover:border-indigo-500/20 rounded-2xl text-xs font-bold text-slate-400 transition">⚡ Electrician</button>
+            <button onclick="quickSearch('Mechanic')" class="px-4 py-2 bg-slate-900 hover:bg-indigo-950/40 hover:text-indigo-300 border border-slate-850 hover:border-indigo-500/20 rounded-2xl text-xs font-bold text-slate-400 transition">🏍️ Mechanic</button>
+            <button onclick="window.location.href='/customer?emergency=true'" class="px-4.5 py-2 bg-red-950/30 text-red-400 hover:bg-red-900/20 border border-red-900/40 rounded-2xl text-xs font-black transition mic-pulse">🚨 Hyperlocal Emergency Mode</button>
+          </div>
+        </div>
+
+        <!-- Hero Premium Graphic Panel -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <div class="w-85 bg-slate-900/90 border border-slate-800 rounded-3xl p-6.5 shadow-2xl relative float-anim glass-card">
+            <div class="absolute -top-3.5 -right-3.5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-extrabold text-xs px-4 py-2 rounded-full border border-red-400 shadow-xl">
+              ⚡ Emergency Match
+            </div>
+            
+            <div class="border-b border-slate-800 pb-4 mb-4">
+              <h3 class="font-extrabold text-[11px] text-indigo-400 tracking-widest uppercase font-mono">⚡ Real-Time ML Dispatch Node</h3>
+              <p class="text-[10px] text-slate-500 mt-0.5">hyperlocal proximity verification active</p>
+            </div>
+            
+            <div class="bg-slate-950/80 border border-slate-900 rounded-2xl p-4.5 mb-4.5 flex items-center gap-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl shadow-md">👷</div>
+              <div class="flex-1">
+                <div class="font-bold text-sm text-slate-100 flex items-center gap-1.5 justify-between">
+                  <span>Veer Karpe</span>
+                  <span class="text-xs bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/20 font-mono">ID W0048</span>
+                </div>
+                <div class="text-xs text-slate-400 mt-0.5">Accredited Plumber • ★ 4.8</div>
+                <div class="flex items-center gap-1.5 mt-2">
+                  <span class="h-2 w-2 rounded-full bg-green-500 animate-ping"></span>
+                  <span class="text-[10px] text-green-400 font-extrabold uppercase tracking-wide">🟢 Available in Noida</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-4.5">
+              <div class="bg-slate-950/60 border border-slate-900 rounded-2xl p-3.5 text-center">
+                <div class="text-[9px] text-slate-550 font-bold uppercase tracking-wider">AI Proximity Match</div>
+                <div class="text-2xl font-black text-indigo-300 mt-1">98.4%</div>
+              </div>
+              <div class="bg-slate-950/60 border border-slate-900 rounded-2xl p-3.5 text-center">
+                <div class="text-[9px] text-slate-550 font-bold uppercase tracking-wider">Simulated Block ID</div>
+                <div class="text-xs font-mono text-slate-300 mt-2 font-bold break-all">#2847-VERIFIED</div>
+              </div>
+            </div>
+
+            <button onclick="window.location.href='/customer?search=Plumber'" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl text-xs font-extrabold shadow-lg transition">Inspect Match Analytics</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Marketplace Stats Ribbon -->
+  <div class="bg-slate-900/50 border-y border-slate-900 py-7">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-6 gap-6 text-center text-xs font-sans-alt">
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-indigo-400 text-lg">🛡️</span>
+        <span class="font-bold text-slate-300">NSDC Audited Profiles</span>
+      </div>
+      <div class="flex items-center justify-center gap-2 md:border-l md:border-slate-800">
+        <span class="text-indigo-400 text-lg">💳</span>
+        <span class="font-bold text-slate-300">Escrow Locked Payments</span>
+      </div>
+      <div class="flex items-center justify-center gap-2 md:border-l md:border-slate-800">
+        <span class="text-indigo-400 text-lg">🔗</span>
+        <span class="font-bold text-slate-300">Blockchain Integrity Ledgers</span>
+      </div>
+      <div class="flex items-center justify-center gap-2 md:border-l md:border-slate-800">
+        <span class="text-indigo-400 text-lg">🤖</span>
+        <span class="font-bold text-slate-300">ML price Index Matching</span>
+      </div>
+      <div class="flex items-center justify-center gap-2 md:border-l md:border-slate-800">
+        <span class="text-indigo-400 text-lg">💬</span>
+        <span class="font-bold text-slate-300">Instant AI translations</span>
+      </div>
+      <div class="flex items-center justify-center gap-2 md:border-l md:border-slate-800">
+        <span class="text-indigo-400 text-lg">📈</span>
+        <span class="font-bold text-slate-300">SVG performance metrics</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upgraded Multi-Service Switcher Categories Grid -->
+  <section id="services" class="py-28 bg-slate-950 border-t border-slate-900 relative">
+    <div class="glow-overlay bottom-0 left-0 w-80 h-80"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="max-w-2xl mx-auto mb-16 space-y-4">
+        <div class="text-indigo-400 text-xs font-black uppercase tracking-widest font-mono">Service Categories Switcher</div>
+        <h2 class="text-4xl font-extrabold font-sans-alt" id="categories-title">Explore 50+ Specialized Skills</h2>
+        <p class="text-slate-400 text-sm">Select any premium category node to view match indices, certified backgrounds, and dynamic evaluations.</p>
+      </div>
+
+      <!-- Custom interactive switcher filters -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <a href="/customer?search=Plumber" class="glass-card rounded-3xl p-7 text-center group">
+          <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🔧</div>
+          <div class="font-extrabold text-base text-slate-100">Home Plumbing</div>
+          <div class="text-[10px] font-mono text-indigo-400 font-extrabold uppercase tracking-wider mt-2.5">Plumbers • NSDC Verified</div>
+        </a>
+        <a href="/customer?search=Electrician" class="glass-card rounded-3xl p-7 text-center group">
+          <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">⚡</div>
+          <div class="font-extrabold text-base text-slate-100">Electrical Engineering</div>
+          <div class="text-[10px] font-mono text-indigo-400 font-extrabold uppercase tracking-wider mt-2.5">Electricians • Certified</div>
+        </a>
+        <a href="/customer?search=Mechanic" class="glass-card rounded-3xl p-7 text-center group">
+          <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🏍️</div>
+          <div class="font-extrabold text-base text-slate-100">Vehicle Mechanics</div>
+          <div class="text-[10px] font-mono text-indigo-400 font-extrabold uppercase tracking-wider mt-2.5">Motorbike & Car Services</div>
+        </a>
+        <a href="/customer?search=Carpenter" class="glass-card rounded-3xl p-7 text-center group">
+          <div class="text-5xl mb-4 group-hover:scale-110 transition duration-300">🪚</div>
+          <div class="font-extrabold text-base text-slate-100">Wood Carpentry</div>
+          <div class="text-[10px] font-mono text-indigo-400 font-extrabold uppercase tracking-wider mt-2.5">Furniture Craftsmen</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900/60 py-16 text-xs text-slate-500 text-center relative z-10">
+    <div class="max-w-7xl mx-auto px-6 space-y-4">
+      <div class="text-slate-400 font-bold text-sm">🔨 BlueCollar Premium Marketplace Console</div>
+      <p>Powered by FastAPI pure Python backend microservices and Llama-3 AI match reasoning. Created by Akarsh Chaturvedi.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Assistant Widget -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Toggle Button -->
+    <button onclick="toggleChat()" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition duration-300 border border-indigo-400 flex items-center justify-center gap-2.5 group">
+      <span class="text-xl">💬</span>
+      <span class="font-black text-xs uppercase tracking-wider max-w-0 overflow-hidden group-hover:max-w-28 transition-all duration-300 whitespace-nowrap">Sahayak AI</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chat-window" class="hidden bg-slate-900 border border-slate-800 w-85 md:w-100 h-[520px] rounded-3xl shadow-2xl mt-4 flex flex-col overflow-hidden animate-slideup">
+      <!-- Chat Header -->
+      <div class="bg-gradient-to-r from-indigo-950 to-purple-950 p-4 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl bg-indigo-500/10 p-2 rounded-2xl">🤖</span>
+          <div>
+            <h4 class="font-extrabold text-sm text-slate-100 flex items-center gap-1.5">Sahayak Cognitive Agent</h4>
+            <p class="text-[9px] text-indigo-400 font-extrabold uppercase tracking-wider font-mono">Multi-Turn RAG System</p>
+          </div>
+        </div>
+        <button onclick="toggleChat()" class="text-slate-400 hover:text-slate-200">✕</button>
+      </div>
+
+      <!-- Message History -->
+      <div id="chat-history" class="flex-1 p-4.5 space-y-4 overflow-y-auto bg-slate-950/60 text-xs leading-relaxed">
+        <div class="flex justify-start">
+          <div class="bg-slate-850 border border-slate-800/80 rounded-2xl rounded-bl-none px-4 py-3 text-slate-200">
+            👋 **Namaste! I am Sahayak, your advanced BlueCollar AI assistant.**<br><br>
+            Ask me to recommend workers, compare specific profiles, predict trade rates, or query platform safety rules!
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick reply suggestions -->
+      <div class="px-4 py-2 bg-slate-900/90 border-t border-slate-850 flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-none" id="chat-replies">
+        <button onclick="chatQuick('best plumber')" class="px-3 py-1.5 bg-slate-950 border border-slate-800 hover:border-indigo-500/30 text-indigo-400 rounded-lg text-[10px] font-bold transition">🔍 Plumbers</button>
+        <button onclick="chatQuick('compare W0048 and W0053')" class="px-3 py-1.5 bg-slate-950 border border-slate-800 hover:border-indigo-500/30 text-indigo-400 rounded-lg text-[10px] font-bold transition">⚖️ Compare Proximity</button>
+        <button onclick="chatQuick('cost of electrician')" class="px-3 py-1.5 bg-slate-950 border border-slate-800 hover:border-indigo-500/30 text-indigo-400 rounded-lg text-[10px] font-bold transition">📊 Electrician Rates</button>
+        <button onclick="chatQuick('cancellation policy')" class="px-3 py-1.5 bg-slate-950 border border-slate-800 hover:border-indigo-500/30 text-indigo-400 rounded-lg text-[10px] font-bold transition">📖 Refund Rules</button>
+      </div>
+
+      <!-- Input controls -->
+      <div class="p-3 bg-slate-900 border-t border-slate-850 flex gap-2">
+        <input type="text" id="chat-input" placeholder="Ask Sahayak something..." class="flex-1 bg-slate-950 border border-slate-850 text-xs px-3.5 py-3 rounded-2xl text-slate-100 placeholder:text-slate-500 outline-none focus:border-indigo-500/50 transition" onkeydown="if(event.key==='Enter') sendMessage()" />
+        <button onclick="sendMessage()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-2xl text-xs font-bold transition">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multilingual and voice handlers -->
+  <script>
+    let currentLang = 'English';
+
+    async function changeLanguage(langName) {
+      currentLang = langName;
+      document.getElementById('selected-lang').innerText = langName;
+      
+      const langCodes = {
+        'English': 'en', 'Hindi': 'hi', 'Gujarati': 'gu', 'Punjabi': 'pa',
+        'Bengali': 'bn', 'Tamil': 'ta', 'Telugu': 'te', 'Kannada': 'kn', 'Marathi': 'mr'
+      };
+      const code = langCodes[langName] || 'en';
+      
+      const textMap = {
+        'hero-sub': "Connect with vetted plumbers, electricians, mechanics & professional experts. Evaluated dynamically by machine learning models and logged safely on-chain.",
+        'search-btn': "Search",
+        'popular-label': "Popular Queries:",
+        'nav-book-btn': "Book Service",
+        'nav-join-btn': "Join as Worker",
+        'categories-title': "Explore 50+ Specialized Skills"
+      };
+
+      const placeholderDefault = "What service do you need today?";
+      if (code === 'en') {
+        document.getElementById('hero-title').innerHTML = "Hire Skilled Workers<br><span class='gradient-text glow-text-indigo'>Near You, Instantly</span>";
+        document.getElementById('hero-sub').innerText = textMap['hero-sub'];
+        document.getElementById('search-input').placeholder = placeholderDefault;
+        document.getElementById('search-btn').innerText = textMap['search-btn'];
+        document.getElementById('popular-label').innerText = textMap['popular-label'];
+        document.getElementById('nav-book-btn').innerText = textMap['nav-book-btn'];
+        document.getElementById('nav-join-btn').innerText = textMap['nav-join-btn'];
+        document.getElementById('categories-title').innerText = textMap['categories-title'];
+        return;
+      }
+
+      // Show temporary loading indicator
+      document.getElementById('hero-title').innerText = "...";
+
+      for (const [id, originalText] of Object.entries(textMap)) {
+        try {
+          const res = await fetch('/api/workers/translate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ text: originalText, target_lang: code })
+          });
+          const data = await res.json();
+          if (id === 'categories-title') {
+             document.getElementById(id).innerText = data.translated;
+          } else {
+             document.getElementById(id).innerText = data.translated;
+          }
+        } catch (err) {
+          console.error("Translation error", err);
+        }
+      }
+
+      // Translate Hero title uniquely
+      try {
+        const resTitle = await fetch('/api/workers/translate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: "Hire Skilled Workers Near You Instantly", target_lang: code })
+        });
+        const dataTitle = await resTitle.json();
+        const parts = dataTitle.translated.split(/,|\n|आस-पास|નજીક|जवळ|પાસ/);
+        document.getElementById('hero-title').innerHTML = parts[0] + "<br><span class='gradient-text glow-text-indigo'>" + (parts[1] || '') + "</span>";
+      } catch (e) { console.error(e); }
+
+      // Translate search placeholder
+      try {
+        const resPlaceholder = await fetch('/api/workers/translate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: placeholderDefault, target_lang: code })
+        });
+        const dataPlaceholder = await resPlaceholder.json();
+        document.getElementById('search-input').placeholder = dataPlaceholder.translated;
+      } catch (e) { console.error(e); }
+    }
+
+    function executeSearch() {
+      const val = document.getElementById('search-input').value;
+      window.location.href = `/customer?search=${encodeURIComponent(val)}`;
+    }
+
+    function quickSearch(skill) {
+      window.location.href = `/customer?search=${skill}`;
+    }
+
+    // Voice search using Web Speech API
+    function startVoiceSearch() {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+        alert("Voice search is not supported in this browser. Please use Chrome.");
+        return;
+      }
+      const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.lang = currentLang === 'English' ? 'en-IN' : 'hi-IN';
+      
+      const mic = document.getElementById('mic-btn');
+      recognition.onstart = () => {
+        mic.classList.add('bg-red-500/25', 'text-red-400', 'mic-pulse');
+      };
+      recognition.onend = () => {
+        mic.classList.remove('bg-red-500/25', 'text-red-400', 'mic-pulse');
+      };
+      recognition.onresult = (event) => {
+        const text = event.results[0][0].transcript;
+        document.getElementById('search-input').value = text;
+        setTimeout(() => {
+          window.location.href = `/customer?search=${encodeURIComponent(text)}&voice=true`;
+        }, 1000);
+      };
+      recognition.start();
+    }
+
+    // Chatbot widget controls
+    function toggleChat() {
+      const chat = document.getElementById('chat-window');
+      chat.classList.toggle('hidden');
+    }
+
+    function chatQuick(actionText) {
+      document.getElementById('chat-input').value = actionText;
+      sendMessage();
+    }
+
+    // Send Message directly to python backend API on port 8001
+    async function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const text = input.value;
+      if (!text.trim()) return;
+
+      const history = document.getElementById('chat-history');
+      
+      // User bubble
+      const userDiv = document.createElement('div');
+      userDiv.className = "flex justify-end";
+      userDiv.innerHTML = `<div class="bg-indigo-600 text-white rounded-2xl rounded-br-none px-4.5 py-3 max-w-[85%]">${text}</div>`;
+      history.appendChild(userDiv);
+      input.value = '';
+      history.scrollTop = history.scrollHeight;
+
+      // Add typing indicator bubble
+      const typingDiv = document.createElement('div');
+      typingDiv.className = "flex justify-start items-center gap-2 text-slate-500 text-[10px]";
+      typingDiv.id = "chat-typing-node";
+      typingDiv.innerHTML = `<span>🤖 Sahayak is thinking...</span>`;
+      history.appendChild(typingDiv);
+      history.scrollTop = history.scrollHeight;
+
+      // Call API
+      try {
+        const res = await fetch('/api/chatbot/message', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({
+            message: text,
+            user_type: 'customer',
+            session_id: 'bluecollar-enterprise-session'
+          })
+        });
+        const data = await res.json();
+        
+        // Remove typing indicator
+        document.getElementById('chat-typing-node').remove();
+
+        // Bot bubble
+        const botDiv = document.createElement('div');
+        botDiv.className = "flex justify-start";
+        
+        // Clean markdown formatting slightly
+        let formattedRes = data.response.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        formattedRes = formattedRes.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        formattedRes = formattedRes.replace(/\n/g, '<br>');
+        
+        botDiv.innerHTML = `<div class="bg-slate-850 border border-slate-800 rounded-2xl rounded-bl-none px-4 py-3 text-slate-200 max-w-[85%]">${formattedRes}</div>`;
+        history.appendChild(botDiv);
+        
+        // Update quick replies dynamically if returned by agent!
+        if (data.quick_replies && data.quick_replies.length > 0) {
+          const repliesContainer = document.getElementById('chat-replies');
+          repliesContainer.innerHTML = '';
+          data.quick_replies.forEach(qr => {
+            const btn = document.createElement('button');
+            btn.className = "px-3 py-1.5 bg-slate-950 border border-slate-800 hover:border-indigo-500/30 text-indigo-400 rounded-lg text-[10px] font-bold transition";
+            btn.innerText = qr.title;
+            btn.onclick = () => chatQuick(qr.action);
+            repliesContainer.appendChild(btn);
+          });
+        }
+        
+        history.scrollTop = history.scrollHeight;
+
+        // Text to Speech
+        if (data.should_speak && 'speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(data.response.replace(/[#*•]/g, ''));
+          utterance.lang = currentLang === 'English' ? 'en-IN' : 'hi-IN';
+          window.speechSynthesis.speak(utterance);
+        }
+      } catch (err) {
+        console.error(err);
+        const errNode = document.getElementById('chat-typing-node');
+        if (errNode) errNode.remove();
+      }
+    }
+
+    // ============ THEME TOGGLE ============
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-mode');
+      // Label shows the CURRENT active mode
+      document.getElementById('theme-icon').textContent  = isLight ? '☀️' : '🌙';
+      document.getElementById('theme-label').textContent = isLight ? 'Light' : 'Dark';
+      localStorage.setItem('bc-theme', isLight ? 'light' : 'dark');
+    }
+
+    // Restore saved preference on load
+    (function () {
+      const saved = localStorage.getItem('bc-theme');
+      if (saved === 'light') {
+        document.body.classList.add('light-mode');
+        document.addEventListener('DOMContentLoaded', () => {
+          const icon  = document.getElementById('theme-icon');
+          const label = document.getElementById('theme-label');
+          if (icon)  icon.textContent  = '☀️';
+          if (label) label.textContent = 'Light';
+        });
+      }
+    })();
+    // =====================================
+  </script>
+</body>
+</html>

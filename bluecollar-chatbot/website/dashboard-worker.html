@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Worker Portal — BlueCollar</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="brand"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="workers.html">Find Workers</a></li>
+    <li><a href="booking.html">Book Now</a></li><li><a href="dashboard-customer.html">My Bookings</a></li>
+    <li><a href="dashboard-worker.html" class="active">Worker Portal</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span style="font-size:13px;color:#6b7280">🔧 Rajesh Kumar</span>
+    <span class="badge badge-green" style="padding:6px 12px">● Online</span>
+  </div>
+</div></nav>
+
+<div class="dashboard-layout">
+  <div class="dash-sidebar">
+    <div class="dash-menu-item active">🏠 Dashboard</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Show me available jobs near me')">💼 Find Jobs</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('How much did I earn today')">💰 Earnings</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('I am not available tomorrow')">📅 Availability</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('My rating dropped why')">📊 Performance</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('How to get verified')">🆔 Verification</div>
+    <hr style="margin:12px 0;border-color:#f3f4f6"/>
+    <div style="padding:12px;background:#fef3c7;border-radius:10px;font-size:12px">
+      <strong style="color:#d97706">Wallet Balance</strong><br>
+      <span style="font-size:20px;font-weight:800;color:#d97706">₹4,200</span><br>
+      <button class="btn btn-primary btn-sm" style="margin-top:8px;width:100%;justify-content:center" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Withdraw 1500 to UPI')">Withdraw</button>
+    </div>
+    <div style="margin-top:12px;padding:12px;background:#f0fdf4;border-radius:10px;font-size:12px">
+      <strong style="color:#059669">Verification Level</strong><br>
+      <span class="badge badge-purple" style="margin-top:4px;display:inline-block">🟣 Level 3 — Skill Tested</span>
+    </div>
+  </div>
+
+  <div class="dash-main">
+    <div class="dash-cards">
+      <div class="dash-card"><div class="dash-card-val">₹1,530</div><div class="dash-card-label">Today's Earnings</div><div class="dash-card-delta">4 jobs completed</div></div>
+      <div class="dash-card"><div class="dash-card-val">₹28,400</div><div class="dash-card-label">This Month</div><div class="dash-card-delta">+23% vs last month</div></div>
+      <div class="dash-card"><div class="dash-card-val">4.8★</div><div class="dash-card-label">My Rating</div><div class="dash-card-delta">234 reviews</div></div>
+      <div class="dash-card"><div class="dash-card-val">3</div><div class="dash-card-label">New Job Requests</div><div class="dash-card-delta">Near you now</div></div>
+    </div>
+
+    <!-- JOB REQUESTS -->
+    <div class="table-wrap" style="margin-bottom:20px">
+      <div class="table-header">
+        <h3>🔔 New Job Requests</h3>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Show me available jobs near me')">View All via AI</button>
+      </div>
+      <table>
+        <thead><tr><th>Job</th><th>Customer</th><th>Location</th><th>Pay</th><th>Urgency</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>🔧 Leakage Repair</td><td>Anjali S.</td><td>2.3km away</td><td>₹500</td>
+            <td><span class="badge badge-green">High</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Accept job 1')">Accept</button></td>
+          </tr>
+          <tr>
+            <td>⚡ Fan Installation</td><td>Raj M.</td><td>1.8km away</td><td>₹300</td>
+            <td><span class="badge badge-yellow">Medium</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Accept job 2')">Accept</button></td>
+          </tr>
+          <tr>
+            <td>🚿 Bathroom Plumbing</td><td>Priya K.</td><td>3.1km away</td><td>₹1,200</td>
+            <td><span class="badge badge-blue">Low</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Accept job 3')">Accept</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TODAY'S JOBS -->
+    <div class="table-wrap">
+      <div class="table-header"><h3>Today's Completed Jobs</h3></div>
+      <table>
+        <thead><tr><th>Job</th><th>Customer</th><th>Earned</th><th>Rating</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>🔧 Leakage repair</td><td>Meena R.</td><td>₹500</td><td>⭐ 5.0</td><td><span class="badge badge-blue">Paid</span></td></tr>
+          <tr><td>⚡ Fan installation</td><td>Suresh P.</td><td>₹300</td><td>⭐ 4.8</td><td><span class="badge badge-blue">Paid</span></td></tr>
+          <tr><td>🔧 Pipe fitting</td><td>Kavita M.</td><td>₹400</td><td>⭐ 5.0</td><td><span class="badge badge-blue">Paid</span></td></tr>
+          <tr><td>🚿 Bathroom repair</td><td>Ravi S.</td><td>₹600</td><td>⭐ 4.5</td><td><span class="badge badge-blue">Paid</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px;background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:14px">Quick Actions via Sahayak AI</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Show me available jobs near me')">💼 Find Jobs</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('Withdraw 1500 to UPI')">💰 Withdraw Earnings</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('I am not available tomorrow')">📅 Set Unavailable</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('My rating dropped why')">📊 Check Rating</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakSetType('worker');window.sahayakQuick('How to get verified')">🆔 Get Verified</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">
+  <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+</div></footer>
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlueCollar — Find Skilled Workers Near You</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🔧</span>
+      <span class="brand-name">BlueCollar</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="workers.html">Find Workers</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="dashboard-customer.html">My Bookings</a></li>
+      <li><a href="dashboard-worker.html">Worker Portal</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="workers.html" class="btn btn-outline">Login</a>
+      <a href="workers.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🇮🇳 India's #1 Blue-Collar Job Platform</div>
+    <h1>Find Skilled Workers<br><span class="gradient-text">Near You, Instantly</span></h1>
+    <p>Connect with verified plumbers, electricians, carpenters, cleaners & more. Book in 60 seconds. Pay securely via UPI or card.</p>
+    <div class="search-bar">
+      <select id="skill-select">
+        <option value="">Select Service</option>
+        <option>Plumber</option><option>Electrician</option><option>Carpenter</option>
+        <option>Cleaner</option><option>Painter</option><option>Mechanic</option>
+        <option>Gardener</option><option>Cook</option><option>Driver</option>
+      </select>
+      <input type="text" placeholder="Enter your location..." id="location-input"/>
+      <button class="btn btn-primary" onclick="window.location='workers.html'">🔍 Search</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>50,000+</strong><span>Verified Workers</span></div>
+      <div class="stat"><strong>2M+</strong><span>Jobs Completed</span></div>
+      <div class="stat"><strong>4.8★</strong><span>Average Rating</span></div>
+      <div class="stat"><strong>100+</strong><span>Cities</span></div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-card">
+      <div class="worker-preview">
+        <div class="wp-avatar">👷</div>
+        <div>
+          <div class="wp-name">Rajesh Kumar</div>
+          <div class="wp-skill">⭐ 4.9 · Plumber · 800m away</div>
+        </div>
+        <div class="wp-badge">Available</div>
+      </div>
+      <div class="worker-preview">
+        <div class="wp-avatar">👷‍♀️</div>
+        <div>
+          <div class="wp-name">Priya Sharma</div>
+          <div class="wp-skill">⭐ 4.8 · Electrician · 1.2km</div>
+        </div>
+        <div class="wp-badge">Available</div>
+      </div>
+      <div class="worker-preview">
+        <div class="wp-avatar">🧑‍🔧</div>
+        <div>
+          <div class="wp-name">Amit Singh</div>
+          <div class="wp-skill">⭐ 4.7 · Carpenter · 2.1km</div>
+        </div>
+        <div class="wp-badge">Available</div>
+      </div>
+      <a href="workers.html" class="btn btn-primary" style="width:100%;text-align:center;margin-top:8px">View All Workers →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Popular Services</h2>
+      <p>Book any skilled worker in under 60 seconds</p>
+    </div>
+    <div class="services-grid">
+      <a href="workers.html?skill=Plumber" class="service-card">
+        <div class="service-icon">🔧</div>
+        <div class="service-name">Plumber</div>
+        <div class="service-price">From ₹400/hr</div>
+      </a>
+      <a href="workers.html?skill=Electrician" class="service-card">
+        <div class="service-icon">⚡</div>
+        <div class="service-name">Electrician</div>
+        <div class="service-price">From ₹450/hr</div>
+      </a>
+      <a href="workers.html?skill=Carpenter" class="service-card">
+        <div class="service-icon">🪚</div>
+        <div class="service-name">Carpenter</div>
+        <div class="service-price">From ₹500/hr</div>
+      </a>
+      <a href="workers.html?skill=Cleaner" class="service-card">
+        <div class="service-icon">🧹</div>
+        <div class="service-name">Cleaner</div>
+        <div class="service-price">From ₹300/hr</div>
+      </a>
+      <a href="workers.html?skill=Painter" class="service-card">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Painter</div>
+        <div class="service-price">From ₹550/hr</div>
+      </a>
+      <a href="workers.html?skill=Mechanic" class="service-card">
+        <div class="service-icon">🔩</div>
+        <div class="service-name">Mechanic</div>
+        <div class="service-price">From ₹600/hr</div>
+      </a>
+      <a href="workers.html?skill=Cook" class="service-card">
+        <div class="service-icon">👨‍🍳</div>
+        <div class="service-name">Cook</div>
+        <div class="service-price">From ₹400/hr</div>
+      </a>
+      <a href="workers.html?skill=Driver" class="service-card">
+        <div class="service-icon">🚗</div>
+        <div class="service-name">Driver</div>
+        <div class="service-price">From ₹350/hr</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>Book a skilled worker in 3 simple steps</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-icon">🔍</div>
+        <h3>Search</h3>
+        <p>Search for the service you need. Filter by location, rating, and price.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-icon">📅</div>
+        <h3>Book</h3>
+        <p>Choose a time slot and pay a small advance via UPI, GPay, or card.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-icon">✅</div>
+        <h3>Done</h3>
+        <p>Worker arrives, completes the job. Pay the rest and rate your experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PAYMENT METHODS ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Secure Payments</h2>
+      <p>Pay your way — UPI, cards, or wallet</p>
+    </div>
+    <div class="payment-grid">
+      <div class="payment-badge">📱 Google Pay</div>
+      <div class="payment-badge">📱 PhonePe</div>
+      <div class="payment-badge">📱 Paytm</div>
+      <div class="payment-badge">📱 Amazon Pay</div>
+      <div class="payment-badge">📱 BHIM</div>
+      <div class="payment-badge">📱 WhatsApp Pay</div>
+      <div class="payment-badge">💳 Visa</div>
+      <div class="payment-badge">💳 Mastercard</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="section-header"><h2>What People Say</h2></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Found a plumber in 5 minutes. Fixed my leaking pipe same day. Amazing service!"</p>
+        <div class="t-author">— Anjali S., Mumbai</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"As a worker, I get 4-5 jobs daily. The app is simple and payments are instant."</p>
+        <div class="t-author">— Rajesh K., Delhi</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="t-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The AI chatbot Sahayak helped me book in Hindi. Very easy to use!"</p>
+        <div class="t-author">— Priya M., Bangalore</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="container" style="text-align:center">
+    <h2>Ready to get started?</h2>
+    <p>Join 2 million+ users who trust BlueCollar for their home services</p>
+    <div style="display:flex;gap:16px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+      <a href="workers.html" class="btn btn-white">Find a Worker</a>
+      <a href="dashboard-worker.html" class="btn btn-outline-white">Join as Worker</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:12px"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></div>
+        <p style="font-size:13px;color:#9ca3af">India's leading platform connecting skilled workers with customers.</p>
+        <p style="font-size:12px;color:#6b7280;margin-top:8px">Created by <strong style="color:#a5b4fc">Akarsh Chaturvedi</strong></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="workers.html">Find Workers</a></li><li><a href="booking.html">Book Now</a></li><li><a href="#">Pricing</a></li></ul>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul><li><a href="dashboard-worker.html">Worker Portal</a></li><li><a href="admin.html">Admin Panel</a></li><li><a href="#">API Docs</a></li></ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul><li><a href="#" onclick="window.sahayakOpen()">Chat with Sahayak</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">Call Us</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+  </div>
+</footer>
+
+<!-- ── SAHAYAK CHATBOT WIDGET ── -->
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

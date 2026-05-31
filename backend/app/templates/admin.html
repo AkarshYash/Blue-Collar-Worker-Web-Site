@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Control Suite — BlueCollar AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #020617;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .font-alt {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glow-overlay {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(99, 102, 241, 0.03) 50%, transparent 100%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 99px;
+    }
+  </style>
+</head>
+<body class="selection:bg-purple-500 selection:text-white pb-20">
+
+  <!-- Glows -->
+  <div class="glow-overlay top-0 left-1/4"></div>
+
+  <!-- Header -->
+  <div class="bg-gradient-to-r from-purple-950 via-slate-950 to-slate-950 pt-24 pb-8 border-b border-slate-900 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-6">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl bg-purple-500/10 p-3 rounded-2xl border border-purple-500/25">⚙️</span>
+          <div>
+            <h1 class="text-3xl font-black text-slate-100 flex items-center gap-2 font-alt tracking-tight">
+              Admin Control Suite
+              <span class="text-[9px] bg-purple-500/15 text-purple-400 font-extrabold px-3 py-1.5 rounded-full border border-purple-500/20 font-mono tracking-widest uppercase">Authorized Node</span>
+            </h1>
+            <p class="text-slate-400 text-xs mt-1">Review holding disputes, audit verified identity ledger commits, inspect live SVG growth indices.</p>
+          </div>
+        </div>
+        
+        <!-- Tab Swapper -->
+        <div class="flex flex-wrap bg-slate-900 border border-slate-850 rounded-2xl p-1.5 w-fit">
+          <button onclick="switchTab('overview')" id="tab-overview" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all bg-purple-600 text-white shadow-lg">📊 Operations Overview</button>
+          <button onclick="switchTab('disputes')" id="tab-disputes" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-slate-200">⚖️ Escrow Disputes</button>
+          <button onclick="switchTab('verifications')" id="tab-verifications" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-slate-200">🆔 KYC Verify Queue</button>
+          <button onclick="switchTab('fraud')" id="tab-fraud" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-slate-200">🚨 Fraud Radar Logs</button>
+          <button onclick="switchTab('analytics')" id="tab-analytics" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-slate-200">📈 SVG Charts</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-8">
+
+    <!-- OVERVIEW TAB -->
+    <div id="panel-overview" class="space-y-6 animate-slideup">
+      
+      <!-- Dash tiles -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 shadow-xl border-l-4 border-indigo-500 glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Marketplace billing GMV</div>
+          <div class="text-2xl font-black text-slate-100 mt-2 font-alt">₹2.34 Cr</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 shadow-xl border-l-4 border-green-500 glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Fulfillment rate</div>
+          <div class="text-2xl font-black text-slate-100 mt-2 font-alt">15,670 jobs</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 shadow-xl border-l-4 border-red-500 glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active holding disputes</div>
+          <div class="text-2xl font-black text-slate-100 mt-2 font-alt">45 pending</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 shadow-xl border-l-4 border-purple-500 glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">AI Proximity Accuracy</div>
+          <div class="text-2xl font-black text-slate-100 mt-2 font-alt">98.4% Rate</div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        <!-- donut segment demand -->
+        <div class="lg:col-span-6 bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+          <h3 class="font-bold text-sm font-alt tracking-tight">Category Demand Heatmap</h3>
+          
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-8 font-sans">
+            <div class="relative w-36 h-36 flex items-center justify-center">
+              <svg class="w-full h-full transform -rotate-90">
+                <circle cx="72" cy="72" r="54" fill="transparent" stroke="#6366f1" stroke-width="10" stroke-dasharray="135 339" />
+                <circle cx="72" cy="72" r="54" fill="transparent" stroke="#a855f7" stroke-width="10" stroke-dasharray="101 339" stroke-dashoffset="-135" />
+                <circle cx="72" cy="72" r="54" fill="transparent" stroke="#f43f5e" stroke-width="10" stroke-dasharray="68 339" stroke-dashoffset="-236" />
+                <circle cx="72" cy="72" r="54" fill="transparent" stroke="#10b981" stroke-width="10" stroke-dasharray="35 339" stroke-dashoffset="-304" />
+              </svg>
+              <div class="absolute text-center">
+                <div class="text-[9px] text-slate-550 font-bold uppercase font-mono">Total dispatches</div>
+                <div class="text-xl font-black text-slate-200 font-alt">50K+</div>
+              </div>
+            </div>
+
+            <!-- Legends -->
+            <div class="space-y-3.5 text-xs w-full max-w-48">
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-indigo-500"></span>🔧 Plumbing</span>
+                <span class="font-bold text-slate-400 font-mono">40%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-purple-500"></span>⚡ Electrical</span>
+                <span class="font-bold text-slate-400 font-mono">30%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-rose-500"></span>🏍️ Mechanics</span>
+                <span class="font-bold text-slate-400 font-mono">20%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>🧹 Wood Work</span>
+                <span class="font-bold text-slate-400 font-mono">10%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- system logs -->
+        <div class="lg:col-span-6 bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-4 glass-panel">
+          <h3 class="font-bold text-sm font-alt tracking-tight">🚨 Automated System Safety logs</h3>
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl text-xs border bg-red-950/20 border-red-500/20 text-red-400">
+            <span>🔴</span><span class="flex-1 font-mono text-[10px]">Escrow disputes alert queue: 45 active claims flagged</span>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl text-xs border bg-slate-950 border-slate-900 text-slate-350">
+            <span>🟡</span><span class="flex-1 font-mono text-[10px]">Verification pending commitments awaiting signature</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DISPUTES TAB -->
+    <div id="panel-disputes" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold border-b border-slate-850 pb-4 font-alt tracking-tight">⚖️ Holding Escrow Disputes</h2>
+      
+      <div class="space-y-4" id="disputes-container">
+        <div class="border rounded-2xl p-5 border-slate-850 bg-slate-950/40 hover:border-slate-800">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <span class="font-mono text-[10px] text-indigo-400 bg-indigo-500/10 px-2.5 py-1 rounded border border-indigo-500/15">TRANSACTION HASH: #BLR-260531-A1</span>
+              <h4 class="font-extrabold text-sm text-slate-100 mt-3">Disputed: Anjali S. vs Rajesh Kumar</h4>
+              <p class="text-xs text-slate-400 mt-1">Claim reason: "Poor quality pipe alignment on bathroom layout" • Locked escrow: ₹100</p>
+            </div>
+            
+            <div class="flex gap-2">
+              <button onclick="resolveDispute(1, 'refund')" id="refund-btn-1" class="px-4 py-2 bg-slate-950 border border-slate-800 hover:border-red-500/40 text-red-400 text-xs font-bold rounded-xl transition">Refund Client</button>
+              <button onclick="resolveDispute(1, 'release')" id="dispute-btn-1" class="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold rounded-xl transition shadow-md">Release to Worker</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERIFICATION QUEUE -->
+    <div id="panel-verifications" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold border-b border-slate-850 pb-4 font-alt tracking-tight">🆔 Administrative Identity KYC Verification queue</h2>
+      
+      <div class="space-y-4" id="verifications-container">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+
+    <!-- FRAUD RADAR LOGS -->
+    <div id="panel-fraud" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold border-b border-slate-850 pb-4 font-alt tracking-tight">🚨 Machine Learning Fraud Logs</h2>
+      
+      <div class="space-y-4">
+        <div class="bg-red-950/20 border border-red-500/20 rounded-2xl p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs">
+          <div>
+            <div class="font-bold text-slate-100 flex items-center gap-2 font-mono">🚨 ML Review Spammer Flagged: Worker #W-44512</div>
+            <p class="text-slate-400 mt-1">NLP sentiment auditor flagged duplicate review text velocity (8 ratings in 1 minute).</p>
+            <div class="text-[10px] text-red-400 font-bold mt-1.5 uppercase font-mono tracking-wider">Audit status: Worker node quarantined in-memory</div>
+          </div>
+        </div>
+        
+        <div class="bg-slate-950/40 border border-slate-850 rounded-2xl p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs leading-relaxed">
+          <div>
+            <div class="font-bold text-slate-100 flex items-center gap-2 font-mono">🟡 Hyperlocal Proximity spoof alarm: Worker #W-0095</div>
+            <p class="text-slate-400 mt-1">GPS dispatch nodes detected mismatch between worker IP location and mapped mobile triangulation.</p>
+            <div class="text-[10px] text-slate-500 font-bold mt-1.5 uppercase font-mono tracking-wider">Audit status: Proximity match scoring multiplier reduced by 50%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC ANALYTICS & VISUAL SVG CHARTS -->
+    <div id="panel-analytics" class="hidden space-y-8 animate-slideup">
+      <div class="grid lg:grid-cols-2 gap-8">
+        
+        <!-- User Growth -->
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-4 glass-panel">
+          <h3 class="font-bold text-sm font-alt tracking-tight">Line Chart — Platform User Growth Indices</h3>
+          
+          <div class="w-full h-56 bg-slate-950/40 rounded-2xl p-3 border border-slate-900 flex items-center justify-center">
+            <svg class="w-full h-full" viewBox="0 0 400 180">
+              <defs>
+                <linearGradient id="line-gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#a855f7" stop-opacity="0.4" />
+                  <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+              <line x1="30" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+              <line x1="30" y1="80" x2="380" y2="80" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+              <line x1="30" y1="130" x2="380" y2="130" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+              
+              <path d="M 30 140 L 100 120 L 170 100 L 240 70 L 310 40 L 380 30 L 380 150 L 30 150 Z" fill="url(#line-gradient)" />
+              <path d="M 30 140 L 100 120 L 170 100 L 240 70 L 310 40 L 380 30" fill="none" stroke="#a855f7" stroke-width="4.5" stroke-linecap="round" />
+              
+              <circle cx="30" cy="140" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="3" />
+              <circle cx="100" cy="120" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="3" />
+              <circle cx="170" cy="100" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="3" />
+              <circle cx="240" cy="70" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="3" />
+              <circle cx="310" cy="40" r="4.5" fill="#ffffff" stroke="#a855f7" stroke-width="3" />
+              <circle cx="380" cy="30" r="5" fill="#ffffff" stroke="#a855f7" stroke-width="3" class="animate-pulse" />
+
+              <text x="30" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Jan</text>
+              <text x="100" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Feb</text>
+              <text x="170" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Mar</text>
+              <text x="240" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Apr</text>
+              <text x="310" y="168" fill="#64748b" fontSize="10" text-anchor="middle">May</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Weekly GMV -->
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-4 glass-panel">
+          <h3 class="font-bold text-sm font-alt tracking-tight">Bar Chart — Platform Billing Weekly GMV</h3>
+          
+          <div class="w-full h-56 bg-slate-950/40 rounded-2xl p-3 border border-slate-900 flex items-center justify-center">
+            <svg class="w-full h-full" viewBox="0 0 400 180">
+              <defs>
+                <linearGradient id="bar-gradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6366f1" />
+                  <stop offset="100%" stop-color="#4f46e5" />
+                </linearGradient>
+              </defs>
+              <line x1="30" y1="30" x2="380" y2="30" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+              <line x1="30" y1="80" x2="380" y2="80" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+              <line x1="30" y1="130" x2="380" y2="130" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+
+              <rect x="55" y="100" width="30" height="50" rx="6" fill="url(#bar-gradient)" />
+              <rect x="135" y="80" width="30" height="70" rx="6" fill="url(#bar-gradient)" />
+              <rect x="215" y="50" width="30" height="100" rx="6" fill="url(#bar-gradient)" />
+              <rect x="295" y="25" width="30" height="125" rx="6" fill="url(#bar-gradient)" class="animate-pulse" />
+
+              <text x="70" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Week 1</text>
+              <text x="150" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Week 2</text>
+              <text x="230" y="168" fill="#64748b" fontSize="10" text-anchor="middle">Week 3</text>
+              <text x="310" y="168" fill="#6366f1" fontSize="10" text-anchor="middle" fontWeight="bold">Week 4</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function resolveDispute(id, action) {
+      const btn = document.getElementById(`dispute-btn-${id}`);
+      const refundBtn = document.getElementById(`refund-btn-${id}`);
+      
+      if (action === 'release') {
+        btn.outerHTML = `<span class="text-xs text-green-500 font-bold block bg-green-500/5 px-4 py-2 rounded-xl border border-green-500/20 w-fit">✔ Escrow Disbursed</span>`;
+        if (refundBtn) refundBtn.remove();
+        alert("Dispute resolved. Holding escrow payments successfully released to the worker!");
+      } else {
+        refundBtn.outerHTML = `<span class="text-xs text-red-400 font-bold block bg-red-500/5 px-4 py-2 rounded-xl border border-red-500/20 w-fit">✔ Refunded Client</span>`;
+        if (btn) btn.remove();
+        alert("Dispute resolved. Escrow advance refunded to the customer!");
+      }
+    }
+
+    async function loadVerificationQueue() {
+      const container = document.getElementById('verifications-container');
+      try {
+        const res = await fetch('/api/workers/verify/queue');
+        const data = await res.json();
+        
+        container.innerHTML = '';
+        if (!data.queue || data.queue.length === 0) {
+          container.innerHTML = `<div class="py-12 text-center text-slate-500 text-xs font-mono">No identity certifications waiting in administrative queue.</div>`;
+          return;
+        }
+        
+        data.queue.forEach((item, index) => {
+          const div = document.createElement('div');
+          div.className = "border rounded-2xl p-5 border-slate-850 bg-slate-950/45 hover:border-slate-800";
+          div.id = `verify-row-${index}`;
+          
+          let actionNode = item.status === 'approved' 
+            ? `<span class="text-xs text-green-500 font-bold block bg-green-500/5 px-4 py-2 rounded-xl border border-green-500/20">✔ Block committed</span>`
+            : `<button onclick="approveVerification('${item.worker_id}', ${index})" class="px-5 py-2.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:shadow-lg text-white text-xs font-bold rounded-xl transition font-alt">Approve & Sign Block</button>`;
+
+          div.innerHTML = `
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+              <div class="flex-1">
+                <span class="font-mono text-[9px] text-indigo-400 bg-indigo-500/10 px-2.5 py-0.5 rounded border border-indigo-500/20">MERKLE ID: ${item.worker_id}</span>
+                <h3 class="font-extrabold text-sm text-slate-100 mt-2">${item.name}</h3>
+                <p class="text-xs text-slate-400 mt-1">${item.category} category • Doc Number: ${item.doc_number} • Submitted recently</p>
+                <div id="verify-hash-${index}" class="${item.status === 'approved' ? '' : 'hidden'} mt-3 bg-slate-950/80 p-2.5 rounded-xl border border-slate-900 font-mono text-[9px] text-slate-550 break-all leading-normal">
+                  🔒 On-Chain block Ref #2847 committed: <span class="text-indigo-400 font-bold" id="verify-hash-text-${index}">${item.blockchain_hash || ''}</span>
+                </div>
+              </div>
+              <div id="verify-action-${index}">
+                ${actionNode}
+              </div>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    async function approveVerification(workerId, rowId) {
+      try {
+        const res = await fetch(`/api/workers/verify/approve/${workerId}`, { method: 'POST' });
+        const data = await res.json();
+        
+        document.getElementById(`verify-hash-text-${rowId}`).innerText = data.blockchain_hash;
+        document.getElementById(`verify-hash-${rowId}`).classList.remove('hidden');
+        document.getElementById(`verify-action-${rowId}`).innerHTML = `<span class="text-xs text-green-500 font-bold block bg-green-500/5 px-4 py-2 rounded-xl border border-green-500/20 font-alt">✔ Block committed</span>`;
+        alert(`Verification authenticated. Ledger block #${data.blockchain_block} committed successfully!`);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function switchTab(t) {
+      const tabs = ['overview', 'disputes', 'verifications', 'fraud', 'analytics'];
+      tabs.forEach(tabName => {
+        document.getElementById(`panel-${tabName}`).classList.add('hidden');
+        document.getElementById(`tab-${tabName}`).className = `px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-slate-200`;
+      });
+
+      document.getElementById(`panel-${t}`).classList.remove('hidden');
+      document.getElementById(`tab-${t}`).className = `px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all bg-purple-600 text-white shadow-lg`;
+      
+      if (t === 'verifications') {
+        loadVerificationQueue();
+      }
+    }
+
+    window.onload = () => {
+      loadVerificationQueue();
+    };
+
+    function toastMessage(msg) {
+      console.log(msg);
+    }
+  </script>
+</body>
+</html>

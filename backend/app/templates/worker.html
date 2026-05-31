@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Operations Suite — BlueCollar AI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #020617;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .font-alt {
+      font-family: 'Outfit', sans-serif;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+    .pulse-glow {
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
+    .glow-overlay {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, rgba(239, 68, 68, 0.03) 50%, transparent 100%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 99px;
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-white pb-20">
+
+  <!-- Glows -->
+  <div class="glow-overlay top-0 left-1/3"></div>
+
+  <!-- Header -->
+  <div class="bg-gradient-to-r from-amber-650 via-amber-900 to-slate-950 text-white pt-24 pb-8 shadow-2xl border-b border-amber-950/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-6">
+        <div class="flex items-center gap-4">
+          <span class="text-4xl bg-white/10 p-3 rounded-2xl border border-white/20">🔧</span>
+          <div>
+            <h1 class="text-3xl font-black flex items-center gap-2.5 font-alt tracking-tight">
+              <span id="header-name">Veer Karpe</span>
+              <span id="level-badge" class="text-[9px] font-black px-3 py-1.5 rounded-full border bg-amber-500/10 text-amber-300 border-amber-500/20 font-mono tracking-widest uppercase">
+                Basic Verified
+              </span>
+            </h1>
+            <p class="text-amber-100/75 text-xs mt-1">Manage jobs, certify trade credentials, and synchronize verification states to the ledger.</p>
+          </div>
+        </div>
+        
+        <!-- Tab Swapper -->
+        <div class="flex flex-wrap bg-slate-950/50 border border-slate-900/60 rounded-2xl p-1.5 w-fit">
+          <button onclick="switchTab('dashboard')" id="tab-dashboard" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all bg-amber-600 text-white shadow-lg">📊 Dispatch board</button>
+          <button onclick="switchTab('earnings')" id="tab-earnings" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-white">💰 Wallet Earnings</button>
+          <button onclick="switchTab('verify')" id="tab-verify" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-white">🆔 Trust Sandbox</button>
+          <button onclick="switchTab('assess')" id="tab-assess" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-white">🎓 Practical Quiz</button>
+          <button onclick="switchTab('languages')" id="tab-languages" class="px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-white">🗣️ Language Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-8">
+
+    <!-- WORKER DASHBOARD -->
+    <div id="panel-dashboard" class="space-y-6">
+      
+      <!-- KPI metrics -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 text-center shadow-xl glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Earnings Balance Today</div>
+          <div class="text-3xl font-black text-amber-400 mt-2 font-alt">₹1,530</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 text-center shadow-xl glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Nearby dispatches</div>
+          <div class="text-3xl font-black text-indigo-400 mt-2 font-alt">Pending</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 text-center shadow-xl glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Satisfaction Rating</div>
+          <div class="text-3xl font-black text-yellow-500 mt-2 font-alt">★ 4.8</div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-5 text-center shadow-xl glass-panel">
+          <div class="text-[9px] text-slate-500 font-bold uppercase tracking-wider font-mono">Quiz Skill Rating</div>
+          <div class="text-3xl font-black text-green-400 mt-2 font-alt animate-pulse" id="dashboard-skill-score">Basic Tier</div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        <!-- controls -->
+        <div class="lg:col-span-4 space-y-6">
+          <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-5 glass-panel">
+            <h3 class="font-extrabold text-sm font-alt tracking-tight">💡 Proximity & Rate controls</h3>
+            
+            <div id="emergency-banner" onclick="toggleEmergency()" class="p-4.5 rounded-2xl border bg-slate-950/60 border-slate-850 hover:border-slate-850 transition duration-300 flex items-center justify-between cursor-pointer">
+              <div>
+                <div class="font-extrabold text-xs flex items-center gap-1.5" id="emergency-title">⚡ Emergency Shift Mode</div>
+                <p class="text-[10px] text-slate-500 mt-1">Raises hourly base rates +50% for urgent hyperlocal dispatches.</p>
+              </div>
+              <div class="w-11 h-6 bg-slate-800 rounded-full p-1 flex items-center transition" id="emergency-toggle">
+                <div class="w-4 h-4 rounded-full bg-white transition-transform" id="emergency-toggle-knob"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-4 glass-panel">
+            <h3 class="font-extrabold text-sm font-alt tracking-tight">👤 Profile Config Node</h3>
+            
+            <div class="space-y-3">
+              <div>
+                <label class="text-[9px] text-slate-500 font-bold uppercase tracking-wider block">Specialist Full Name</label>
+                <input type="text" id="profile-name" value="Veer Karpe" class="w-full mt-1.5 bg-slate-950 border border-slate-850 focus:border-amber-500 outline-none rounded-xl px-3.5 py-2.5 text-xs text-slate-200" oninput="updateProfileDetails()" />
+              </div>
+              <div>
+                <label class="text-[9px] text-slate-500 font-bold uppercase tracking-wider block">Accredited Skill designation</label>
+                <select id="profile-skill" class="w-full mt-1.5 bg-slate-950 border border-slate-850 focus:border-amber-500 outline-none rounded-xl px-3.5 py-2.5 text-xs text-slate-350" onchange="updateProfileDetails()">
+                  <option value="Plumber">Plumber</option>
+                  <option value="Electrician">Electrician</option>
+                  <option value="Carpenter">Carpenter</option>
+                  <option value="Gardener">Gardener</option>
+                  <option value="Cleaner">Cleaner</option>
+                  <option value="Painter">Painter</option>
+                  <option value="Mechanic">Mechanic</option>
+                  <option value="Mason">Mason</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-[9px] text-slate-500 font-bold uppercase tracking-wider block">Operational Phone Number</label>
+                <input type="text" id="profile-phone" value="+91 8048612358" class="w-full mt-1.5 bg-slate-950 border border-slate-850 focus:border-amber-500 outline-none rounded-xl px-3.5 py-2.5 text-xs text-slate-200" oninput="updateProfileDetails()" />
+              </div>
+              <div>
+                <label class="text-[9px] text-slate-500 font-bold uppercase tracking-wider block">City Location</label>
+                <input type="text" id="profile-city" value="Noida, Uttar Pradesh" class="w-full mt-1.5 bg-slate-950 border border-slate-850 focus:border-amber-500 outline-none rounded-xl px-3.5 py-2.5 text-xs text-slate-200" oninput="updateProfileDetails()" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- dispatch requests -->
+        <div class="lg:col-span-8 bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl glass-panel">
+          <h3 class="font-bold text-sm mb-4 font-alt tracking-tight">📍 Incoming Match Dispatch Requests</h3>
+          <div class="space-y-4" id="requests-container">
+            <div class="border rounded-2xl p-4 flex justify-between items-center border-slate-850 bg-slate-950/50 hover:border-slate-800">
+              <div>
+                <h4 class="font-extrabold text-sm text-slate-100">Emergency Plumber Leakage</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Customer: Anjali Sharma • 📍 2.3km away</p>
+              </div>
+              <div class="text-right">
+                <div class="text-lg font-black text-amber-400" id="job-1-price">₹600</div>
+                <button onclick="acceptJob(1)" id="accept-btn-1" class="mt-1.5 px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold rounded-xl transition shadow-md font-alt">Accept Job</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EARNINGS -->
+    <div id="panel-earnings" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold font-alt tracking-tight">💰 Earnings Wallet & Disbursals</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-r from-amber-650 to-orange-700 rounded-3xl p-6 flex flex-col justify-between min-h-48 text-white border border-amber-500/20">
+          <div>
+            <span class="text-[10px] font-mono tracking-widest font-black block opacity-85">AVAILABLE ESCROWED WALLET BALANCE</span>
+            <h3 class="text-4xl font-black mt-2 font-alt">₹4,200</h3>
+          </div>
+          <button class="px-5 py-2.5 bg-slate-950/80 hover:bg-slate-950 border border-slate-850 rounded-xl text-xs font-bold transition font-mono tracking-wider" onclick="alert('Wired payout of ₹4,200 to +918048612358@paytm!')">Wired Transfer to UPI</button>
+        </div>
+        
+        <div class="bg-slate-950/40 border border-slate-850 rounded-3xl p-6 space-y-3 text-xs leading-relaxed">
+          <h3 class="font-bold font-alt tracking-tight text-sm">Escrow Wallet Policies</h3>
+          <p class="text-slate-400 text-xs">Your earnings are credited here instantly upon customer audit validation of the completed dispatches. Disbursements are directly wired via automated UPI channels.</p>
+          <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800 font-mono text-[10px] text-amber-500">
+            Flat Marketplace commission: 15%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCKCHAIN ON-CHAIN DOCUMENT VERIFICATION SANDBOX -->
+    <div id="panel-verify" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold flex items-center gap-2 font-alt tracking-tight">🆔 Cryptographic Identity Verification Sandbox</h2>
+      
+      <div class="grid md:grid-cols-12 gap-8">
+        <!-- Upload forms -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="bg-slate-950/60 border border-slate-850 rounded-2xl p-5 space-y-4">
+            <h3 class="font-bold text-xs uppercase tracking-wider font-mono text-slate-300">📁 Audit Verification Credentials</h3>
+            
+            <div>
+              <label class="text-[9px] text-slate-500 font-bold uppercase tracking-wider block">ID Document Number (PAN/Aadhaar)</label>
+              <input
+                type="text"
+                id="doc-number"
+                value="8472-2849-1102"
+                placeholder="Input ID Number (e.g. 8472-2849-1102)"
+                class="w-full mt-1.5 bg-slate-900 border border-slate-800 focus:border-amber-500 outline-none rounded-xl px-3.5 py-2.5 text-xs text-slate-200 transition font-mono"
+              />
+            </div>
+          </div>
+
+          <button
+            onclick="triggerBlockchainMining()"
+            class="w-full py-3.5 bg-gradient-to-r from-amber-600 to-orange-650 text-white font-extrabold rounded-2xl transition shadow-lg text-xs tracking-wider"
+          >
+            Submit for On-Chain Ledger Audit
+          </button>
+        </div>
+
+        <!-- Mining ledger viewscreen -->
+        <div class="md:col-span-7 bg-slate-950 border border-slate-850 rounded-2xl p-6 flex flex-col justify-between min-h-[300px] relative overflow-hidden font-mono text-xs">
+          
+          <!-- Mining overlay -->
+          <div id="mining-overlay" class="hidden absolute inset-0 bg-slate-950/90 z-20 flex flex-col items-center justify-center gap-4 text-center p-6">
+            <div class="h-10 w-10 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+            <div class="text-xs font-bold text-amber-400">Ledger Block Mining in Progress...</div>
+            <div id="mining-step" class="text-[10px] text-slate-400">[1/3] Reading document signatures...</div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex justify-between items-center text-[10px] text-slate-500 uppercase tracking-widest border-b border-slate-900 pb-2">
+              <span>Cryptographic Ledger Status</span>
+              <span class="text-green-400 font-bold">Node Sync Active</span>
+            </div>
+
+            <div class="space-y-2.5 text-slate-350 leading-relaxed text-[11px]">
+              <div>Block Index: <strong class="text-slate-100 font-bold" id="block-ref">#2845</strong></div>
+              <div>Transaction Hash: <div class="bg-slate-900 border border-slate-850 p-3 rounded text-[9px] text-indigo-400 break-all mt-1.5" id="block-hash">Waiting for commit...</div></div>
+              <div>Merkle Root Proof: <strong class="text-slate-200">84a7e937d2f091bc86b97</strong></div>
+              <div>Verification Badge: <span class="bg-green-500/10 border border-green-500/20 text-green-400 px-2.5 py-1 rounded ml-2 text-[10px]" id="block-badge">PENDING</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI SKILL ASSESSMENTS (Quiz) -->
+    <div id="panel-assess" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <h2 class="text-xl font-bold flex items-center gap-2 font-alt tracking-tight">🎓 AI Practical Skill Certification</h2>
+      
+      <!-- Quiz display -->
+      <div id="quiz-intro" class="bg-slate-950/60 border border-slate-850 rounded-3xl p-8 text-center max-w-xl mx-auto space-y-6">
+        <span class="text-5xl block animate-bounce" style="animation-duration: 4s;">🎓</span>
+        <h3 class="font-extrabold text-lg font-alt tracking-tight">Accredited Level 3 Trade Certification</h3>
+        <p class="text-xs text-slate-450 leading-relaxed font-sans">Certify your technical capabilities. Completing the skill quiz submits credentials directly to the platform nodes, boosting your Match Relevance ratings on search metrics!</p>
+        <button onclick="startQuiz()" class="px-6 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-xl text-xs transition duration-200" id="quiz-start-btn">Start Trade Assessment</button>
+      </div>
+
+      <div id="quiz-questions" class="hidden bg-slate-950 border border-slate-850 rounded-3xl p-6 max-w-lg mx-auto space-y-5 font-sans">
+        <div class="flex justify-between items-center text-[10px] text-slate-500 font-bold border-b border-slate-850 pb-2">
+          <span id="quiz-category-text" class="font-mono">Category: General Quiz</span>
+          <span id="quiz-progress" class="font-mono">Question 1 of 2</span>
+        </div>
+        <h3 class="font-extrabold text-sm text-slate-100" id="quiz-question-text">Which tool is primarily used for tightening water pipes and pipe fittings?</h3>
+        
+        <div class="space-y-2.5" id="options-container">
+          <!-- Loaded dynamically -->
+        </div>
+
+        <button onclick="nextQuestion()" class="w-full py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-bold rounded-2xl text-xs transition">Next Question</button>
+      </div>
+    </div>
+
+    <!-- LANGUAGE & SKILLS PROFILE PANEL -->
+    <div id="panel-languages" class="hidden bg-slate-900/60 border border-slate-850 rounded-3xl p-6 shadow-xl space-y-6 glass-panel">
+      <div class="border-b border-slate-850 pb-4">
+        <h2 class="text-xl font-bold font-alt tracking-tight">🗣️ Language & Skills Profile</h2>
+        <p class="text-xs text-slate-400 mt-1">Languages spoken and communication abilities of this trade specialist.</p>
+      </div>
+
+      <!-- Languages Grid -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono mb-4">🌐 Languages Known</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="lang-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Communication Badge -->
+      <div class="bg-slate-950/60 border border-slate-850 rounded-2xl p-5 space-y-4">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono">📊 Communication Readiness</h3>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+            <div class="text-2xl mb-1">🏠</div>
+            <div class="text-[9px] font-mono text-slate-500 uppercase tracking-wider">Client Interaction</div>
+            <div class="text-sm font-black text-green-400 mt-1">Fluent</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+            <div class="text-2xl mb-1">📞</div>
+            <div class="text-[9px] font-mono text-slate-500 uppercase tracking-wider">Phone Support</div>
+            <div class="text-sm font-black text-amber-400 mt-1">Available</div>
+          </div>
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+            <div class="text-2xl mb-1">📝</div>
+            <div class="text-[9px] font-mono text-slate-500 uppercase tracking-wider">Written Comm.</div>
+            <div class="text-sm font-black text-indigo-400 mt-1">Basic</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Coverage -->
+      <div class="bg-slate-950/60 border border-slate-850 rounded-2xl p-5">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono mb-3">🗺️ Regional Service Coverage</h3>
+        <div class="flex flex-wrap gap-2" id="region-tags">
+          <span class="px-3 py-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-300 rounded-full text-[10px] font-bold font-mono">Maharashtra</span>
+          <span class="px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 rounded-full text-[10px] font-bold font-mono">Delhi NCR</span>
+          <span class="px-3 py-1.5 bg-green-500/10 border border-green-500/20 text-green-300 rounded-full text-[10px] font-bold font-mono">Uttar Pradesh</span>
+          <span class="px-3 py-1.5 bg-purple-500/10 border border-purple-500/20 text-purple-300 rounded-full text-[10px] font-bold font-mono">Rajasthan</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let activeTab = 'dashboard';
+    let emergencyMode = false;
+    
+    // Blockchain document commits
+    async function triggerBlockchainMining() {
+      const docVal = document.getElementById('doc-number').value;
+      if (!docVal.trim()) {
+        alert("Please input ID document number first!");
+        return;
+      }
+      
+      const overlay = document.getElementById('mining-overlay');
+      const step = document.getElementById('mining-step');
+      
+      overlay.classList.remove('hidden');
+      
+      const name = document.getElementById('profile-name').value;
+      const category = document.getElementById('profile-skill').value;
+
+      try {
+        await fetch('/api/workers/verify/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            worker_id: 'W0048',
+            name: name,
+            category: category,
+            doc_number: docVal
+          })
+        });
+      } catch (e) {
+        console.error("Verification submit failed", e);
+      }
+
+      setTimeout(() => { step.innerText = "[2/3] Solving cryptographic block proof..."; }, 1500);
+      setTimeout(() => { step.innerText = "[3/3] Committing block transaction data..."; }, 3000);
+      
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        
+        const mockHash = "0000f3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852";
+        document.getElementById('block-ref').innerText = "#2847";
+        document.getElementById('block-hash').innerText = mockHash;
+        document.getElementById('block-badge').innerText = "SECURED";
+        document.getElementById('block-badge').className = "bg-green-500/10 border border-green-500/20 text-green-400 px-2.5 py-1 rounded ml-2 font-bold";
+        
+        document.getElementById('level-badge').innerText = "On-Chain Identity Verified";
+        document.getElementById('level-badge').className = "text-[9px] font-black px-3 py-1.5 rounded-full border bg-green-500/20 text-green-300 border-green-500/20 uppercase tracking-widest font-mono";
+
+        document.getElementById('cv-block-ref').innerText = "Block Ref: #2847";
+        document.getElementById('cv-block-hash').innerText = `Hash: ${mockHash.substring(0, 12)}...`;
+        
+        alert("Decentralized block transaction confirmed, signed, and saved on-chain!");
+      }, 4500);
+    }
+
+    // AI Quiz certification engine
+    let quizQuestions = [];
+    let activeQuizIndex = 0;
+    let quizScore = 0;
+    let selectedAnswerIdx = null;
+
+    async function startQuiz() {
+      const category = document.getElementById('profile-skill').value;
+      const startBtn = document.getElementById('quiz-start-btn');
+      
+      document.getElementById('quiz-intro').innerHTML = `<p class="text-xs text-slate-500 font-mono">Loading dynamic trade questions for ${category}...</p>`;
+      
+      try {
+        const res = await fetch(`/api/workers/quiz/${category.toLowerCase()}`);
+        const data = await res.json();
+        quizQuestions = data.questions || [];
+        activeQuizIndex = 0;
+        quizScore = 0;
+        
+        document.getElementById('quiz-intro').classList.add('hidden');
+        document.getElementById('quiz-questions').classList.remove('hidden');
+        document.getElementById('quiz-category-text').innerText = `Category: ${category} Quiz`;
+        loadQuizQuestion();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function loadQuizQuestion() {
+      const q = quizQuestions[activeQuizIndex];
+      document.getElementById('quiz-progress').innerText = `Question ${activeQuizIndex + 1} of ${quizQuestions.length}`;
+      document.getElementById('quiz-question-text').innerText = q.q;
+      
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+      selectedAnswerIdx = null;
+      
+      q.o.forEach((option, idx) => {
+        const btn = document.createElement('button');
+        btn.innerText = `${idx + 1}. ${option}`;
+        btn.className = `w-full text-left p-3.5 rounded-xl border text-xs font-semibold bg-slate-900 border-slate-850 text-slate-350 hover:border-slate-800 transition`;
+        btn.onclick = () => {
+          selectedAnswerIdx = idx;
+          Array.from(container.children).forEach(child => child.className = `w-full text-left p-3.5 rounded-xl border text-xs font-semibold bg-slate-900 border-slate-850 text-slate-350 hover:border-slate-800`);
+          btn.className = `w-full text-left p-3.5 rounded-xl border text-xs font-semibold bg-amber-650/10 border-amber-500 text-amber-400`;
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    async function nextQuestion() {
+      if (selectedAnswerIdx === null) {
+        alert("Please pick an answer first!");
+        return;
+      }
+      
+      // Calculate grade
+      if (selectedAnswerIdx === quizQuestions[activeQuizIndex].a) {
+        quizScore += Math.round(100 / quizQuestions.length);
+      }
+
+      if (activeQuizIndex < quizQuestions.length - 1) {
+        activeQuizIndex++;
+        loadQuizQuestion();
+      } else {
+        // Caps score at max 100
+        quizScore = Math.min(quizScore, 100);
+        
+        // POST to backend API to commit score live!
+        try {
+          const category = document.getElementById('profile-skill').value;
+          await fetch('/api/workers/quiz/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              worker_id: 'W0048',
+              category: category,
+              score: quizScore
+            })
+          });
+        } catch(e) {
+          console.error(e);
+        }
+
+        document.getElementById('quiz-questions').classList.add('hidden');
+        document.getElementById('quiz-intro').classList.remove('hidden');
+        document.getElementById('quiz-intro').innerHTML = `
+          <span class="text-5xl block animate-bounce">🎉</span>
+          <h3 class="font-extrabold text-lg font-alt tracking-tight">AI certification completed!</h3>
+          <div class="text-3xl font-black text-green-400 mt-2 font-mono">${quizScore}% Grade Score</div>
+          <p class="text-xs text-slate-400 mt-2 font-sans">Level 3 trade credential sync completed. Score ledger block recorded on-chain.</p>
+          <button onclick="location.reload()" class="mt-4 px-6 py-2.5 bg-slate-900 border border-slate-800 text-slate-300 rounded-xl text-xs font-bold transition">Done</button>
+        `;
+        
+        document.getElementById('dashboard-skill-score').innerText = `${quizScore}% Verified`;
+        document.getElementById('cv-skill-score').innerText = `${quizScore}% Grade Score`;
+        document.getElementById('level-badge').innerText = "On-Chain Skill Certified";
+        document.getElementById('level-badge').className = "text-[9px] font-black px-3 py-1.5 rounded-full border bg-green-500/20 text-green-300 border-green-500/20 uppercase tracking-widest font-mono";
+      }
+    }
+
+    function toggleEmergency() {
+      emergencyMode = !emergencyMode;
+      const title = document.getElementById('emergency-title');
+      const toggle = document.getElementById('emergency-toggle');
+      const knob = document.getElementById('emergency-toggle-knob');
+      const rate = document.getElementById('job-1-price');
+
+      if (emergencyMode) {
+        title.innerText = "⚡ Shift Mode: Emergency";
+        toggle.className = "w-11 h-6 bg-amber-600 rounded-full p-1 flex items-center transition";
+        knob.className = "w-4 h-4 rounded-full bg-white translate-x-5 transition-transform";
+        rate.innerText = "₹900"; 
+        alert("Emergency dispatch active. Rates bumped +50% on search matching!");
+      } else {
+        title.innerText = "⚡ Go Emergency-Only";
+        toggle.className = "w-11 h-6 bg-slate-800 rounded-full p-1 flex items-center transition";
+        knob.className = "w-4 h-4 rounded-full bg-white translate-x-0 transition-transform";
+        rate.innerText = "₹600";
+      }
+    }
+
+    async function loadWorkerDashboard() {
+      const container = document.getElementById('requests-container');
+      try {
+        const res = await fetch('/api/bookings/');
+        const data = await res.json();
+        
+        container.innerHTML = '';
+        const pendingBookings = (data.bookings || []).filter(b => b.status === 'pending');
+        
+        if (pendingBookings.length === 0) {
+          container.innerHTML = `<div class="py-12 text-center text-slate-500 text-xs font-mono">No pending dispatches nearby in Noida. Searching grid...</div>`;
+          return;
+        }
+        
+        pendingBookings.forEach(b => {
+          const div = document.createElement('div');
+          div.className = "border rounded-2xl p-4 flex justify-between items-center border-slate-850 bg-slate-950/50 hover:border-slate-800";
+          div.innerHTML = `
+            <div class="flex-1 mr-4">
+              <h4 class="font-extrabold text-sm text-slate-100 font-alt">${b.service} Dispatch Request</h4>
+              <p class="text-xs text-slate-400 mt-0.5">Customer: ${b.customer_name || 'Anjali Sharma'} • 📍 ${b.address}</p>
+              <span class="inline-block mt-2 text-[9px] font-mono text-slate-550">Escrow ID: ${b.id}</span>
+            </div>
+            <div class="text-right">
+              <div class="text-lg font-black text-amber-400 font-mono">₹${b.advance_amount * 6}</div>
+              <button onclick="acceptJob('${b.id}')" id="accept-btn-${b.id}" class="mt-1.5 px-4.5 py-2 bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold rounded-xl transition shadow-md font-alt">Accept Job</button>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    async function acceptJob(bookingId) {
+      try {
+        const res = await fetch(`/api/bookings/${bookingId}/accept`, { method: 'POST' });
+        const data = await res.json();
+        document.getElementById(`accept-btn-${bookingId}`).outerHTML = `<span class="text-xs text-green-400 font-bold block mt-2 font-mono">✅ Accepted</span>`;
+        alert(`Job ${bookingId} accepted! Dispatch node synced.`);
+        loadWorkerDashboard();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function updateProfileDetails() {
+      const name = document.getElementById('profile-name').value;
+      const skill = document.getElementById('profile-skill').value;
+      const phone = document.getElementById('profile-phone').value;
+      const city = document.getElementById('profile-city').value;
+      
+      document.getElementById('header-name').innerText = name;
+      
+      document.getElementById('cv-name').innerText = name;
+      document.getElementById('cv-skill').innerText = skill + " Professional";
+      document.getElementById('cv-contact').innerText = `Phone: ${phone} | City: ${city}`;
+    }
+
+    function switchTab(t) {
+      const tabs = ['dashboard', 'earnings', 'verify', 'assess', 'languages'];
+      tabs.forEach(tabName => {
+        document.getElementById(`panel-${tabName}`).classList.add('hidden');
+        document.getElementById(`tab-${tabName}`).className = `px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all text-slate-400 hover:text-white`;
+      });
+
+      document.getElementById(`panel-${t}`).classList.remove('hidden');
+      document.getElementById(`tab-${t}`).className = `px-4.5 py-2.5 rounded-xl text-xs font-bold capitalize transition-all bg-amber-600 text-white shadow-lg`;
+      
+      if (t === 'dashboard') {
+        loadWorkerDashboard();
+      }
+      if (t === 'languages') {
+        loadLanguageProfile();
+      }
+    }
+
+    function loadLanguageProfile() {
+      const LANGUAGES = [
+        { name: 'Hindi', flag: '🇮🇳', level: 'Native', color: 'amber' },
+        { name: 'Marathi', flag: '🌺', level: 'Fluent', color: 'orange' },
+        { name: 'English', flag: '🇬🇧', level: 'Conversational', color: 'indigo' },
+        { name: 'Gujarati', flag: '🌸', level: 'Basic', color: 'green' },
+        { name: 'Punjabi', flag: '🌾', level: 'Basic', color: 'purple' },
+        { name: 'Urdu', flag: '☪️', level: 'Intermediate', color: 'rose' },
+      ];
+
+      const colorMap = {
+        amber:  ['bg-amber-500/10', 'border-amber-500/20', 'text-amber-300'],
+        orange: ['bg-orange-500/10', 'border-orange-500/20', 'text-orange-300'],
+        indigo: ['bg-indigo-500/10', 'border-indigo-500/20', 'text-indigo-300'],
+        green:  ['bg-green-500/10', 'border-green-500/20', 'text-green-300'],
+        purple: ['bg-purple-500/10', 'border-purple-500/20', 'text-purple-300'],
+        rose:   ['bg-rose-500/10', 'border-rose-500/20', 'text-rose-300'],
+      };
+
+      const grid = document.getElementById('lang-grid');
+      if (!grid || grid.children.length > 0) return;
+
+      LANGUAGES.forEach(lang => {
+        const [bg, border, text] = colorMap[lang.color];
+        const card = document.createElement('div');
+        card.className = `${bg} border ${border} rounded-2xl p-4 text-center space-y-1.5 transition hover:scale-105 duration-200`;
+        card.innerHTML = `
+          <div class="text-3xl">${lang.flag}</div>
+          <div class="font-extrabold text-sm font-alt ${text}">${lang.name}</div>
+          <div class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">${lang.level}</div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    window.onload = () => {
+      loadWorkerDashboard();
+    };
+  </script>
+</body>
+</html>

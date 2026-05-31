@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Book a Worker — BlueCollar</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="brand"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="workers.html">Find Workers</a></li>
+    <li><a href="booking.html" class="active">Book Now</a></li>
+    <li><a href="dashboard-customer.html">My Bookings</a></li>
+    <li><a href="dashboard-worker.html">Worker Portal</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="#" class="btn btn-outline">Login</a>
+    <a href="#" class="btn btn-primary">Sign Up</a>
+  </div>
+</div></nav>
+
+<div class="page-header"><div class="container">
+  <h1>📅 Book a Worker</h1>
+  <p>Fill in the details and confirm your booking in seconds</p>
+</div></div>
+
+<div class="booking-layout">
+  <!-- FORM -->
+  <div class="booking-form">
+    <h2>Booking Details</h2>
+    <div class="form-group">
+      <label>Service Type</label>
+      <select id="service-type" onchange="updateSummary()">
+        <option>Plumbing</option><option>Electrical</option><option>Carpentry</option>
+        <option>Cleaning</option><option>Painting</option><option>Mechanic</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="book-date" onchange="updateSummary()"/>
+      </div>
+      <div class="form-group">
+        <label>Time Slot</label>
+        <select id="book-time" onchange="updateSummary()">
+          <option>9:00 AM</option><option>11:00 AM</option><option>2:00 PM</option>
+          <option>4:00 PM</option><option>6:00 PM</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Your Address</label>
+      <input type="text" id="address" placeholder="House no, Street, Area, City" value="C-204, Sector 62, Noida"/>
+    </div>
+    <div class="form-group">
+      <label>Describe the Problem</label>
+      <textarea rows="3" placeholder="E.g. Leaking pipe under kitchen sink..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Contact Number</label>
+      <input type="tel" placeholder="+91 98765 43210"/>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:700;margin-bottom:12px">Payment Method</h3>
+    <div class="payment-options" id="pay-opts">
+      <div class="pay-opt selected" onclick="selectPay(this)">📱 GPay</div>
+      <div class="pay-opt" onclick="selectPay(this)">📱 PhonePe</div>
+      <div class="pay-opt" onclick="selectPay(this)">📱 Paytm</div>
+      <div class="pay-opt" onclick="selectPay(this)">📱 Amazon Pay</div>
+      <div class="pay-opt" onclick="selectPay(this)">📱 BHIM</div>
+      <div class="pay-opt" onclick="selectPay(this)">📱 WhatsApp Pay</div>
+      <div class="pay-opt" onclick="selectPay(this)">💳 Visa</div>
+      <div class="pay-opt" onclick="selectPay(this)">💳 Mastercard</div>
+    </div>
+
+    <button class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;font-size:15px;margin-top:8px" onclick="confirmBooking()">
+      ✅ Confirm Booking & Pay Advance
+    </button>
+    <p style="font-size:12px;color:#9ca3af;text-align:center;margin-top:8px">🔒 Secure payment · Advance ₹100 only · Cancel anytime</p>
+  </div>
+
+  <!-- SUMMARY -->
+  <div>
+    <div class="booking-summary">
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:14px">Booking Summary</h3>
+      <div class="summary-worker">
+        <div style="font-size:36px">👷</div>
+        <div>
+          <div style="font-weight:700;font-size:14px" id="sum-worker">Rajesh Kumar</div>
+          <div style="font-size:12px;color:#6b7280">⭐ 4.9 · Plumber · Verified ✅</div>
+        </div>
+      </div>
+      <div class="summary-row"><span>Service</span><span id="sum-service">Plumbing</span></div>
+      <div class="summary-row"><span>Date & Time</span><span id="sum-datetime">—</span></div>
+      <div class="summary-row"><span>Location</span><span>Sector 62, Noida</span></div>
+      <div class="summary-row"><span>Rate</span><span>₹500/hr</span></div>
+      <div class="summary-row"><span>Estimated Duration</span><span>1-2 hrs</span></div>
+      <div class="summary-row"><span>Estimated Total</span><span>₹500–₹1,000</span></div>
+      <div class="summary-total"><span>Advance to Pay</span><span>₹100</span></div>
+      <div style="background:#f0fdf4;border-radius:10px;padding:12px;font-size:12px;color:#059669;margin-top:8px">
+        ✅ Worker notified instantly after payment<br>
+        📍 Live tracking starts 15 min before arrival<br>
+        🔄 Free cancellation 2+ hours before
+      </div>
+    </div>
+
+    <div class="booking-summary" style="margin-top:16px">
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:10px">💬 Need Help?</h3>
+      <p style="font-size:13px;color:#6b7280;margin-bottom:10px">Ask Sahayak AI to help you with your booking</p>
+      <button class="btn btn-outline" style="width:100%;justify-content:center" onclick="window.sahayakOpen();window.sahayakQuick('Help me book a plumber')">
+        🤖 Chat with Sahayak
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div id="success-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:none;align-items:center;justify-content:center">
+  <div style="background:#fff;border-radius:20px;padding:36px;max-width:400px;width:90%;text-align:center">
+    <div style="font-size:56px;margin-bottom:12px">🎉</div>
+    <h2 style="font-size:22px;font-weight:800;margin-bottom:8px">Booking Confirmed!</h2>
+    <p style="color:#6b7280;margin-bottom:20px">Rajesh Kumar has been notified. You'll receive a tracking link 15 minutes before arrival.</p>
+    <div style="background:#f0fdf4;border-radius:12px;padding:14px;margin-bottom:20px;text-align:left;font-size:13px;line-height:2">
+      <div>📋 Booking ID: <strong>BLR-240115-001</strong></div>
+      <div>💰 Advance paid: <strong>₹100</strong></div>
+      <div>📅 Scheduled: <strong id="modal-time"></strong></div>
+    </div>
+    <a href="dashboard-customer.html" class="btn btn-primary" style="width:100%;justify-content:center">View My Bookings</a>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">
+  <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+</div></footer>
+
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+<script>
+// Set default date to tomorrow
+const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+document.getElementById('book-date').value = tomorrow.toISOString().split('T')[0];
+updateSummary();
+
+function updateSummary() {
+  const svc  = document.getElementById('service-type').value;
+  const date = document.getElementById('book-date').value;
+  const time = document.getElementById('book-time').value;
+  document.getElementById('sum-service').textContent = svc;
+  document.getElementById('sum-datetime').textContent = date ? `${date} · ${time}` : '—';
+}
+
+function selectPay(el) {
+  document.querySelectorAll('.pay-opt').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function confirmBooking() {
+  const date = document.getElementById('book-date').value;
+  const time = document.getElementById('book-time').value;
+  document.getElementById('modal-time').textContent = `${date} at ${time}`;
+  const modal = document.getElementById('success-modal');
+  modal.style.display = 'flex';
+  // Auto-open chatbot with confirmation
+  setTimeout(() => {
+    window.sahayakOpen();
+    window.sahayakQuick('My booking is confirmed. What happens next?');
+  }, 1500);
+}
+</script>
+</body>
+</html>

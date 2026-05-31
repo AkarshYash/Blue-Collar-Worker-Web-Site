@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>My Bookings — BlueCollar</title>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/chatbot.css"/>
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="brand"><span class="brand-icon">🔧</span><span class="brand-name">BlueCollar</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="workers.html">Find Workers</a></li>
+    <li><a href="booking.html">Book Now</a></li>
+    <li><a href="dashboard-customer.html" class="active">My Bookings</a></li>
+    <li><a href="dashboard-worker.html">Worker Portal</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span style="font-size:13px;color:#6b7280">👤 Anjali Sharma</span>
+    <a href="booking.html" class="btn btn-primary">+ New Booking</a>
+  </div>
+</div></nav>
+
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <div class="dash-sidebar">
+    <div class="dash-menu-item active">📋 My Bookings</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakQuick('Track my booking')">📍 Track Worker</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakQuick('My refund status')">💰 Payments</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen();window.sahayakQuick('The worker did poor quality work')">⚖️ Disputes</div>
+    <div class="dash-menu-item" onclick="window.sahayakOpen()">💬 Chat Support</div>
+    <hr style="margin:12px 0;border-color:#f3f4f6"/>
+    <div style="padding:12px;background:#f0fdf4;border-radius:10px;font-size:12px;color:#059669">
+      <strong>Wallet Balance</strong><br>
+      <span style="font-size:20px;font-weight:800;color:#059669">₹200</span>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="dash-main">
+    <div class="dash-cards">
+      <div class="dash-card"><div class="dash-card-val">12</div><div class="dash-card-label">Total Bookings</div><div class="dash-card-delta">+2 this month</div></div>
+      <div class="dash-card"><div class="dash-card-val">₹4,800</div><div class="dash-card-label">Total Spent</div><div class="dash-card-delta">Lifetime</div></div>
+      <div class="dash-card"><div class="dash-card-val">4.7★</div><div class="dash-card-label">Avg Worker Rating</div><div class="dash-card-delta">You gave</div></div>
+      <div class="dash-card"><div class="dash-card-val">1</div><div class="dash-card-label">Active Booking</div><div class="dash-card-delta">Today</div></div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-header">
+        <h3>Recent Bookings</h3>
+        <a href="booking.html" class="btn btn-primary btn-sm">+ New Booking</a>
+      </div>
+      <table>
+        <thead><tr>
+          <th>Booking ID</th><th>Worker</th><th>Service</th><th>Date</th><th>Amount</th><th>Status</th><th>Action</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>BLR-240115-001</strong></td>
+            <td>👷 Rajesh Kumar</td><td>Plumbing</td><td>Today, 2:00 PM</td><td>₹500</td>
+            <td><span class="badge badge-green">Active</span></td>
+            <td><button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Where is my worker? He is late')">Track</button></td>
+          </tr>
+          <tr>
+            <td><strong>BLR-240114-089</strong></td>
+            <td>👷‍♀️ Priya Sharma</td><td>Electrical</td><td>Jan 14, 11:00 AM</td><td>₹650</td>
+            <td><span class="badge badge-blue">Completed</span></td>
+            <td><button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Rate my last worker')">Rate</button></td>
+          </tr>
+          <tr>
+            <td><strong>BLR-240112-045</strong></td>
+            <td>🧑‍🔧 Amit Singh</td><td>Carpentry</td><td>Jan 12, 4:00 PM</td><td>₹800</td>
+            <td><span class="badge badge-blue">Completed</span></td>
+            <td><button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Book Amit Singh again')">Rebook</button></td>
+          </tr>
+          <tr>
+            <td><strong>BLR-240110-023</strong></td>
+            <td>👩 Sunita Devi</td><td>Cleaning</td><td>Jan 10, 9:00 AM</td><td>₹300</td>
+            <td><span class="badge badge-yellow">Disputed</span></td>
+            <td><button class="btn btn-danger btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Check my dispute status')">View Dispute</button></td>
+          </tr>
+          <tr>
+            <td><strong>BLR-240108-012</strong></td>
+            <td>👨 Vikram Patel</td><td>Painting</td><td>Jan 8, 10:00 AM</td><td>₹1,200</td>
+            <td><span class="badge badge-blue">Completed</span></td>
+            <td><button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Book a painter again')">Rebook</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- QUICK ACTIONS -->
+    <div style="margin-top:20px;background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+      <h3 style="font-size:15px;font-weight:700;margin-bottom:14px">Quick Actions via Sahayak AI</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('Track my booking BLR-240115-001')">📍 Track Active Booking</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('My refund is not showing')">💰 Check Refund</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('The worker did poor quality work')">⚖️ Raise Dispute</button>
+        <button class="btn btn-outline btn-sm" onclick="window.sahayakOpen();window.sahayakQuick('I need a plumber near me')">🔍 Find New Worker</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="container">
+  <div class="footer-bottom">© 2026 BlueCollar · Created by Akarsh Chaturvedi · MIT License</div>
+</div></footer>
+<div id="chatbot-root"></div>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
