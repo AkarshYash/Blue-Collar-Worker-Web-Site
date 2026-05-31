@@ -521,7 +521,7 @@ REDIS_URL=redis://localhost:6379
 ## 🎥 Video Demo
 
 <div align="center">
-  <a href="https://drive.google.com/file/d/1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U/view?usp=drive_link" target="_blank">
+  <a href="https://drive.google.com/file/d/1dYgF3H2GvtUGvK-G_ohqxRE53gs5BN1c/view?usp=drive_link" target="_blank">
     <img src="https://drive.google.com/thumbnail?id=1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U&sz=w1920" 
          alt="Sahayak AI Chatbot Demo - Click to Watch"
          style="border-radius: 16px; border: 2px solid #333; width: 100%; max-width: 800px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.2s;"
@@ -532,7 +532,7 @@ REDIS_URL=redis://localhost:6379
 
 <div align="center">
   <br>
-  <a href="https://drive.google.com/file/d/1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U/view?usp=drive_link" target="_blank">
+  <a href="https://drive.google.com/file/d/1dYgF3H2GvtUGvK-G_ohqxRE53gs5BN1c/view?usp=drive_link" target="_blank">
     <img src="https://img.shields.io/badge/▶️_Click_to_Watch_Video_Demo-FF0000?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch on Google Drive">
   </a>
 </div>
