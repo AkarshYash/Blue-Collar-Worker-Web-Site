@@ -518,47 +518,24 @@ REDIS_URL=redis://localhost:6379
 ```
 
 ---
+## 🎥 Video Demo
 
-## 🚀 Quick Start
+<div align="center">
+  <a href="https://drive.google.com/file/d/1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U/view?usp=drive_link" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U&sz=w1920" 
+         alt="Sahayak AI Chatbot Demo - Click to Watch"
+         style="border-radius: 16px; border: 2px solid #333; width: 100%; max-width: 800px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.2s;"
+         onmouseover="this.style.transform='scale(1.02)'"
+         onmouseout="this.style.transform='scale(1)'">
+  </a>
+</div>
 
-### Prerequisites
-- Python 3.9+
-- Git
-
-### Option 1 — One-Click Windows Launch
-```bat
-double-click  run_app.bat
-```
-This opens both servers automatically and launches the browser.
-
-### Option 2 — Manual Launch
-```powershell
-# Install dependencies
-pip install -r backend/requirements.txt
-
-# Start the main platform
-uvicorn backend.app.main:app --host 0.0.0.0 --port 8001 --reload
-```
-
-Then open: **http://localhost:8001**
-
-### Option 3 — Docker
-```bash
-docker-compose up --build
-```
-
----
-
-## 🌐 Deployment — Render.com (Free)
-
-1. Go to [render.com](https://render.com) → Sign in with GitHub
-2. Click **New Web Service** → Select this repo
-3. Configure:
-   - **Root Directory:** `backend`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-4. Add environment variables from `.env`
-5. Click **Deploy** → Get live URL!
+<div align="center">
+  <br>
+  <a href="https://drive.google.com/file/d/1Q45-azbInJQ6QVOnnhaSdOGoDT4tVv4U/view?usp=drive_link" target="_blank">
+    <img src="https://img.shields.io/badge/▶️_Click_to_Watch_Video_Demo-FF0000?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch on Google Drive">
+  </a>
+</div>
 
 ---
 
