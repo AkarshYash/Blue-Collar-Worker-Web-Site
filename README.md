@@ -14,8 +14,6 @@
 **A voice-first, AI-powered, blockchain-verified Indian blue-collar hiring marketplace.**  
 Built with Python · FastAPI · RAG · LLM · NLP · Machine Learning · HTML · TailwindCSS
 
-[🌐 Live Demo](#) · [📖 Documentation](#-complete-tech-stack) · [🚀 Quick Start](#-quick-start)
-
 </div>
 
 ---
